@@ -1,0 +1,35 @@
+{
+  "name": "sonatra-theme-gluon",
+  "version": "1.0.0",
+  "authors": [
+    "François Pluchino <francois.pluchino@sonatra.com>"
+  ],
+  "description": "Default theme of Sonatra",
+  "keywords": [
+    "theme",
+    "frontend"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sonatra/sonatra-theme-gluon",
+  "dependencies": {
+    "sonatra-bootstrap-nav-scroll": "latest",
+    "sonatra-bootstrap-nav-footable": "latest",
+    "sonatra-bootstrap-panel-collapse": "latest",
+    "sonatra-jquery-table-pager-footable": "latest",
+    "sonatra-jquery-table-select": "latest",
+    "sonatra-jquery-table-pager": "latest",
+    "sonatra-select2-hammer-scroll": "latest",
+    "sonatra-select2-responsive": "latest",
+    "sonatra-footable-striped": "latest",
+    "sonatra-footable-responsive": "latest",
+    "sonatra-hammer-scroll": "latest",
+    "sonatra-jquery-sidebar": "latest",
+    "sonatra-jquery-datetime-picker": "latest",
+    "font-awesome": ">=4.2"
+  },
+  "ignore": [
+    "examples",
+    "doc",
+    "README.md"
+  ]
+}
