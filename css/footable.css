@@ -1,0 +1,106 @@
+.footable {
+  width: 100%;
+}
+.footable.breakpoint > tbody > tr.footable-detail-show > td {
+  border-bottom: none;
+}
+.footable.breakpoint > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\f078";
+}
+.footable.breakpoint > tbody > tr:hover:not(.footable-row-detail) {
+  cursor: pointer;
+}
+.footable.breakpoint > tbody > tr > td.footable-row-detail-cell {
+  border-top: none;
+  background-color: #fcfcfc;
+  -webkit-box-shadow: inset 0px 6px 5px -5px rgba(0, 0, 0, 0.14);
+  box-shadow: inset 0px 6px 5px -5px rgba(0, 0, 0, 0.14);
+}
+.footable.breakpoint > tbody > tr > td.footable-first-column {
+  padding-left: 16px;
+}
+.footable.breakpoint > tbody > tr > td > span.footable-toggle {
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+  padding-top: 4px;
+  padding-right: 5px;
+  color: #00b092;
+  float: left;
+  margin-left: -16px;
+  font-size: 12px;
+  width: 16px;
+}
+.footable.breakpoint > tbody > tr > td > span.footable-toggle:before {
+  content: "\f054";
+}
+.footable.breakpoint.toggle-medium > tbody > tr > td > span.footable-toggle {
+  font-size: 13px;
+  width: 18px;
+}
+.footable.breakpoint.toggle-large > tbody > tr > td > span.footable-toggle {
+  font-size: 17px;
+  width: 23px;
+}
+.footable-row-detail-inner {
+  display: table;
+}
+.footable-row-detail-row {
+  display: table-row;
+  line-height: 1.5em;
+}
+.footable-row-detail-group {
+  display: block;
+  line-height: 2em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.footable-row-detail-name {
+  display: table-cell;
+  font-weight: bold;
+  padding: 4px 15px;
+  color: #00b092;
+}
+.footable-row-detail-name > i.table-sort-icon {
+  display: none;
+  margin-left: 3px;
+  vertical-align: middle;
+  color: #777777;
+}
+.footable-row-detail-name[data-table-sort=asc] > i.table-sort-icon {
+  display: inline-block;
+}
+.footable-row-detail-name[data-table-sort=asc] > i.table-sort-icon:before {
+  content: "\f0dd";
+}
+.footable-row-detail-name[data-table-sort=desc] > i.table-sort-icon {
+  display: inline-block;
+}
+.footable-row-detail-name[data-table-sort=desc] > i.table-sort-icon:before {
+  content: "\f0de";
+}
+.footable-row-detail-name[data-table-pager-sortable=true]:not([data-table-sort]) > i.table-sort-icon:before {
+  content: "\f0dc";
+}
+.footable-row-detail-name[data-table-pager-sortable=true]:hover {
+  cursor: pointer;
+  color: #028dff;
+}
+.footable-row-detail-name[data-table-pager-sortable=true] > i.table-sort-icon {
+  display: inline-block;
+}
+.footable-row-detail-name[data-table-pager-sortable=true][data-table-sort=asc] > i.table-sort-icon {
+  color: #00b092;
+}
+.footable-row-detail-name[data-table-pager-sortable=true][data-table-sort=desc] > i.table-sort-icon {
+  color: #00b092;
+}
+.footable-row-detail-value {
+  display: table-cell;
+  padding: 4px 0;
+}
