@@ -23,6 +23,7 @@ module.exports = function (grunt) {
                     "css/bootstrap.css": "less/bootstrap/bootstrap.less",
                     "css/bootstrap-theme.css": "less/bootstrap-theme/bootstrap-theme.less",
                     "css/footable.css": "less/footable/footable.less",
+                    "css/sonatra-bootstrap-panel-collapse.css": "less/bootstrap-panel-collapse/bootstrap-panel-collapse.less",
                     "css/gluon.css": "less/gluon/gluon.less",
                     "css/components.css": "less/components.less"
                 }
