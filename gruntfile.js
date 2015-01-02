@@ -30,6 +30,7 @@ module.exports = function (grunt) {
                     "css/sonatra-jquery-sidebar.css": "less/jquery-sidebar/jquery-sidebar.less",
                     "css/sonatra-select2-hammer-scroll.css": "less/select2-hammer-scroll/select2-hammer-scroll.less",
                     "css/sonatra-select2-responsive.css": "less/select2-responsive/select2-responsive.less",
+                    "css/sonatra-jquery-table-select.css": "less/jquery-table-select/jquery-table-select.less",
                     "css/gluon.css": "less/gluon/gluon.less",
                     "css/components.css": "less/components.less"
                 }
