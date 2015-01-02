@@ -844,27 +844,6 @@ caption[data-table-pager-loading-info=true] > i:before {
     text-align: center;
   }
 }
-.hammer-scrollbar {
-  display: none;
-  float: right;
-  width: 3px;
-  height: 100%;
-  background-color: #000000;
-  margin-right: 2px;
-  opacity: 0.32;
-  z-index: 1000;
-  border-top-right-radius: 2px;
-  border-top-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  border-bottom-left-radius: 2px;
-}
-.hammer-scrollbar.hammer-scroll-active {
-  display: block;
-}
-.hammer-scrollbar.hammer-scroll-inverse {
-  left: 2px;
-  right: inherit;
-}
 .footable-odd {
   background-color: #f9f9f9;
 }
