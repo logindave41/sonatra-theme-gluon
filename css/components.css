@@ -1,20 +1,3 @@
-.select2-results.select2-hammer-scroll {
-  -ms-touch-action: none;
-}
-.select2-results.select2-hammer-scroll-native {
-  -ms-overflow-style: auto;
-}
-@media (max-width: 767px) {
-  .select2-drop .select2-hammer-scroll-content {
-    height: 100%;
-  }
-  .select2-drop .select2-results .select2-hammer-scroll-content {
-    height: auto;
-  }
-  .select2-drop .select2-results .select2-result-label {
-    padding: 10px 20px;
-  }
-}
 .select2-container .select2-choice abbr,
 .select2-container .select2-arrow b,
 .select2-search-choice-close {

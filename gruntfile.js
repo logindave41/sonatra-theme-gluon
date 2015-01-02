@@ -28,6 +28,7 @@ module.exports = function (grunt) {
                     "css/sonatra-jquery-datetime-picker.css": "less/jquery-datetime-picker/jquery-datetime-picker.less",
                     "css/sonatra-hammer-scroll.css": "less/hammer-scroll/hammer-scroll.less",
                     "css/sonatra-jquery-sidebar.css": "less/jquery-sidebar/jquery-sidebar.less",
+                    "css/sonatra-select2-hammer-scroll.css": "less/select2-hammer-scroll/select2-hammer-scroll.less",
                     "css/gluon.css": "less/gluon/gluon.less",
                     "css/components.css": "less/components.less"
                 }
