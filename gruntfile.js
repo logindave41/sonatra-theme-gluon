@@ -26,6 +26,7 @@ module.exports = function (grunt) {
                     "css/sonatra-bootstrap-panel-collapse.css": "less/bootstrap-panel-collapse/bootstrap-panel-collapse.less",
                     "css/sonatra-bootstrap-nav-scroll.css": "less/bootstrap-nav-scroll/bootstrap-nav-scroll.less",
                     "css/sonatra-jquery-datetime-picker.css": "less/jquery-datetime-picker/jquery-datetime-picker.less",
+                    "css/sonatra-jquery-sidebar.css": "less/jquery-sidebar/jquery-sidebar.less",
                     "css/gluon.css": "less/gluon/gluon.less",
                     "css/components.css": "less/components.less"
                 }
