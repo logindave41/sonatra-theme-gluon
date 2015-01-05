@@ -1,0 +1,60 @@
+//
+// Wrapper
+// --------------------------------------------------
+
+html,
+body {
+    height: 100%;
+}
+
+
+
+html.container-scroll {
+    height: 100%;
+
+    > body {
+        height: 100%;
+
+        > .container,
+        > .container-fluid {
+            height: 100%;
+
+            > .row {
+                height: 100%;
+                overflow-y: auto;
+            }
+        }
+
+        .navbar-fixed-top {
+            + .container,
+            + .container-fluid,
+            + .sidebar-trigger + .container,
+            + .sidebar-trigger + .container-fluid,
+            + .sidebar-trigger + .sidebar-trigger + .container,
+            + .sidebar-trigger + .sidebar-trigger + .container-fluid {
+                margin-top: 0;
+                padding-top: @navbar-height + 1;
+
+                > .row {
+                    padding-top: @navbar-margin-bottom;
+                }
+            }
+        }
+
+        .navbar-fixed-bottom {
+            + .container,
+            + .container-fluid,
+            + .sidebar-trigger + .container,
+            + .sidebar-trigger + .container-fluid,
+            + .sidebar-trigger + .sidebar-trigger + .container,
+            + .sidebar-trigger + .sidebar-trigger + .container-fluid {
+                margin-bottom: 0;
+                padding-bottom: @navbar-height + 1;
+
+                > .row {
+                    padding-bottom: @navbar-margin-bottom;
+                }
+            }
+        }
+    }
+}

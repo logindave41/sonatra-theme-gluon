@@ -74,6 +74,59 @@ ul {
 .sf-toolbar {
   z-index: 1033;
 }
+html,
+body {
+  height: 100%;
+}
+html.container-scroll {
+  height: 100%;
+}
+html.container-scroll > body {
+  height: 100%;
+}
+html.container-scroll > body > .container,
+html.container-scroll > body > .container-fluid {
+  height: 100%;
+}
+html.container-scroll > body > .container > .row,
+html.container-scroll > body > .container-fluid > .row {
+  height: 100%;
+  overflow-y: auto;
+}
+html.container-scroll > body .navbar-fixed-top + .container,
+html.container-scroll > body .navbar-fixed-top + .container-fluid,
+html.container-scroll > body .navbar-fixed-top + .sidebar-trigger + .container,
+html.container-scroll > body .navbar-fixed-top + .sidebar-trigger + .container-fluid,
+html.container-scroll > body .navbar-fixed-top + .sidebar-trigger + .sidebar-trigger + .container,
+html.container-scroll > body .navbar-fixed-top + .sidebar-trigger + .sidebar-trigger + .container-fluid {
+  margin-top: 0;
+  padding-top: 51px;
+}
+html.container-scroll > body .navbar-fixed-top + .container > .row,
+html.container-scroll > body .navbar-fixed-top + .container-fluid > .row,
+html.container-scroll > body .navbar-fixed-top + .sidebar-trigger + .container > .row,
+html.container-scroll > body .navbar-fixed-top + .sidebar-trigger + .container-fluid > .row,
+html.container-scroll > body .navbar-fixed-top + .sidebar-trigger + .sidebar-trigger + .container > .row,
+html.container-scroll > body .navbar-fixed-top + .sidebar-trigger + .sidebar-trigger + .container-fluid > .row {
+  padding-top: 18px;
+}
+html.container-scroll > body .navbar-fixed-bottom + .container,
+html.container-scroll > body .navbar-fixed-bottom + .container-fluid,
+html.container-scroll > body .navbar-fixed-bottom + .sidebar-trigger + .container,
+html.container-scroll > body .navbar-fixed-bottom + .sidebar-trigger + .container-fluid,
+html.container-scroll > body .navbar-fixed-bottom + .sidebar-trigger + .sidebar-trigger + .container,
+html.container-scroll > body .navbar-fixed-bottom + .sidebar-trigger + .sidebar-trigger + .container-fluid {
+  margin-bottom: 0;
+  padding-bottom: 51px;
+}
+html.container-scroll > body .navbar-fixed-bottom + .container > .row,
+html.container-scroll > body .navbar-fixed-bottom + .container-fluid > .row,
+html.container-scroll > body .navbar-fixed-bottom + .sidebar-trigger + .container > .row,
+html.container-scroll > body .navbar-fixed-bottom + .sidebar-trigger + .container-fluid > .row,
+html.container-scroll > body .navbar-fixed-bottom + .sidebar-trigger + .sidebar-trigger + .container > .row,
+html.container-scroll > body .navbar-fixed-bottom + .sidebar-trigger + .sidebar-trigger + .container-fluid > .row {
+  padding-bottom: 18px;
+}
 .text-secondary {
   color: #00b092;
 }
