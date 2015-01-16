@@ -12,6 +12,7 @@
   "license": "MIT",
   "homepage": "https://github.com/sonatra/sonatra-theme-gluon",
   "dependencies": {
+    "sonatra-bootstrap-dropdown-position": "latest",
     "sonatra-bootstrap-nav-scroll": "latest",
     "sonatra-bootstrap-nav-footable": "latest",
     "sonatra-bootstrap-panel-collapse": "latest",

@@ -25,6 +25,7 @@ module.exports = function (grunt) {
                     "css/footable.css": "less/footable/footable.less",
                     "css/footable-striped.css": "less/footable-striped/footable-striped.less",
                     "css/sonatra-bootstrap-panel-collapse.css": "less/bootstrap-panel-collapse/bootstrap-panel-collapse.less",
+                    "css/sonatra-bootstrap-dropdown-position.css": "less/bootstrap-dropdown-position/bootstrap-dropdown-position.less",
                     "css/sonatra-bootstrap-nav-scroll.css": "less/bootstrap-nav-scroll/bootstrap-nav-scroll.less",
                     "css/sonatra-jquery-datetime-picker.css": "less/jquery-datetime-picker/jquery-datetime-picker.less",
                     "css/sonatra-hammer-scroll.css": "less/hammer-scroll/hammer-scroll.less",
