@@ -1,19 +1,17 @@
-.nav-scrollable {
-  overflow: hidden;
+.nav-scrollable .hammer-scrollbar {
+  margin: 0;
 }
 .nav-scrollable .nav {
   float: inherit;
   white-space: nowrap;
-  display: inline-block;
+  display: block;
   margin: 0;
+  height: 50px;
+  width: 100%;
 }
 .nav-scrollable .nav > li {
   float: inherit;
   display: inline-block;
-}
-.nav-scrollable .nav.navbar-nav > li > a {
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 .nav-scrollable.is-nav-tabs + .panel,
 .nav-scrollable.is-nav-tabs + .tab-content > .tab-pane > .panel,
@@ -29,39 +27,41 @@
 .nav-scrollable.is-nav-pills {
   margin-bottom: 10px;
 }
-.nav-scrollable.nav-scrollable-has-previous {
-  -webkit-box-shadow: inset 23px 0px 23px -23px #aaaaaa;
-  box-shadow: inset 23px 0px 23px -23px #aaaaaa;
-}
-.nav-scrollable.nav-scrollable-has-next {
-  -webkit-box-shadow: inset -23px 0px 23px -23px #aaaaaa;
-  box-shadow: inset -23px 0px 23px -23px #aaaaaa;
-}
-.nav-scrollable.nav-scrollable-has-previous.nav-scrollable-has-next {
-  -webkit-box-shadow: inset 23px 0px 23px -23px #aaaaaa, inset -23px 0px 23px -23px #aaaaaa;
-  box-shadow: inset 23px 0px 23px -23px #aaaaaa, inset -23px 0px 23px -23px #aaaaaa;
-}
-.navbar-inverse .nav-scrollable.nav-scrollable-has-previous {
-  -webkit-box-shadow: inset 23px 0px 23px -23px #007fe8;
-  box-shadow: inset 23px 0px 23px -23px #007fe8;
-}
-.navbar-inverse .nav-scrollable.nav-scrollable-has-next {
-  -webkit-box-shadow: inset -23px 0px 23px -23px #007fe8;
-  box-shadow: inset -23px 0px 23px -23px #007fe8;
-}
-.navbar-inverse .nav-scrollable.nav-scrollable-has-previous.nav-scrollable-has-next {
-  -webkit-box-shadow: inset 23px 0px 23px -23px #007fe8, inset -23px 0px 23px -23px #aaaaaa;
-  box-shadow: inset 23px 0px 23px -23px #007fe8, inset -23px 0px 23px -23px #aaaaaa;
-}
-.navbar-fixed-top .nav-scrollable:last-child,
-.navbar-static-top .nav-scrollable:last-child {
-  margin-right: 25px;
-}
-.dropdown-menu.dropdown-nav-scrollable {
+.nav-scrollable.nav-scrollable-has-previous:before,
+.nav-scrollable > .nav-scrollable-has-previous:before {
+  content: "";
+  position: absolute;
   display: block;
-  margin-top: -1px;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  z-index: 1;
+  -webkit-box-shadow: 0px 0px 15px 5px #aaaaaa;
+  box-shadow: 0px 0px 15px 5px #aaaaaa;
+}
+.nav-scrollable.nav-scrollable-has-next:after,
+.nav-scrollable > .nav-scrollable-has-next:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  z-index: 1;
+  -webkit-box-shadow: 0px 0px 15px 5px #aaaaaa;
+  box-shadow: 0px 0px 15px 5px #aaaaaa;
+}
+.navbar-inverse .nav-scrollable.nav-scrollable-has-previous:before,
+.navbar-inverse .nav-scrollable > .nav-scrollable-has-previous:before {
+  -webkit-box-shadow: 0px 0px 15px 5px #35a4ff;
+  box-shadow: 0px 0px 15px 5px #35a4ff;
+}
+.navbar-inverse .nav-scrollable.nav-scrollable-has-next:after,
+.navbar-inverse .nav-scrollable > .nav-scrollable-has-next:after {
+  -webkit-box-shadow: 0px 0px 15px 5px #35a4ff;
+  box-shadow: 0px 0px 15px 5px #35a4ff;
 }
 @media (max-width: 767px) {
   .navbar.has-nav-scrollable .navbar-header {
@@ -70,48 +70,6 @@
   .nav-scrollable .navbar-nav > li > a {
     padding-left: 5px;
     padding-right: 5px;
-  }
-  .dropdown-menu.dropdown-nav-scrollable {
-    left: 0 !important;
-    width: 100%;
-    min-width: inherit;
-    border-left: none;
-    border-right: none;
-    max-height: 250px;
-    overflow-y: auto;
-  }
-  .dropdown-menu.dropdown-nav-scrollable .dropdown > a:after {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-  .dropdown-menu.dropdown-nav-scrollable .dropdown > .dropdown-menu {
-    display: block;
-    position: relative;
-    width: 100%;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    padding-left: 20px;
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  .dropdown-menu.dropdown-nav-scrollable .dropdown.open > a:after {
-    border-left-color: inherit;
-  }
-  .hammer-scroll-content {
-    left: 0 !important;
-    width: 100%;
-    min-width: inherit;
-    border-left: none;
-    border-right: none;
-  }
-  .hammer-scroll-content .dropdown-menu.dropdown-nav-scrollable {
-    max-height: inherit;
-    overflow-y: hidden;
   }
 }
 .navbar-fixed-top .nav-scrollable,
