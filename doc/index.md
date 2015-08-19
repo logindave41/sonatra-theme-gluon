@@ -4,22 +4,32 @@ Getting Started
 Prerequisites
 -------------
 
-This library require:
+This library uses:
 
-- sonatra-bootstrap-nav-scroll
+- bootstrap
+- bootstrap-filestyle
+- font-awesome
+- footable
+- hammerjs
+- jquery
+- jquery-knob
+- moment
+- select2
+- select2-bootstrap-theme
+- sonatra-bootstrap-dropdown-position
 - sonatra-bootstrap-nav-footable
+- sonatra-bootstrap-nav-scroll
 - sonatra-bootstrap-panel-collapse
+- sonatra-footable-responsive
+- sonatra-footable-striped
+- sonatra-jquery-datetime-picker
+- sonatra-jquery-scroller
+- sonatra-jquery-sidebar
+- sonatra-jquery-table-pager
 - sonatra-jquery-table-pager-footable
 - sonatra-jquery-table-select
-- sonatra-jquery-table-pager
-- sonatra-select2-hammer-scroll
 - sonatra-select2-responsive
-- sonatra-footable-striped
-- sonatra-footable-responsive
-- sonatra-hammer-scroll
-- sonatra-jquery-sidebar
-- sonatra-jquery-datetime-picker
-- font-awesome
+- sonatra-select2-scroller
 
 Installation
 ------------

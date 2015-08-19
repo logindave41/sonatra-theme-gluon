@@ -3,58 +3,46 @@
 // --------------------------------------------------
 
 html,
-body {
+html > body {
     height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
-
-
-html.container-scroll {
+.container-sidebar {
+    width: 100%;
     height: 100%;
+    overflow-y: auto;
+}
 
-    > body {
-        height: 100%;
+.navbar-toggle {
+    &.btn-sidebar-toggle-left {
+        float: left;
+        margin-left: 15px;
+    }
 
-        > .container,
-        > .container-fluid {
-            height: 100%;
+    &.btn-sidebar-toggle-left,
+    &.btn-sidebar-toggle-right {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
 
-            > .row {
-                height: 100%;
-                overflow-y: auto;
-            }
-        }
+@media (min-width: (@screen-sm-max + 1)) {
+    .navbar-header {
+        width: 100%;
+    }
 
-        .navbar-fixed-top {
-            + .container,
-            + .container-fluid,
-            + .sidebar-trigger + .container,
-            + .sidebar-trigger + .container-fluid,
-            + .sidebar-trigger + .sidebar-trigger + .container,
-            + .sidebar-trigger + .sidebar-trigger + .container-fluid {
-                margin-top: 0;
-                padding-top: @navbar-height + 1;
+    .navbar-toggle {
+        &.btn-sidebar-toggle-left,
+        &.btn-sidebar-toggle-right {
+            display: inline-block;
 
-                > .row {
-                    padding-top: @navbar-margin-bottom;
-                }
-            }
-        }
-
-        .navbar-fixed-bottom {
-            + .container,
-            + .container-fluid,
-            + .sidebar-trigger + .container,
-            + .sidebar-trigger + .container-fluid,
-            + .sidebar-trigger + .sidebar-trigger + .container,
-            + .sidebar-trigger + .sidebar-trigger + .container-fluid {
-                margin-bottom: 0;
-                padding-bottom: @navbar-height + 1;
-
-                > .row {
-                    padding-bottom: @navbar-margin-bottom;
-                }
+            &.sidebar-locked-toggle {
+                display: none;
             }
         }
     }
+
+
 }
