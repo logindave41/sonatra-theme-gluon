@@ -75,7 +75,7 @@ module.exports = function (grunt) {
                     "css/sonatra-bootstrap-dropdown-position.css": "less/bootstrap-dropdown-position/bootstrap-dropdown-position.less",
                     "css/sonatra-bootstrap-nav-scroll.css": "less/bootstrap-nav-scroll/bootstrap-nav-scroll.less",
                     "css/sonatra-jquery-datetime-picker.css": "less/jquery-datetime-picker/jquery-datetime-picker.less",
-                    "css/sonatra-jquery-scroller.css": "less/scroller/scroller.less",
+                    "css/sonatra-jquery-scroller.css": "less/jquery-scroller/jquery-scroller.less",
                     "css/sonatra-jquery-sidebar.css": "less/jquery-sidebar/jquery-sidebar.less",
                     "css/sonatra-select2-responsive.css": "less/select2-responsive/select2-responsive.less",
                     "css/sonatra-jquery-table-select.css": "less/jquery-table-select/jquery-table-select.less",
