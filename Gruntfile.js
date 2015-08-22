@@ -49,7 +49,8 @@ module.exports = function (grunt) {
                             "/bower_components": "bower_components",
                             "/js": "js",
                             "/css": "css",
-                            "/fonts": "fonts"
+                            "/fonts": "fonts",
+                            "/assets": "assets"
                         }
                     }
                 },
