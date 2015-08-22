@@ -31,6 +31,10 @@
     "bootstrap-filestyle": "^1.2.0",
     "jquery": "^2.1.0"
   },
+  "devDependencies": {
+    "html5shiv": "3.7.*",
+    "respond": "1.4.*"
+  },
   "ignore": [
     "examples",
     "doc",
