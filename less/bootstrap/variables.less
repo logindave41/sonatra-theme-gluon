@@ -30,8 +30,8 @@
 @font-family-sans-serif:  'Open Sans', sans-serif;
 @font-family-weight:      700;
 
-@font-size-base:          13px;
-@font-size-medium:        ceil((@font-size-base * 1.10)); // ~15px
+@font-size-base:          14px;
+@font-size-medium:        ceil((@font-size-base * 1.10)); // ~16px
 
 @headings-font-family:    'Raleway', sans-serif;
 @headings-font-weight:    200;
@@ -131,11 +131,22 @@
 // Navbar
 // -------------------------
 
+@navbar-height: 60px;
+@navbar-padding-horizontal: 15px;
+
+// Custom navbar sidebar toggle
+@btn-sidebar-toggle-height: 38px;
+@btn-sidebar-toggle-margin-top: 11px;
+@btn-sidebar-toggle-margin-bottom: @btn-sidebar-toggle-margin-top;
+@btn-sidebar-toggle-padding: 4px;
+@btn-sidebar-toggle-margin-horizontal: 5px;
+
 // Custom navbar brand
 @navbar-brand-font-size:                   @font-size-small;
 @navbar-brand-width:                       210px;
-@navbar-brand-vertical-padding:            10px;
-@navbar-brand-img-height:                  30px;
+@navbar-brand-vertical-padding:            14px;
+@navbar-brand-line-height:                 32px;
+@navbar-brand-img-height:                  @navbar-brand-line-height;
 
 // Custom navbar dropdown link
 @navbar-dropdown-link-color:               @brand-primary;

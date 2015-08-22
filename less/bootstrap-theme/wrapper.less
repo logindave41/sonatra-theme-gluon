@@ -12,36 +12,12 @@ body,
 
 .container-main {
     overflow-y: auto;
-}
 
-.navbar-toggle {
-    &.btn-sidebar-toggle-left {
-        float: left;
-        margin-left: 15px;
+    &.container-fixed-top {
+        padding-top: @navbar-height + @navbar-margin-bottom;
     }
 
-    &.btn-sidebar-toggle-left,
-    &.btn-sidebar-toggle-right {
-        margin-top: 5px;
-        margin-bottom: 5px;
+    &.container-fixed-bottom {
+        padding-bottom: @navbar-height + @navbar-margin-bottom;
     }
-}
-
-@media (min-width: (@screen-sm-max + 1)) {
-    .navbar-header {
-        width: 100%;
-    }
-
-    .navbar-toggle {
-        &.btn-sidebar-toggle-left,
-        &.btn-sidebar-toggle-right {
-            display: inline-block;
-
-            &.sidebar-locked-toggle {
-                display: none;
-            }
-        }
-    }
-
-
 }
