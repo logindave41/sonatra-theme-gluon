@@ -48,7 +48,8 @@ module.exports = function (grunt) {
                         routes: {
                             "/bower_components": "bower_components",
                             "/js": "js",
-                            "/css": "css"
+                            "/css": "css",
+                            "/fonts": "fonts"
                         }
                     }
                 },
@@ -84,13 +85,28 @@ module.exports = function (grunt) {
                     "css/gluon.css": "less/gluon/gluon.less"
                 }
             }
+        },
+        copy: {
+            main: {
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['bower_components/bootstrap/fonts/*', 'bower_components/font-awesome/fonts/*'],
+                        dest: 'fonts/',
+                        filter: 'isFile'
+                    }
+                ]
+            }
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
 
     grunt.registerTask('serve', function () {
         grunt.task.run([
+            'copy',
             'less',
             'browserSync:seed',
             'watch'
