@@ -31,9 +31,8 @@
     margin-bottom: @navbar-default-toggle-margin-bottom;
 }
 
-.btn-sidebar-toggle-left,
-.btn.btn-sidebar-toggle-right,
-.btn-group.btn-sidebar-toggle-right .btn {
+.btn-sidebar-toggle:not(.btn-group),
+.btn-group.btn-sidebar-toggle .btn {
     width: @btn-sidebar-toggle-height;
     height: @btn-sidebar-toggle-height;
     margin-top: @btn-sidebar-toggle-margin-top;
@@ -41,20 +40,13 @@
     margin-left: @btn-sidebar-toggle-margin-horizontal;
     margin-right: @btn-sidebar-toggle-margin-horizontal;
     padding: @btn-sidebar-toggle-padding;
+    float: left;
     .border-top-radius(@btn-sidebar-toggle-height);
     .border-bottom-radius(@btn-sidebar-toggle-height);
 }
 
-.btn-sidebar-toggle-left {
-    float: left;
-}
-
-.btn-sidebar-toggle-right {
-    float: right;
-}
-
-.btn-sidebar-toggle-left,
-.btn-sidebar-toggle-left + .btn-sidebar-toggle-right {
+.btn-sidebar-toggle,
+.btn-sidebar-toggle + .btn-sidebar-toggle.pull-right {
     + .navbar-brand-switch {
         padding-left: 0;
     }
@@ -344,9 +336,8 @@
         width: 100%;
     }
 
-    .btn-sidebar-toggle-left,
-    .btn.btn-sidebar-toggle-right,
-    .btn-group.btn-sidebar-toggle-right .btn {
+    .btn-sidebar-toggle,
+    .btn-group.btn-sidebar-toggle .btn {
         display: inline-block;
 
         &.sidebar-locked-toggle {
@@ -354,8 +345,8 @@
         }
     }
 
-    .btn-sidebar-toggle-left,
-    .btn-sidebar-toggle-left + .btn-sidebar-toggle-right {
+    .btn-sidebar-toggle,
+    .btn-sidebar-toggle + .btn-sidebar-toggle.pull-right {
         + .navbar-brand-switch {
             padding-left: @navbar-padding-horizontal;
             padding-right: @navbar-padding-horizontal;
