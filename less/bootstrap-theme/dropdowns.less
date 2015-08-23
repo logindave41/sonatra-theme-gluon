@@ -4,15 +4,20 @@
 
 .dropdown-menu {
     background-clip: none;
+    min-width: 190px;
     .box-shadow(@dropdown-shadow);
+
+    &.pull-top {
+        margin: 5px;
+    }
 }
 
 .dropdown-menu {
     > li > a,
     li > a {
-        padding: 5px 20px;
+        padding: 0 16px;
         display: block;
-        font-size: @font-size-small;
+        line-height: 48px;
     }
 
     > li.dropdown {
