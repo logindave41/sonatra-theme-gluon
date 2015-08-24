@@ -13,14 +13,16 @@
     }
 
     &:active,
-    &.active {
+    &.active,
+    .open > .dropdown-toggle& {
         background-color: @bg-active !important;
         -webkit-box-shadow: none;
         box-shadow: none;
     }
 
     &.btn-ripple:active,
-    &.btn-ripple.active {
+    &.btn-ripple.active,
+    .open > .dropdown-toggle.btn-ripple& {
         background-color: @bg-hover !important;
     }
 
