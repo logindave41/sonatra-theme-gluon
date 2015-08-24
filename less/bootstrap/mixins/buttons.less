@@ -47,3 +47,46 @@
         }
     }
 }
+
+.button-variant-raised(@color; @bg; @bg-active; @color-disabled; @bg-disabled; @shadow; @shadow-active) {
+    &.btn-raised {
+        color: @color;
+        background-color: @bg;
+        -webkit-box-shadow: @shadow;
+        box-shadow: @shadow;
+
+        &:hover,
+        &:focus {
+            color: @color;
+        }
+
+        &:active,
+        &.active,
+        .open > .dropdown-toggle& {
+            background-color: @bg-active !important;
+            -webkit-box-shadow: @shadow-active;
+            box-shadow: @shadow-active;
+        }
+
+        &.btn-ripple:active,
+        &.btn-ripple.active,
+        .open > .dropdown-toggle.btn-ripple& {
+            background-color: @bg !important;
+        }
+
+        &.disabled,
+        &[disabled],
+        fieldset[disabled] {
+            &,
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                background-color: @bg-disabled !important;
+                color: @color-disabled;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+        }
+    }
+}

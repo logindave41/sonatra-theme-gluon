@@ -66,6 +66,14 @@
 @btn-default-bg-disabled:        @btn-default-bg;
 @btn-default-ripple-bg:          rgba(0, 0, 0, 0.1);
 
+@btn-default-raised-color:          @btn-default-color;
+@btn-default-raised-bg:             #e0e0e0;
+@btn-default-raised-bg-active:      @btn-default-bg-active;
+@btn-default-raised-color-disabled: @btn-default-color-disabled;
+@btn-default-raised-bg-disabled:    lighten(@btn-default-raised-bg, 4%);
+@btn-default-raised-shadow:         0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+@btn-default-raised-shadow-active:  0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+
 @btn-primary-color:              @brand-primary;
 @btn-primary-bg:                 transparent;
 @btn-primary-border:             transparent;
@@ -74,6 +82,14 @@
 @btn-primary-color-disabled:     @btn-default-color-disabled;
 @btn-primary-bg-disabled:        @btn-default-bg;
 @btn-primary-ripple-bg:          rgba(255, 255, 255, 0.3);
+
+@btn-primary-raised-color:          #fff;
+@btn-primary-raised-bg:             @brand-primary;
+@btn-primary-raised-bg-active:      lighten(@brand-primary, 7%);
+@btn-primary-raised-color-disabled: @btn-default-raised-color-disabled;
+@btn-primary-raised-bg-disabled:    @btn-default-raised-bg-disabled;
+@btn-primary-raised-shadow:         @btn-default-raised-shadow;
+@btn-primary-raised-shadow-active:  @btn-default-raised-shadow-active;
 
 @btn-accent-color:               @brand-accent;
 @btn-accent-bg:                  transparent;
@@ -84,6 +100,14 @@
 @btn-accent-bg-disabled:         @btn-default-bg;
 @btn-accent-ripple-bg:           @btn-primary-ripple-bg;
 
+@btn-accent-raised-color:          #fff;
+@btn-accent-raised-bg:             @brand-accent;
+@btn-accent-raised-bg-active:      lighten(@brand-accent, 7%);
+@btn-accent-raised-color-disabled: @btn-default-raised-color-disabled;
+@btn-accent-raised-bg-disabled:    @btn-default-raised-bg-disabled;
+@btn-accent-raised-shadow:         @btn-default-raised-shadow;
+@btn-accent-raised-shadow-active:  @btn-default-raised-shadow-active;
+
 @btn-success-color:              @brand-success;
 @btn-success-bg:                 transparent;
 @btn-success-border:             transparent;
@@ -92,6 +116,14 @@
 @btn-success-color-disabled:     @btn-default-color-disabled;
 @btn-success-bg-disabled:        @btn-default-bg;
 @btn-success-ripple-bg:          @btn-primary-ripple-bg;
+
+@btn-success-raised-color:          #fff;
+@btn-success-raised-bg:             @brand-success;
+@btn-success-raised-bg-active:      lighten(@brand-success, 7%);
+@btn-success-raised-color-disabled: @btn-default-raised-color-disabled;
+@btn-success-raised-bg-disabled:    @btn-default-raised-bg-disabled;
+@btn-success-raised-shadow:         @btn-default-raised-shadow;
+@btn-success-raised-shadow-active:  @btn-default-raised-shadow-active;
 
 @btn-warning-color:              @brand-warning;
 @btn-warning-bg:                 transparent;
@@ -102,6 +134,14 @@
 @btn-warning-bg-disabled:        @btn-default-bg;
 @btn-warning-ripple-bg:          @btn-primary-ripple-bg;
 
+@btn-warning-raised-color:          #fff;
+@btn-warning-raised-bg:             @brand-warning;
+@btn-warning-raised-bg-active:      lighten(@brand-warning, 7%);
+@btn-warning-raised-color-disabled: @btn-default-raised-color-disabled;
+@btn-warning-raised-bg-disabled:    @btn-default-raised-bg-disabled;
+@btn-warning-raised-shadow:         @btn-default-raised-shadow;
+@btn-warning-raised-shadow-active:  @btn-default-raised-shadow-active;
+
 @btn-danger-color:               @brand-danger;
 @btn-danger-bg:                  transparent;
 @btn-danger-border:              transparent;
@@ -110,6 +150,14 @@
 @btn-danger-color-disabled:      @btn-default-color-disabled;
 @btn-danger-bg-disabled:         @btn-default-bg;
 @btn-danger-ripple-bg:           @btn-primary-ripple-bg;
+
+@btn-danger-raised-color:          #fff;
+@btn-danger-raised-bg:             @brand-danger;
+@btn-danger-raised-bg-active:      lighten(@brand-danger, 7%);;
+@btn-danger-raised-color-disabled: @btn-default-raised-color-disabled;
+@btn-danger-raised-bg-disabled:    @btn-default-raised-bg-disabled;
+@btn-danger-raised-shadow:         @btn-default-raised-shadow;
+@btn-danger-raised-shadow-active:  @btn-default-raised-shadow-active;
 
 @btn-info-color:                 @brand-info;
 @btn-info-bg:                    transparent;
@@ -120,11 +168,27 @@
 @btn-info-bg-disabled:           @btn-default-bg;
 @btn-info-ripple-bg:             @btn-primary-ripple-bg;
 
+@btn-info-raised-color:          #fff;
+@btn-info-raised-bg:             @brand-info;
+@btn-info-raised-bg-active:      lighten(@brand-info, 7%);
+@btn-info-raised-color-disabled: @btn-default-raised-color-disabled;
+@btn-info-raised-bg-disabled:    @btn-default-raised-bg-disabled;
+@btn-info-raised-shadow:         @btn-default-raised-shadow;
+@btn-info-raised-shadow-active:  @btn-default-raised-shadow-active;
+
 @btn-link-bg-hover:              fade(@btn-default-color, 10%);
 @btn-link-bg-active:             fade(@btn-default-color, 20%);
 @btn-link-color-disabled:        @btn-default-color-disabled;
 @btn-link-bg-disabled:           @btn-default-bg;
 @btn-link-ripple-bg:             @btn-default-ripple-bg;
+
+@btn-link-raised-color:          @link-color;
+@btn-link-raised-bg:             @btn-default-raised-bg;
+@btn-link-raised-bg-active:      @btn-default-bg-active;
+@btn-link-raised-color-disabled: @btn-default-raised-color-disabled;
+@btn-link-raised-bg-disabled:    @btn-default-raised-bg-disabled;
+@btn-link-raised-shadow:         @btn-default-raised-shadow;
+@btn-link-raised-shadow-active:  @btn-default-raised-shadow-active;
 
 // Forms
 // -------------------------
