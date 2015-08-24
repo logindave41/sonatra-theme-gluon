@@ -83,6 +83,7 @@ module.exports = function (grunt) {
                     "css/sonatra-jquery-table-select.css": "less/jquery-table-select/jquery-table-select.less",
                     "css/sonatra-jquery-table-pager.css": "less/jquery-table-pager/jquery-table-pager.less",
                     "css/sonatra-jquery-table-sort.css": "less/jquery-table-pager/jquery-table-sort.less",
+                    "css/sonatra-jquery-ripple.css": "less/jquery-ripple/jquery-ripple.less",
                     "css/gluon.css": "less/gluon/gluon.less"
                 }
             }
