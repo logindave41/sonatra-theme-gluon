@@ -2,74 +2,35 @@
 // Buttons
 // --------------------------------------------------
 
-button.btn:not(.btn-default):not(.btn-primary):not(.btn-accent):not(.btn-success):not(.btn-info):not(.btn-warning):not(.btn-danger) {
-  background-color: transparent;
+.btn-default {
+  .button-variant-flat(@btn-default-bg-hover; @btn-default-bg-active; @btn-default-color-disabled; @btn-default-ripple-bg);
 }
 
-
-// Alternate buttons
-// --------------------------------------------------
+.btn-primary {
+  .button-variant-flat(@btn-primary-bg-hover; @btn-primary-bg-active; @btn-primary-color-disabled; @btn-primary-ripple-bg);
+}
 
 .btn-accent {
   .button-variant(@btn-accent-color; @btn-accent-bg; @btn-accent-border);
+  .button-variant-flat(@btn-accent-bg-hover; @btn-accent-bg-active; @btn-accent-color-disabled; @btn-accent-ripple-bg);
 }
 
-
-// Alternate outline buttons
-// --------------------------------------------------
-
-.btn-default-outline {
-  .button-variant-outline(@btn-default-bg; @btn-default-color; @btn-default-border);
-}
-.btn-primary-outline {
-  .button-variant-outline(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
-}
-.btn-accent-outline {
-  .button-variant-outline(@btn-accent-color; @btn-accent-bg; @btn-accent-border);
-}
-// Success appears as green
-.btn-success-outline {
-  .button-variant-outline(@btn-success-color; @btn-success-bg; @btn-success-border);
-}
-// Info appears as blue-green
-.btn-info-outline {
-  .button-variant-outline(@btn-info-color; @btn-info-bg; @btn-info-border);
-}
-// Warning appears as orange
-.btn-warning-outline {
-  .button-variant-outline(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
-}
-// Danger and error appear as red
-.btn-danger-outline {
-  .button-variant-outline(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+.btn-success {
+  .button-variant-flat(@btn-success-bg-hover; @btn-success-bg-active; @btn-success-color-disabled; @btn-success-ripple-bg);
 }
 
+.btn-info {
+  .button-variant-flat(@btn-info-bg-hover; @btn-info-bg-active; @btn-info-color-disabled; @btn-info-ripple-bg);
+}
 
-// Alternate outline inverse buttons
-// --------------------------------------------------
+.btn-warning {
+  .button-variant-flat(@btn-warning-bg-hover; @btn-warning-bg-active; @btn-warning-color-disabled; @btn-warning-ripple-bg);
+}
 
-.btn-default-outline-inverse {
-  .button-variant-outline-inverse(@btn-default-bg; @btn-default-color; @btn-default-border);
+.btn-danger {
+  .button-variant-flat(@btn-danger-bg-hover; @btn-danger-bg-active; @btn-danger-color-disabled; @btn-danger-ripple-bg);
 }
-.btn-primary-outline-inverse {
-  .button-variant-outline-inverse(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
-}
-.btn-accent-outline-inverse {
-  .button-variant-outline-inverse(@btn-accent-color; @btn-accent-bg; @btn-accent-border);
-}
-// Success appears as green
-.btn-success-outline-inverse {
-  .button-variant-outline-inverse(@btn-success-color; @btn-success-bg; @btn-success-border);
-}
-// Info appears as blue-green
-.btn-info-outline-inverse {
-  .button-variant-outline-inverse(@btn-info-color; @btn-info-bg; @btn-info-border);
-}
-// Warning appears as orange
-.btn-warning-outline-inverse {
-  .button-variant-outline-inverse(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
-}
-// Danger and error appear as red
-.btn-danger-outline-inverse {
-  .button-variant-outline-inverse(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+
+.btn-link {
+  .button-variant-flat(@btn-link-bg-hover; @btn-link-bg-active; @btn-link-color-disabled; @btn-link-ripple-bg);
 }
