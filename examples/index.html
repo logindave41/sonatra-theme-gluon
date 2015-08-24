@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ripple data-ripple-selector=".sidebar-item, .dropdown-menu > li">
+<html data-ripple data-ripple-selector=".sidebar-item, .dropdown-menu > li, .btn-ripple">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
@@ -36,6 +36,14 @@
     <script src="/bower_components/html5shiv/dist/html5shiv.js"></script>
     <script src="/bower_components/respond/dest/respond.src.js"></script>
     <![endif]-->
+    <style>
+        .demo-separator {
+            margin-top: 24px;
+        }
+        .demo-col > .btn {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -118,9 +126,94 @@
     </nav>
 
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" id="demo-buttons">
             <div class="col-md-12">
-                <h1>Home example</h1>
+                <a href="#demo-buttons"><h1>Buttons</h1></a>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 demo-col">
+                            <h3>Normal/Flat buttons</h3>
+                            <button class="btn btn-default">Button</button>
+                            <button class="btn btn-primary">Primary</button>
+                            <button class="btn btn-accent">Accent</button>
+                            <button class="btn btn-success">Success</button>
+                            <button class="btn btn-info">Info</button>
+                            <button class="btn btn-warning">Warning</button>
+                            <button class="btn btn-danger">Danger</button>
+                            <button class="btn btn-link">Link</button>
+                            <div class="demo-separator"></div>
+                            <button class="btn btn-default" disabled>Button</button>
+                            <button class="btn btn-primary" disabled>Primary</button>
+                            <button class="btn btn-accent" disabled>Accent</button>
+                            <button class="btn btn-success" disabled>Success</button>
+                            <button class="btn btn-info" disabled>Info</button>
+                            <button class="btn btn-warning" disabled>Warning</button>
+                            <button class="btn btn-danger" disabled>Danger</button>
+                            <button class="btn btn-link" disabled>Link</button>
+                            <h3>Normal/Flat ripple buttons</h3>
+                            <button class="btn btn-default btn-ripple">Button</button>
+                            <button class="btn btn-primary btn-ripple">Primary</button>
+                            <button class="btn btn-accent btn-ripple">Accent</button>
+                            <button class="btn btn-success btn-ripple">Success</button>
+                            <button class="btn btn-info btn-ripple">Info</button>
+                            <button class="btn btn-warning btn-ripple">Warning</button>
+                            <button class="btn btn-danger btn-ripple">Danger</button>
+                            <button class="btn btn-link btn-ripple">Link</button>
+                            <div class="demo-separator"></div>
+                            <button class="btn btn-default btn-ripple" disabled>Button</button>
+                            <button class="btn btn-primary btn-ripple" disabled>Primary</button>
+                            <button class="btn btn-accent btn-ripple" disabled>Accent</button>
+                            <button class="btn btn-success btn-ripple" disabled>Success</button>
+                            <button class="btn btn-info btn-ripple" disabled>Info</button>
+                            <button class="btn btn-warning btn-ripple" disabled>Warning</button>
+                            <button class="btn btn-danger btn-ripple" disabled>Danger</button>
+                            <button class="btn btn-link btn-ripple" disabled>Link</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 demo-col">
+                            <h3>Raised buttons</h3>
+                            <button class="btn btn-raised btn-default">Button</button>
+                            <button class="btn btn-raised btn-primary">Primary</button>
+                            <button class="btn btn-raised btn-accent">Accent</button>
+                            <button class="btn btn-raised btn-success">Success</button>
+                            <button class="btn btn-raised btn-info">Info</button>
+                            <button class="btn btn-raised btn-warning">Warning</button>
+                            <button class="btn btn-raised btn-danger">Danger</button>
+                            <button class="btn btn-raised btn-link">Link</button>
+                            <div class="demo-separator"></div>
+                            <button class="btn btn-raised btn-default" disabled>Button</button>
+                            <button class="btn btn-raised btn-primary" disabled>Primary</button>
+                            <button class="btn btn-raised btn-accent" disabled>Accent</button>
+                            <button class="btn btn-raised btn-success" disabled>Success</button>
+                            <button class="btn btn-raised btn-info" disabled>Info</button>
+                            <button class="btn btn-raised btn-warning" disabled>Warning</button>
+                            <button class="btn btn-raised btn-danger" disabled>Danger</button>
+                            <button class="btn btn-raised btn-link" disabled>Link</button>
+                            <h3>Raised ripple buttons</h3>
+                            <button class="btn btn-raised btn-default btn-ripple">Button</button>
+                            <button class="btn btn-raised btn-primary btn-ripple">Primary</button>
+                            <button class="btn btn-raised btn-accent btn-ripple">Accent</button>
+                            <button class="btn btn-raised btn-success btn-ripple">Success</button>
+                            <button class="btn btn-raised btn-info btn-ripple">Info</button>
+                            <button class="btn btn-raised btn-warning btn-ripple">Warning</button>
+                            <button class="btn btn-raised btn-danger btn-ripple">Danger</button>
+                            <button class="btn btn-raised btn-link btn-ripple">Link</button>
+                            <div class="demo-separator"></div>
+                            <button class="btn btn-raised btn-default btn-ripple" disabled>Button</button>
+                            <button class="btn btn-raised btn-primary btn-ripple" disabled>Primary</button>
+                            <button class="btn btn-raised btn-accent btn-ripple" disabled>Accent</button>
+                            <button class="btn btn-raised btn-success btn-ripple" disabled>Success</button>
+                            <button class="btn btn-raised btn-info btn-ripple" disabled>Info</button>
+                            <button class="btn btn-raised btn-warning btn-ripple" disabled>Warning</button>
+                            <button class="btn btn-raised btn-danger btn-ripple" disabled>Danger</button>
+                            <button class="btn btn-raised btn-link btn-ripple" disabled>Link</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
