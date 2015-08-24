@@ -4,8 +4,12 @@
 
 .button-variant-flat(@bg-hover; @bg-active; @color-disabled; @bg-disabled; @ripple-bg) {
     text-transform: uppercase;
-    padding: 8px 24px;
+    padding: 8px 20px;
     margin: 10px 1px;
+    min-width: 77px;
+
+    -webkit-transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
 
     &:hover,
     &:focus {
