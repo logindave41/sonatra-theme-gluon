@@ -2,7 +2,7 @@
 // Button mixins
 // --------------------------------------------------
 
-.button-variant-flat(@bg-hover; @bg-active; @color-disabled; @ripple-bg) {
+.button-variant-flat(@bg-hover; @bg-active; @color-disabled; @bg-disabled; @ripple-bg) {
     text-transform: uppercase;
     padding: 8px 24px;
     margin: 10px 1px;
@@ -39,6 +39,7 @@
         &:active,
         &.active {
             color: @color-disabled;
+            background-color: @bg-disabled !important;
         }
     }
 }
