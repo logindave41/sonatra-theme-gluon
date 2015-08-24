@@ -255,14 +255,14 @@
 }
 
 // Contextual variations
-.panel-secondary {
-    .panel-variant(@panel-secondary-border; @panel-secondary-text; @panel-secondary-heading-bg; @panel-secondary-border);
+.panel-accent {
+    .panel-variant(@panel-accent-border; @panel-accent-text; @panel-accent-heading-bg; @panel-accent-border);
 }
 
 .panel {
     &.panel-default,
     &.panel-primary,
-    &.panel-secondary,
+    &.panel-accent,
     &.panel-success,
     &.panel-info,
     &.panel-warning,
@@ -324,7 +324,7 @@
 // -------------------------
 
 .panel-variant-box(primary, @brand-primary, @brand-primary, lighten(@brand-primary, 3%), #fff);
-.panel-variant-box(secondary, @brand-secondary, @brand-secondary, lighten(@brand-secondary, 3%), #fff);
+.panel-variant-box(accent, @brand-accent, @brand-accent, lighten(@brand-accent, 3%), #fff);
 .panel-variant-box(success, @brand-success, @brand-success, lighten(@brand-success, 3%), #fff);
 .panel-variant-box(info, @brand-info, @brand-info, lighten(@brand-info, 3%), #fff);
 .panel-variant-box(warning, @brand-warning, @brand-warning, lighten(@brand-warning, 3%), #fff);
@@ -332,7 +332,7 @@
 
 .panel-variant-top(default, @brand-primary, @panel-top-border-height);
 .panel-variant-top(primary, @brand-primary, @panel-top-border-height);
-.panel-variant-top(secondary, @brand-secondary, @panel-top-border-height);
+.panel-variant-top(accent, @brand-accent, @panel-top-border-height);
 .panel-variant-top(success, @brand-success, @panel-top-border-height);
 .panel-variant-top(info, @brand-info, @panel-top-border-height);
 .panel-variant-top(warning, @brand-warning, @panel-top-border-height);
@@ -340,7 +340,7 @@
 
 .panel-variant-wire(default, @text-color);
 .panel-variant-wire(primary, @brand-primary);
-.panel-variant-wire(secondary, @brand-secondary);
+.panel-variant-wire(accent, @brand-accent);
 .panel-variant-wire(success, @brand-success);
 .panel-variant-wire(info, @brand-info);
 .panel-variant-wire(warning, @brand-warning);
@@ -348,7 +348,7 @@
 
 .panel-variant-frame(default, @text-color);
 .panel-variant-frame(primary, @brand-primary);
-.panel-variant-frame(secondary, @brand-secondary);
+.panel-variant-frame(accent, @brand-accent);
 .panel-variant-frame(success, @brand-success);
 .panel-variant-frame(info, @brand-info);
 .panel-variant-frame(warning, @brand-warning);
@@ -356,7 +356,7 @@
 
 .panel-variant-lite(default, @text-color);
 .panel-variant-lite(primary, @brand-primary);
-.panel-variant-lite(secondary, @brand-secondary);
+.panel-variant-lite(accent, @brand-accent);
 .panel-variant-lite(success, @brand-success);
 .panel-variant-lite(info, @brand-info);
 .panel-variant-lite(warning, @brand-warning);
@@ -364,7 +364,7 @@
 
 .panel-variant-label(default, @text-color);
 .panel-variant-label(primary, @brand-primary);
-.panel-variant-label(secondary, @brand-secondary);
+.panel-variant-label(accent, @brand-accent);
 .panel-variant-label(success, @brand-success);
 .panel-variant-label(info, @brand-info);
 .panel-variant-label(warning, @brand-warning);

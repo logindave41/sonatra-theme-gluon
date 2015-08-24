@@ -2,16 +2,16 @@
 // Buttons
 // --------------------------------------------------
 
-button.btn:not(.btn-default):not(.btn-primary):not(.btn-secondary):not(.btn-success):not(.btn-info):not(.btn-warning):not(.btn-danger) {
-    background-color: transparent;
+button.btn:not(.btn-default):not(.btn-primary):not(.btn-accent):not(.btn-success):not(.btn-info):not(.btn-warning):not(.btn-danger) {
+  background-color: transparent;
 }
 
 
 // Alternate buttons
 // --------------------------------------------------
 
-.btn-secondary {
-  .button-variant(@btn-secondary-color; @btn-secondary-bg; @btn-secondary-border);
+.btn-accent {
+  .button-variant(@btn-accent-color; @btn-accent-bg; @btn-accent-border);
 }
 
 
@@ -24,8 +24,8 @@ button.btn:not(.btn-default):not(.btn-primary):not(.btn-secondary):not(.btn-succ
 .btn-primary-outline {
   .button-variant-outline(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
 }
-.btn-secondary-outline {
-  .button-variant-outline(@btn-secondary-color; @btn-secondary-bg; @btn-secondary-border);
+.btn-accent-outline {
+  .button-variant-outline(@btn-accent-color; @btn-accent-bg; @btn-accent-border);
 }
 // Success appears as green
 .btn-success-outline {
@@ -54,8 +54,8 @@ button.btn:not(.btn-default):not(.btn-primary):not(.btn-secondary):not(.btn-succ
 .btn-primary-outline-inverse {
   .button-variant-outline-inverse(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
 }
-.btn-secondary-outline-inverse {
-  .button-variant-outline-inverse(@btn-secondary-color; @btn-secondary-bg; @btn-secondary-border);
+.btn-accent-outline-inverse {
+  .button-variant-outline-inverse(@btn-accent-color; @btn-accent-bg; @btn-accent-border);
 }
 // Success appears as green
 .btn-success-outline-inverse {
