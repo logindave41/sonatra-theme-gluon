@@ -35,6 +35,7 @@
 .btn-group.btn-sidebar-toggle .btn {
     width: @btn-sidebar-toggle-height;
     height: @btn-sidebar-toggle-height;
+    min-width: inherit;
     margin-top: @btn-sidebar-toggle-margin-top;
     margin-bottom: @btn-sidebar-toggle-margin-bottom;
     margin-left: @btn-sidebar-toggle-margin-horizontal;
@@ -125,6 +126,18 @@
 
     .navbar-toggle {
         color: @navbar-inverse-toggle-icon-bar-bg;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: @navbar-inverse-bg;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .ripple {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
     }
 }
 
