@@ -1,0 +1,31 @@
+{% macro single(brand, ripple=true, disabled=false) %}
+<div class="btn-group dropdown-md">
+    <button type="button" class="btn btn-{{ brand }}{% if ripple %} btn-ripple{% endif %} dropdown-toggle{% if disabled %} disabled{% endif %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Action <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li class="disabled"><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+    </ul>
+</div>
+{% endmacro %}
+
+{% macro split(brand, ripple=true, disabled=false) %}
+<div class="btn-group dropdown-md">
+    <button type="button" class="btn btn-{{ brand }}{% if ripple %} btn-ripple{% endif %}{% if disabled %} disabled{% endif %}">Action</button>
+    <button type="button" class="btn btn-{{ brand }}{% if ripple %} btn-ripple{% endif %} dropdown-toggle{% if disabled %} disabled{% endif %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li class="disabled"><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+    </ul>
+</div>
+{% endmacro %}

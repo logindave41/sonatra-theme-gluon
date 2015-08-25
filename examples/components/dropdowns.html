@@ -1,0 +1,108 @@
+{% extends "examples/layout.html" %}
+
+{% import "examples/macros/macro-dropdowns.html" as dropdowns %}
+
+{% set title = 'Dropdowns' %}
+
+{% block container %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Dropdowns</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h3>Single ripple button dropdowns</h3>
+                        {{ dropdowns.single('default', true, false) }}
+                        {{ dropdowns.single('primary', true, false) }}
+                        {{ dropdowns.single('accent', true, false) }}
+                        {{ dropdowns.single('success', true, false) }}
+                        {{ dropdowns.single('info', true, false) }}
+                        {{ dropdowns.single('warning', true, false) }}
+                        {{ dropdowns.single('danger', true, false) }}
+
+                        <div class="demo-separator"></div>
+
+                        {{ dropdowns.single('default', true, true) }}
+                        {{ dropdowns.single('primary', true, true) }}
+                        {{ dropdowns.single('accent', true, true) }}
+                        {{ dropdowns.single('success', true, true) }}
+                        {{ dropdowns.single('info', true, true) }}
+                        {{ dropdowns.single('warning', true, true) }}
+                        {{ dropdowns.single('danger', true, true) }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h3>Single button dropdowns</h3>
+                        {{ dropdowns.single('default', false, false) }}
+                        {{ dropdowns.single('primary', false, false) }}
+                        {{ dropdowns.single('accent', false, false) }}
+                        {{ dropdowns.single('success', false, false) }}
+                        {{ dropdowns.single('info', false, false) }}
+                        {{ dropdowns.single('warning', false, false) }}
+                        {{ dropdowns.single('danger', false, false) }}
+
+                        <div class="demo-separator"></div>
+
+                        {{ dropdowns.single('default', false, true) }}
+                        {{ dropdowns.single('primary', false, true) }}
+                        {{ dropdowns.single('accent', false, true) }}
+                        {{ dropdowns.single('success', false, true) }}
+                        {{ dropdowns.single('info', false, true) }}
+                        {{ dropdowns.single('warning', false, true) }}
+                        {{ dropdowns.single('danger', false, true) }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h3>Split ripple button dropdowns</h3>
+                        {{ dropdowns.split('default', true, false) }}
+                        {{ dropdowns.split('primary', true, false) }}
+                        {{ dropdowns.split('accent', true, false) }}
+                        {{ dropdowns.split('success', true, false) }}
+                        {{ dropdowns.split('info', true, false) }}
+                        {{ dropdowns.split('warning', true, false) }}
+                        {{ dropdowns.split('danger', true, false) }}
+
+                        <div class="demo-separator"></div>
+
+                        {{ dropdowns.split('default', true, true) }}
+                        {{ dropdowns.split('primary', true, true) }}
+                        {{ dropdowns.split('accent', true, true) }}
+                        {{ dropdowns.split('success', true, true) }}
+                        {{ dropdowns.split('info', true, true) }}
+                        {{ dropdowns.split('warning', true, true) }}
+                        {{ dropdowns.split('danger', true, true) }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h3>Split button dropdowns</h3>
+                        {{ dropdowns.split('default', false, false) }}
+                        {{ dropdowns.split('primary', false, false) }}
+                        {{ dropdowns.split('accent', false, false) }}
+                        {{ dropdowns.split('success', false, false) }}
+                        {{ dropdowns.split('info', false, false) }}
+                        {{ dropdowns.split('warning', false, false) }}
+                        {{ dropdowns.split('danger', false, false) }}
+
+                        <div class="demo-separator"></div>
+
+                        {{ dropdowns.split('default', false, true) }}
+                        {{ dropdowns.split('primary', false, true) }}
+                        {{ dropdowns.split('accent', false, true) }}
+                        {{ dropdowns.split('success', false, true) }}
+                        {{ dropdowns.split('info', false, true) }}
+                        {{ dropdowns.split('warning', false, true) }}
+                        {{ dropdowns.split('danger', false, true) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
