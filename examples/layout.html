@@ -1,0 +1,84 @@
+{% extends "examples/base.html" %}
+
+{% block sidebars %}
+<div class="sidebar sidebar-default sidebar-force-open sidebar-fixed-top sidebar-locked sidebar-full-locked sidebar-open-init"
+     data-sidebar="true" data-force-toggle="true" data-locked="true" data-toggle-id="sidebar-toggle-left">
+    <ul class="sidebar-menu">
+        <li class="sidebar-header">
+            <span class="sidebar-header-title">john.doe@example.tld</span>
+        </li>
+        <li class="sidebar-item"><a href="/">Home</a></li>
+        <li class="sidebar-group"><span>Components</span>
+            <ul class="sidebar-group-menu">
+                <li class="sidebar-item"><a href="/components/buttons.html">Buttons</a></li>
+                <li class="sidebar-item"><a href="#" class="active">Item 2</a></li>
+                <li class="sidebar-item"><a href="#">Item 3</a></li>
+                <li class="sidebar-item"><a href="#">Item 4</a></li>
+            </ul>
+        </li>
+        <li class="sidebar-group"><span>Header 2</span>
+            <ul class="sidebar-group-menu">
+                <li class="sidebar-item"><a href="#">Item 5</a></li>
+                <li class="sidebar-item"><a href="#">Item 6</a></li>
+                <li class="sidebar-item"><a href="#">Item 7</a></li>
+                <li class="sidebar-item"><a href="#">Item 8</a></li>
+                <li class="sidebar-item"><a href="#">Item 9</a></li>
+                <li class="sidebar-item"><a href="#">Item 10</a></li>
+            </ul>
+        </li>
+        <li class="sidebar-item"><a href="#">Item 11</a></li>
+        <li class="sidebar-item"><a href="#">Item 12</a></li>
+        <li class="sidebar-item"><a href="#">Item 13</a></li>
+        <li class="sidebar-item"><a href="#">Item 14</a></li>
+        <li class="sidebar-item"><a href="#">Item 15</a></li>
+        <li class="sidebar-item"><a href="#">Item 16</a></li>
+        <li class="sidebar-item"><a href="#">Item 17</a></li>
+        <li class="sidebar-item"><a href="#">Item 18</a></li>
+        <li class="sidebar-item"><a href="#">Item 19</a></li>
+        <li class="sidebar-item"><a href="#">Item 20</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="container-main container-fixed-top container-force-open-left">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-inverse navbar-fixed-top affix">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="btn btn-ripple navbar-toggle btn-sidebar-toggle sidebar-locked-toggle" id="sidebar-toggle-left">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="btn-group btn-sidebar-toggle pull-right">
+                    <button type="button" class="btn btn-ripple navbar-toggle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="sidebar-toggle-right">
+                        <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
+                    </button>
+                    <ul class="dropdown-menu pull-top pull-right">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                    </ul>
+                </div>
+
+                <a class="navbar-brand navbar-brand-switch" href="/">
+                    <img class="navbar-brand-badge" src="../assets/badge_inverse.svg">
+                    <img class="navbar-brand-logo" src="../assets/logo_inverse.svg">
+                </a>
+                <span class="navbar-title">{{ title|default('Home example') }}</span>
+            </div>
+        </div>
+    </nav>
+    {% block container %}
+    {% endblock %}
+</div>
+{% endblock %}

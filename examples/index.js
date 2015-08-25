@@ -42,7 +42,8 @@ var http = require('http'),
     fs = require('fs'),
     path = require('path'),
     mime = require('mime'),
-    nunjucks;
+    nunjucks,
+    src;
 
 http.createServer(function (req, res) {
     'use strict';
@@ -71,6 +72,28 @@ http.createServer(function (req, res) {
 
     nunjucks = require('nunjucks');
     nunjucks.configure({ autoescape: true });
+
+    if (page.substr(0, 12) === '/components/') {
+        /*src = __dirname + page;
+        res.setHeader('Content-type', 'text/html');
+        res.write(nunjucks.render(src));
+        res.end();*/
+        src = __dirname + page;
+
+        fs.stat(src, function (err) {
+            if (null !== err) {
+                res.writeHead(404, {});
+                res.write('<h1>404</h1><h2>File not found!</h2>');
+            } else {
+                res.setHeader('Content-type', 'text/html');
+                res.write(nunjucks.render(src));
+            }
+
+            res.end();
+        });
+
+        return;
+    }
 
     if (page === '/' || page === 'index.html') {
         res.setHeader('Content-type', 'text/html');
