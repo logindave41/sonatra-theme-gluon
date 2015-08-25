@@ -49,6 +49,10 @@ http.createServer(function (req, res) {
 
     var page = url.parse(req.url).pathname;
 
+    if (renderAsset(res, fs, mime, page, '/assets/', 'assets')) {
+        return;
+    }
+
     if (renderAsset(res, fs, mime, page, '/css/', 'css')) {
         return;
     }
