@@ -43,6 +43,7 @@
 {% block body %}
 <div class="container-main container-fixed-top container-force-open-left">
     <!-- NAVBAR -->
+    {% block navbar %}
     <nav class="navbar navbar-inverse navbar-fixed-top affix">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -78,6 +79,7 @@
             </div>
         </div>
     </nav>
+    {% endblock %}
     {% block container %}
     {% endblock %}
 </div>
