@@ -1,5 +1,23 @@
 {% extends "examples/base.html" %}
 
+{% block head_style %}
+<style>
+    .sidebar-header {
+        background: #0c9b8f !important;
+    }
+    .sidebar-header-img {
+        opacity: .05;
+        position: absolute;
+        right: -55px;
+        bottom: -25px;
+        width: 270px;
+        height: 270px;
+        -webkit-filter: drop-shadow( -5px -5px 5px #000 );
+        filter: drop-shadow( -5px -5px 5px #000 );
+    }
+</style>
+{% endblock %}
+
 {% set sidebarItems = sidebarItems|default([
         {label: 'Home', href: '/'},
         {label: 'Components', children: [
@@ -36,6 +54,7 @@
     <ul class="sidebar-menu">
         {% block sidebar_header %}
         <li class="sidebar-header">
+            <img class="sidebar-header-img" src="/assets/badge_inverse.svg">
             <span class="sidebar-header-title">john.doe@example.tld</span>
         </li>
         {% endblock %}
