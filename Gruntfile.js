@@ -7,8 +7,10 @@
  * file that was distributed with this source code.
  */
 
-/*  global module */
-/*  global grunt */
+/*global module*/
+/*global require*/
+/*global grunt*/
+/*global setTimeout*/
 
 module.exports = function (grunt) {
     'use strict';
@@ -20,44 +22,17 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         watch: {
-            options: {
-                nospawn: true
-            },
-            default: {
-                files: [
-                    '/*.html',
-                    '/*.css',
-                    '**/*.less'
-                ],
-                tasks: ['less']
-            }
-        },
-        browserSync: {
-            options: {
-                notify: false,
-                port: 9000,
-                open: true,
-                startPath: "/"
-            },
-            seed: {
+            server: {
+                files: ['.rebooted'],
                 options: {
-                    watchTask: true,
-                    injectChanges: false,
-                    server: {
-                        baseDir: ['examples'],
-                        routes: {
-                            "/bower_components": "bower_components",
-                            "/js": "js",
-                            "/css": "css",
-                            "/fonts": "fonts",
-                            "/assets": "assets"
-                        }
-                    }
-                },
-                bsFiles: {
-                    src: [
-                        './**/*.{css,html,js}'
-                    ]
+                    livereload: true
+                }
+            },
+            less: {
+                files: '**/*.less',
+                tasks: ['less'],
+                options: {
+                    livereload: true
                 }
             }
         },
@@ -100,18 +75,42 @@ module.exports = function (grunt) {
                     }
                 ]
             }
+        },
+        concurrent: {
+            dev: {
+                tasks: ['nodemon', 'watch'],
+                options: {
+                    logConcurrentOutput: true
+                }
+            }
+        },
+        nodemon: {
+            dev: {
+                script: 'examples/index.js',
+                options: {
+                    callback: function (nodemon) {
+                        nodemon.on('restart', function () {
+                            // Delay before server listens on port
+                            setTimeout(function () {
+                                require('fs').writeFileSync('.rebooted', 'rebooted');
+                            }, 1000);
+                        });
+                    }
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-concurrent');
+    grunt.loadNpmTasks('grunt-nodemon');
 
     grunt.registerTask('serve', function () {
         grunt.task.run([
             'copy',
             'less',
-            'browserSync:seed',
-            'watch'
+            'concurrent'
         ]);
     });
 
