@@ -1,41 +1,56 @@
 {% extends "examples/base.html" %}
 
+{% set sidebarItems = sidebarItems|default([
+        {label: 'Home', href: '/'},
+        {label: 'Components', children: [
+            {label: 'Buttons', href: '/components/buttons.html'},
+            {label: 'Item 2', href: '#'},
+            {label: 'Item 3', href: '#'},
+            {label: 'Item 4', href: '#'}
+        ]},
+        {label: 'Header 2', children: [
+            {label: 'Item 5', href: '#'},
+            {label: 'Item 6', href: '#'},
+            {label: 'Item 7', href: '#'},
+            {label: 'Item 8', href: '#'},
+            {label: 'Item 9', href: '#'},
+            {label: 'Item 10', href: '#'}
+        ]},
+        {label: 'Item 11', href: '#'},
+        {label: 'Item 12', href: '#'},
+        {label: 'Item 13', href: '#'},
+        {label: 'Item 14', href: '#'},
+        {label: 'Item 15', href: '#'},
+        {label: 'Item 16', href: '#'},
+        {label: 'Item 17', href: '#'},
+        {label: 'Item 18', href: '#'},
+        {label: 'Item 19', href: '#'},
+        {label: 'Item 20', href: '#'}
+    ]) %}
+
 {% block sidebars %}
 <div class="sidebar sidebar-default sidebar-force-open sidebar-fixed-top sidebar-locked sidebar-full-locked sidebar-open-init"
      data-sidebar="true" data-force-toggle="true" data-locked="true" data-toggle-id="sidebar-toggle-left">
     <ul class="sidebar-menu">
+        {% block sidebar_header %}
         <li class="sidebar-header">
             <span class="sidebar-header-title">john.doe@example.tld</span>
         </li>
-        <li class="sidebar-item"><a href="/">Home</a></li>
-        <li class="sidebar-group"><span>Components</span>
-            <ul class="sidebar-group-menu">
-                <li class="sidebar-item"><a href="/components/buttons.html">Buttons</a></li>
-                <li class="sidebar-item"><a href="#" class="active">Item 2</a></li>
-                <li class="sidebar-item"><a href="#">Item 3</a></li>
-                <li class="sidebar-item"><a href="#">Item 4</a></li>
-            </ul>
-        </li>
-        <li class="sidebar-group"><span>Header 2</span>
-            <ul class="sidebar-group-menu">
-                <li class="sidebar-item"><a href="#">Item 5</a></li>
-                <li class="sidebar-item"><a href="#">Item 6</a></li>
-                <li class="sidebar-item"><a href="#">Item 7</a></li>
-                <li class="sidebar-item"><a href="#">Item 8</a></li>
-                <li class="sidebar-item"><a href="#">Item 9</a></li>
-                <li class="sidebar-item"><a href="#">Item 10</a></li>
-            </ul>
-        </li>
-        <li class="sidebar-item"><a href="#">Item 11</a></li>
-        <li class="sidebar-item"><a href="#">Item 12</a></li>
-        <li class="sidebar-item"><a href="#">Item 13</a></li>
-        <li class="sidebar-item"><a href="#">Item 14</a></li>
-        <li class="sidebar-item"><a href="#">Item 15</a></li>
-        <li class="sidebar-item"><a href="#">Item 16</a></li>
-        <li class="sidebar-item"><a href="#">Item 17</a></li>
-        <li class="sidebar-item"><a href="#">Item 18</a></li>
-        <li class="sidebar-item"><a href="#">Item 19</a></li>
-        <li class="sidebar-item"><a href="#">Item 20</a></li>
+        {% endblock %}
+
+        {% for item in sidebarItems %}
+            {% if item.children %}
+                <li class="sidebar-group"><span>{{ item.label }}</span>
+                    <ul class="sidebar-group-menu">
+                        {% for groupItem in item.children %}
+                            <li class="sidebar-item"><a href="{{ groupItem.href }}"{% if groupItem.href == app.uri %} class="active"{% endif %}>{{ groupItem.label }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% else %}
+                <li class="sidebar-item"><a href="{{ item.href }}"{% if item.href == app.uri %} class="active"{% endif %}>{{ item.label }}</a></li>
+            {% endif%}
+        {% endfor %}
     </ul>
 </div>
 {% endblock %}

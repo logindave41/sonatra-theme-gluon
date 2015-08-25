@@ -48,7 +48,8 @@ var http = require('http'),
 http.createServer(function (req, res) {
     'use strict';
 
-    var page = url.parse(req.url).pathname;
+    var page = url.parse(req.url).pathname,
+        params = {app: {uri: page}};
 
     if (renderAsset(res, fs, mime, page, '/assets/', 'assets')) {
         return;
@@ -82,7 +83,7 @@ http.createServer(function (req, res) {
                 res.write('<h1>404</h1><h2>File not found!</h2>');
             } else {
                 res.setHeader('Content-type', 'text/html');
-                res.write(nunjucks.render(src));
+                res.write(nunjucks.render(src, params));
             }
 
             res.end();
@@ -93,7 +94,7 @@ http.createServer(function (req, res) {
 
     if (page === '/' || page === 'index.html') {
         res.setHeader('Content-type', 'text/html');
-        res.write(nunjucks.render('examples/index.html'));
+        res.write(nunjucks.render('examples/index.html', params));
         res.end();
         return;
     }
