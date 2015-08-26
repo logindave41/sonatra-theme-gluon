@@ -95,5 +95,12 @@
 <script src="/bower_components/sonatra-select2-responsive/js/select2-responsive.js"></script>
 <script src="/bower_components/sonatra-select2-responsive/js/locale/select2-responsive-fr.js"></script>
 <script src="/bower_components/sonatra-select2-scroller/js/select2-scroller.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.container-main').on('scroll.st-examples', function() {
+            $('.open .dropdown-toggle').dropdown('toggle');
+        });
+    });
+</script>
 </body>
 </html>
