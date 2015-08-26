@@ -28,6 +28,12 @@ module.exports = function (grunt) {
                     livereload: true
                 }
             },
+            js: {
+                files: '**/*.js',
+                options: {
+                    livereload: true
+                }
+            },
             less: {
                 files: '**/*.less',
                 tasks: ['less'],
