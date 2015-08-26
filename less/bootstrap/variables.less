@@ -2,6 +2,11 @@
 // Variables
 // --------------------------------------------------
 
+// Transition Theme
+// -------------------------
+
+@transition: .2s cubic-bezier(.4,0,1,1);
+
 // Shadows Theme
 // -------------------------
 
@@ -247,7 +252,17 @@
 // Dropdowns
 // -------------------------
 
-@dropdown-border:                rgba(0,0,0,.1);
+@dropdown-transition:            @transition;
+@dropdown-bg-hover:              #fff;
+@dropdown-default-btn-border:    #d0d0d0;
+@dropdown-primary-btn-border:    @brand-primary;
+@dropdown-accent-btn-border:     @brand-accent;
+@dropdown-success-btn-border:    @brand-success;
+@dropdown-info-btn-border:       @brand-info;
+@dropdown-warning-btn-border:    @brand-warning;
+@dropdown-danger-btn-border:     @brand-danger;
+
+@dropdown-border:                transparent;
 
 @dropdown-link-hover-color:      @dropdown-link-color;
 @dropdown-link-hover-bg:         #eee;

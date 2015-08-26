@@ -1,0 +1,13 @@
+//
+// Dropdown mixins
+// --------------------------------------------------
+
+.dropdown-md-variant(@brand; @color) {
+    .btn-@{brand} {
+        border-bottom-color: @color;
+
+        + .dropdown-toggle {
+            border-left-color: fade(@color, 23%);
+        }
+    }
+}
