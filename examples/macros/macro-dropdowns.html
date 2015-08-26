@@ -1,6 +1,6 @@
 {% macro single(brand, ripple=true, disabled=false) %}
 <div class="btn-group dropdown-md">
-    <button type="button" class="btn btn-{{ brand }}{% if ripple %} btn-ripple{% endif %} dropdown-toggle{% if disabled %} disabled{% endif %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" tabindex="1" class="btn btn-{{ brand }}{% if ripple %} btn-ripple{% endif %} dropdown-toggle{% if disabled %} disabled{% endif %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Action <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
@@ -15,8 +15,8 @@
 
 {% macro split(brand, ripple=true, disabled=false) %}
 <div class="btn-group dropdown-md">
-    <button type="button" class="btn btn-{{ brand }}{% if ripple %} btn-ripple{% endif %}{% if disabled %} disabled{% endif %}">Action</button>
-    <button type="button" class="btn btn-{{ brand }}{% if ripple %} btn-ripple{% endif %} dropdown-toggle{% if disabled %} disabled{% endif %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" tabindex="1" class="btn btn-{{ brand }}{% if ripple %} btn-ripple{% endif %}{% if disabled %} disabled{% endif %}">Action</button>
+    <button type="button" tabindex="1" class="btn btn-{{ brand }}{% if ripple %} btn-ripple{% endif %} dropdown-toggle{% if disabled %} disabled{% endif %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <span class="caret"></span>
         <span class="sr-only">Toggle Dropdown</span>
     </button>
