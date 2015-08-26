@@ -5,12 +5,12 @@
 // Shadows Theme
 // -------------------------
 
-@shadow-z-1: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px  6px 0 rgba(0, 0, 0, 0.12);
-@shadow-z-1-hover: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-@shadow-z-2: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-@shadow-z-3: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-@shadow-z-4: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-@shadow-z-5: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+@shadow-z-1: 0 1px 4px rgba(0,0,0,.37);
+@shadow-z-1-hover: 0 2px 2px rgba(0,0,0,0.2), 0 6px 10px rgba(0,0,0,.3);
+@shadow-z-2: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+@shadow-z-3: 0 11px 7px 0 rgba(0, 0, 0, 0.19), 0 13px 25px 0 rgba(0, 0, 0, 0.3);
+@shadow-z-4: 0 14px 12px 0 rgba(0, 0, 0, 0.17), 0 20px 40px 0 rgba(0, 0, 0, 0.3);
+@shadow-z-5: 0 17px 17px 0 rgba(0, 0, 0, 0.15), 0 27px 55px 0 rgba(0, 0, 0, 0.3);
 
 // Ripple
 // -------------------------
@@ -76,8 +76,8 @@
 @btn-default-raised-bg-active:      @btn-default-bg-active;
 @btn-default-raised-color-disabled: @btn-default-color-disabled;
 @btn-default-raised-bg-disabled:    lighten(@btn-default-raised-bg, 4%);
-@btn-default-raised-shadow:         0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-@btn-default-raised-shadow-active:  0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+@btn-default-raised-shadow:         @shadow-z-1;
+@btn-default-raised-shadow-active:  @shadow-z-3;
 
 @btn-primary-color:              @brand-primary;
 @btn-primary-bg:                 transparent;
@@ -268,6 +268,8 @@
 
 @navbar-height: 60px;
 @navbar-padding-horizontal: 15px;
+@navbar-shadow-default: 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+@navbar-shadow-inverse: @navbar-shadow-default;
 
 // Custom navbar sidebar toggle
 @btn-sidebar-toggle-height: 38px;

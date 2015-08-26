@@ -81,7 +81,7 @@
     &.navbar-fixed-top,
     &.navbar-static-top {
         &.affix {
-            .box-shadow(0 1px 2px rgba(0, 0, 0, 0.18));
+            .box-shadow(@navbar-shadow-default);
         }
     }
 
@@ -105,7 +105,7 @@
     &.navbar-fixed-top,
     &.navbar-fixed-top {
         &.affix {
-            .box-shadow(0 1px 2px rgba(0, 0, 0, 0.46));
+            .box-shadow(@navbar-shadow-inverse);
         }
     }
 
@@ -166,7 +166,7 @@
     .navbar-fixed-top {
         &.affix-top {
             > .navbar-collapse {
-                .box-shadow(0 3px 4px rgba(0, 0, 0, 0.18));
+                .box-shadow(@shadow-z-1);
             }
         }
     }
@@ -338,7 +338,7 @@
     .navbar-inverse.navbar-fixed-top {
         &.affix-top {
             > .navbar-collapse {
-                .box-shadow(0 3px 4px rgba(0, 0, 0, 0.32));
+                .box-shadow(@shadow-z-1);
             }
         }
     }
