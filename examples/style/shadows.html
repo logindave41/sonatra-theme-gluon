@@ -1,0 +1,57 @@
+{% extends "examples/layout.html" %}
+
+{% import "examples/macros/macro-dropdowns.html" as dropdowns %}
+
+{% set title = 'Shadows' %}
+
+{% block custom_head_style %}
+<style>
+    .demo-col {
+        text-align: center;
+    }
+    .panel {
+        width: 100px;
+        height: 100px;
+        display: table;
+        margin: 40px;
+    }
+    .panel p {
+        display: table-cell;
+        vertical-align: middle;
+    }
+</style>
+{% endblock %}
+
+{% block container %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ title }}</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <div class="panel shadow-z-1">
+                            <p>Shadow Z 1</p>
+                        </div>
+                        <div class="panel shadow-z-1-hover">
+                            <p>Shadow Z 1 hover</p>
+                        </div>
+                        <div class="panel shadow-z-2">
+                            <p>Shadow Z 2</p>
+                        </div>
+                        <div class="panel shadow-z-3">
+                            <p>Shadow Z 3</p>
+                        </div>
+                        <div class="panel shadow-z-4">
+                            <p>Shadow Z 4</p>
+                        </div>
+                        <div class="panel shadow-z-5">
+                            <p>Shadow Z 5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

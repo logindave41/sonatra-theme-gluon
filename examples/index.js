@@ -74,7 +74,7 @@ http.createServer(function (req, res) {
     nunjucks = require('nunjucks');
     nunjucks.configure({ autoescape: true });
 
-    if (page.substr(0, 12) === '/components/') {
+    if (page.substr(0, 12) === '/components/' || page.substr(0, 7) === '/style/') {
         src = __dirname + page;
 
         fs.stat(src, function (err) {

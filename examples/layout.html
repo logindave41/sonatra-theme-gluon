@@ -16,10 +16,15 @@
         filter: drop-shadow( -5px -5px 5px #000 );
     }
 </style>
+{% block custom_head_style %}
+{% endblock %}
 {% endblock %}
 
 {% set sidebarItems = sidebarItems|default([
         {label: 'Home', href: '/'},
+        {label: 'Styles', children: [
+            {label: 'Shadows', href: '/style/shadows.html'}
+        ]},
         {label: 'Components', children: [
             {label: 'Buttons', href: '/components/buttons.html'},
             {label: 'Dropdowns', href: '/components/dropdowns.html'}
