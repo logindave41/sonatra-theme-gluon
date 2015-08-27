@@ -1,0 +1,199 @@
+{% extends "examples/layout.html" %}
+
+{% set title = 'Thumbnails' %}
+
+{% block container %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ title}}</h1>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Default example with ripples</h2>
+
+                        <div class="demo-example">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="#" class="thumbnail img-ripple">
+                                        <img data-src="holder.js/100px180" alt="Generic placeholder thumbnail" style="height: 180px;">
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="#" class="thumbnail img-ripple">
+                                        <img data-src="holder.js/100px180" alt="Generic placeholder thumbnail" style="height: 180px;">
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="#" class="thumbnail img-ripple">
+                                        <img data-src="holder.js/100px180" alt="Generic placeholder thumbnail" style="height: 180px;">
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="#" class="thumbnail img-ripple">
+                                        <img data-src="holder.js/100px180" alt="Generic placeholder thumbnail" style="height: 180px;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Custom content with ripples</h2>
+
+                        <div class="demo-example">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-lg-4">
+                                    <div class="thumbnail">
+                                        <a href="#" class="img-ripple">
+                                            <img data-src="holder.js/100px200" alt="Generic placeholder thumbnail" style="height: 200px;">
+                                        </a>
+
+                                        <div class="caption">
+                                            <h3>Thumbnail label</h3>
+
+                                            <p>
+                                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id
+                                                elit non mi porta gravida at eget metus. Nullam id dolor id nibh
+                                                ultricies vehicula ut id elit.
+                                            </p>
+
+                                            <p>
+                                                <a href="#" class="btn btn-default btn-ripple" role="button">Button</a>
+                                                <a href="#" class="btn btn-accent btn-ripple" role="button">Button</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-4">
+                                    <div class="thumbnail">
+                                        <a href="#" class="img-ripple">
+                                            <img data-src="holder.js/100px200" alt="Generic placeholder thumbnail" style="height: 200px;">
+                                        </a>
+
+                                        <div class="caption">
+                                            <h3>Thumbnail label</h3>
+
+                                            <p>
+                                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id
+                                                elit non mi porta gravida at eget metus. Nullam id dolor id nibh
+                                                ultricies vehicula ut id elit.
+                                            </p>
+
+                                            <p>
+                                                <a href="#" class="btn btn-default btn-ripple" role="button">Button</a>
+                                                <a href="#" class="btn btn-accent btn-ripple pull-right" role="button">Button</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-4">
+                                    <div class="thumbnail">
+                                        <a href="#" class="img-ripple">
+                                            <img data-src="holder.js/100px200" alt="Generic placeholder thumbnail" style="height: 200px;">
+                                        </a>
+
+                                        <div class="caption">
+                                            <h3>Thumbnail label</h3>
+
+                                            <p>
+                                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id
+                                                elit non mi porta gravida at eget metus. Nullam id dolor id nibh
+                                                ultricies vehicula ut id elit.
+                                            </p>
+
+                                            <p>
+                                                <a href="#" class="btn btn-accent btn-ripple pull-right btn-raised" role="button">Button</a>
+                                                <a href="#" class="btn btn-default btn-ripple pull-right" role="button">Button</a>
+                                                <span class="clearfix"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Card with ripples</h2>
+
+                        <div class="demo-example">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-lg-4">
+                                    <div class="thumbnail">
+                                        <a href="#" class="card-header img-ripple">
+                                            <h3>Thumbnail label</h3>
+                                            <img data-src="holder.js/100px200" alt="Generic placeholder thumbnail" style="height: 200px;">
+                                        </a>
+
+                                        <div class="caption">
+                                            <p>
+                                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id
+                                                elit non mi porta gravida at eget metus. Nullam id dolor id nibh
+                                                ultricies vehicula ut id elit.
+                                            </p>
+
+                                            <p>
+                                                <a href="#" class="btn btn-default btn-ripple" role="button">Button</a>
+                                                <a href="#" class="btn btn-accent btn-ripple" role="button">Button</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-4">
+                                    <div class="thumbnail">
+                                        <a href="#" class="card-header img-ripple">
+                                            <h3 class="card-title">Thumbnail label</h3>
+                                            <img data-src="holder.js/100px200" alt="Generic placeholder thumbnail" style="height: 200px;">
+                                        </a>
+
+                                        <div class="caption">
+                                            <p>
+                                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id
+                                                elit non mi porta gravida at eget metus. Nullam id dolor id nibh
+                                                ultricies vehicula ut id elit.
+                                            </p>
+
+                                            <p>
+                                                <a href="#" class="btn btn-default btn-ripple" role="button">Button</a>
+                                                <a href="#" class="btn btn-accent btn-ripple pull-right" role="button">Button</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-4">
+                                    <div class="thumbnail">
+                                        <a href="#" class="card-header img-ripple">
+                                            <h3 class="card-title">Thumbnail label</h3>
+                                            <img data-src="holder.js/100px200" alt="Generic placeholder thumbnail" style="height: 200px;">
+                                        </a>
+
+                                        <div class="caption">
+                                            <p>
+                                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id
+                                                elit non mi porta gravida at eget metus. Nullam id dolor id nibh
+                                                ultricies vehicula ut id elit.
+                                            </p>
+
+                                            <p>
+                                                <a href="#" class="btn btn-accent btn-ripple pull-right btn-raised" role="button">Button</a>
+                                                <a href="#" class="btn btn-default btn-ripple pull-right" role="button">Button</a>
+                                                <span class="clearfix"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
