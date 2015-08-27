@@ -4,8 +4,8 @@
 
 .button-variant-flat(@bg-hover; @bg-active; @color-disabled; @bg-disabled; @ripple-bg) {
     text-transform: uppercase;
-    padding: 8px 20px;
-    margin: 10px 1px;
+    padding: @btn-padding-vertical @btn-padding-horizontal;
+    margin: @btn-margin-vertical @btn-margin-horizontal;
     min-width: 77px;
 
     -webkit-transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
@@ -32,6 +32,12 @@
 
     .ripple {
         background-color: @ripple-bg;
+    }
+
+    &.pull-right {
+        + .btn.pull-right {
+            margin-right: @btn-margin-horizontal * 2 + 2;
+        }
     }
 
     &.disabled,
