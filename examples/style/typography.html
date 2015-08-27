@@ -1,0 +1,258 @@
+{% extends "examples/layout.html" %}
+
+{% set title = 'Typography' %}
+
+{% block container %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ title }}</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Headings</h2>
+                        <table class="demo-example table">
+                            <tbody>
+                            <tr>
+                                <td><h1>h1. Bootstrap heading <small>Secondary text</small></h1></td>
+                            </tr>
+                            <tr>
+                                <td><h2>h2. Bootstrap heading <small>Secondary text</small></h2></td>
+                            </tr>
+                            <tr>
+                                <td><h3>h3. Bootstrap heading <small>Secondary text</small></h3></td>
+                            </tr>
+                            <tr>
+                                <td><h4>h4. Bootstrap heading <small>Secondary text</small></h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>h5. Bootstrap heading <small>Secondary text</small></h5></td>
+                            </tr>
+                            <tr>
+                                <td><h6>h6. Bootstrap heading <small>Secondary text</small></h6></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Body copy</h2>
+                        <p class="demo-example">
+                            Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Lead body copy</h2>
+                        <p class="demo-example lead">
+                            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Inline text elements</h2>
+                        <h3>Marked text</h3>
+                        <p class="demo-example">You can use the mark tag to <mark>highlight</mark> text.</p>
+                        <h3>Deleted text</h3>
+                        <p class="demo-example"><del>This line of text is meant to be treated as deleted text.</del></p>
+                        <h3>Strikethrough text</h3>
+                        <p class="demo-example"><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                        <h3>Inserted text</h3>
+                        <p class="demo-example"><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                        <h3>Underlined text</h3>
+                        <p class="demo-example"><u>This line of text will render as underlined</u></p>
+                        <h3>Small text</h3>
+                        <p class="demo-example"><small>This line of text is meant to be treated as fine print.</small></p>
+                        <h3>Bold</h3>
+                        <p class="demo-example"><strong>rendered as bold text</strong></p>
+                        <h3>Italics</h3>
+                        <p class="demo-example"><em>rendered as italicized text</em></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Alignment classes</h2>
+                        <div class="demo-example">
+                            <p class="text-left">Left aligned text.</p>
+                            <p class="text-center">Center aligned text.</p>
+                            <p class="text-right">Right aligned text.</p>
+                            <p class="text-justify">Justified text.</p>
+                            <p class="text-nowrap">No wrap text.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Transformation classes</h2>
+                        <div class="demo-example">
+                            <p class="text-lowercase">Lowercased text.</p>
+                            <p class="text-uppercase">Uppercased text.</p>
+                            <p class="text-capitalize">Capitalized text.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Abbreviations</h2>
+                        <h3>Basic abbreviation</h3>
+                        <p class="demo-example">
+                            <abbr title="attribute">attr</abbr>
+                        </p>
+                        <h3>Initialism</h3>
+                        <p class="demo-example">
+                            <abbr title="HyperText Markup Language" class="initialism">HTML</abbr>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Addresses</h2>
+                        <div class="demo-example">
+                            <address>
+                                <strong>Twitter, Inc.</strong><br>
+                                795 Folsom Ave, Suite 600<br>
+                                San Francisco, CA 94107<br>
+                                <abbr title="Phone">P:</abbr> (123) 456-7890
+                            </address>
+
+                            <address>
+                                <strong>Full Name</strong><br>
+                                <a href="mailto:#">first.last@example.com</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Blockquotes</h2>
+                        <h3>Default blockquote</h3>
+                        <div class="demo-example">
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            </blockquote>
+                        </div>
+                        <h3>Blockquote options</h3>
+                        <div class="demo-example">
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+                        </div>
+                        <h4>Alternate displays</h4>
+                        <div class="demo-example">
+                            <blockquote class="blockquote-reverse">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Lists</h2>
+                        <h3>Unordered</h3>
+                        <div class="demo-example">
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Consectetur adipiscing elit</li>
+                                <li>Integer molestie lorem at massa</li>
+                                <li>Facilisis in pretium nisl aliquet</li>
+                                <li>Nulla volutpat aliquam velit
+                                    <ul>
+                                        <li>Phasellus iaculis neque</li>
+                                        <li>Purus sodales ultricies</li>
+                                        <li>Vestibulum laoreet porttitor sem</li>
+                                        <li>Ac tristique libero volutpat at</li>
+                                    </ul>
+                                </li>
+                                <li>Faucibus porta lacus fringilla vel</li>
+                                <li>Aenean sit amet erat nunc</li>
+                                <li>Eget porttitor lorem</li>
+                            </ul>
+                        </div>
+                        <h3>Ordered</h3>
+                        <div class="demo-example">
+                            <ol>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Consectetur adipiscing elit</li>
+                                <li>Integer molestie lorem at massa</li>
+                                <li>Facilisis in pretium nisl aliquet</li>
+                                <li>Nulla volutpat aliquam velit</li>
+                                <li>Faucibus porta lacus fringilla vel</li>
+                                <li>Aenean sit amet erat nunc</li>
+                                <li>Eget porttitor lorem</li>
+                            </ol>
+                        </div>
+                        <h3>Unstyled</h3>
+                        <div class="demo-example">
+                            <ul class="list-unstyled">
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Consectetur adipiscing elit</li>
+                                <li>Integer molestie lorem at massa</li>
+                                <li>Facilisis in pretium nisl aliquet</li>
+                                <li>Nulla volutpat aliquam velit
+                                    <ul>
+                                        <li>Phasellus iaculis neque</li>
+                                        <li>Purus sodales ultricies</li>
+                                        <li>Vestibulum laoreet porttitor sem</li>
+                                        <li>Ac tristique libero volutpat at</li>
+                                    </ul>
+                                </li>
+                                <li>Faucibus porta lacus fringilla vel</li>
+                                <li>Aenean sit amet erat nunc</li>
+                                <li>Eget porttitor lorem</li>
+                            </ul>
+                        </div>
+                        <h3>Inline</h3>
+                        <div class="demo-example">
+                            <ul class="list-inline">
+                                <li>Lorem ipsum</li>
+                                <li>Phasellus iaculis</li>
+                                <li>Nulla volutpat</li>
+                            </ul>
+                        </div>
+                        <h3>Description</h3>
+                        <div class="demo-example">
+                            <dl>
+                                <dt>Description lists</dt>
+                                <dd>A description list is perfect for defining terms.</dd>
+                                <dt>Euismod</dt>
+                                <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                                <dt>Malesuada porta</dt>
+                                <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                            </dl>
+                        </div>
+                        <h3>Horizontal description</h3>
+                        <div class="demo-example">
+                            <dl class="dl-horizontal">
+                                <dt>Description lists</dt>
+                                <dd>A description list is perfect for defining terms.</dd>
+                                <dt>Euismod</dt>
+                                <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                                <dt>Malesuada porta</dt>
+                                <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                                <dt>Felis euismod semper eget lacinia</dt>
+                                <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

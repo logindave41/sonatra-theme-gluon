@@ -15,6 +15,16 @@
         -webkit-filter: drop-shadow( -5px -5px 5px #000 );
         filter: drop-shadow( -5px -5px 5px #000 );
     }
+    .demo-example {
+        position: relative;
+        padding: 45px 15px 15px;
+        margin: 0 -15px 15px;
+        margin-right: 0;
+        margin-left: 0;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+    }
 </style>
 {% block custom_head_style %}
 {% endblock %}
@@ -23,6 +33,7 @@
 {% set sidebarItems = sidebarItems|default([
         {label: 'Home', href: '/'},
         {label: 'Styles', children: [
+            {label: 'Typography', href: '/style/typography.html'},
             {label: 'Shadows', href: '/style/shadows.html'}
         ]},
         {label: 'Components', children: [
