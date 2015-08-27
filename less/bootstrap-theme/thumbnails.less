@@ -1,0 +1,38 @@
+//
+// Thumbnails
+// --------------------------------------------------
+
+.thumbnail {
+    padding: 0;
+    background-color: @panel-bg;
+    border: none;
+    .box-shadow(@panel-shadow);
+
+    > a {
+        display: block;
+    }
+
+    .card-header {
+        position: relative;
+
+        h3 {
+            position: absolute;
+            bottom: 0;
+            margin-left: @thumbnail-padding;
+            margin-right: @thumbnail-padding;
+            color: @thumbnail-card-header-color;
+        }
+    }
+
+    .caption {
+        padding: (@thumbnail-padding * 2) @thumbnail-padding @thumbnail-padding @thumbnail-padding;
+
+        > p:last-child {
+            margin-bottom: 0;
+
+            > .btn {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
