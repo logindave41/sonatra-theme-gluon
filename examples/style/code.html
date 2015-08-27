@@ -1,0 +1,61 @@
+{% extends "examples/layout.html" %}
+
+{% set title = 'Code' %}
+
+{% block container %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ title }}</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Inline</h2>
+                        <div class="demo-example">
+                            For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>User input</h2>
+                        <div class="demo-example">
+                            To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+                            To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Basic block</h2>
+                        <div class="demo-example">
+                            <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Variables</h2>
+                        <div class="demo-example">
+                            <p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 demo-col">
+                        <h2>Sample output</h2>
+                        <div class="demo-example">
+                            <p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
