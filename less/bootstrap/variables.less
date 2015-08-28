@@ -48,12 +48,14 @@
 
 @font-family-sans-serif:  'Roboto', 'Helvetica', 'Arial', sans-serif;
 @font-family-weight:      400;
+@font-family-weight-bold: 500;
 
 @font-size-base:          14px;
 @font-size-medium:        ceil((@font-size-base * 1.10)); // ~16px
 
 @headings-font-family:    "Roboto", "Helvetica", "Arial", sans-serif;
 @headings-font-weight:    400;
+@headings-font-weight-bold: 500;
 
 // Components
 // -------------------------
@@ -65,7 +67,7 @@
 // Buttons
 // -------------------------
 
-@btn-font-weight:                500;
+@btn-font-weight:                @headings-font-weight-bold;
 @btn-padding-vertical:           8px;
 @btn-padding-horizontal:         20px;
 @btn-margin-vertical:            10px;
@@ -464,6 +466,20 @@
 @panel-danger-border:         @panel-default-border;
 @panel-danger-heading-bg:     transparent;
 
+// Alerts
+// -------------------------
+
+@alert-link-font-weight: @font-family-weight-bold;
+
+// Badges
+// -------------------------
+
+@badge-font-weight: @font-family-weight-bold;
+
+// Close
+// -------------------------
+
+@close-font-weight: @font-family-weight-bold;
 
 // Custom Sidebar
 // -------------------------
