@@ -1,0 +1,83 @@
+{% macro panel(style) %}
+<div data-panel-collapse="true" class="panel {{ style }}">
+    <div class="panel-heading">
+        <div class="panel-actions">
+            <button type="button" class="btn btn-info btn-xs btn-ripple">?</button>
+            <button type="button" class="btn-panel-collapse btn btn-default btn-xs btn-ripple"><span class="caret"></span></button>
+        </div>
+        <h4 class="panel-title">Title foo bar</h4>
+        <div class="clearfix"></div>
+
+        <div class="panel-buttons">
+            <div data-class-nav="nav-btn-group" class="nav-scrollable" data-nav-scroll="true" data-content-selector=".nav-btn-group">
+                <div class="nav-btn-group">
+                    <button type="button" class="btn btn-default btn-ripple">Button 1</button>
+                    <button type="button" class="btn btn-default btn-ripple">Button 2</button>
+                    <button type="button" class="btn btn-default btn-ripple">Button 3</button>
+                    <button type="button" class="btn btn-default btn-ripple">Button 4</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-ripple dropdown-toggle" data-toggle="dropdown">+
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation" class=""><a href="#" role="menuitem">Item 1</a></li>
+                            <li role="presentation" class=""><a href="#" role="menuitem">Item 2</a></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn-default btn-ripple">Button 6</button>
+                    <button type="button" class="btn btn-default btn-ripple">Button 7</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-danger">
+        Alert !
+    </div>
+    <div class="panel-section container-fluid">
+        <div class="panel-section-heading"><h6 class="panel-section-title">Section of content</h6></div>
+        <div class="panel-row row">
+            <div class="panel-cell col-sm-6">
+                <div class="panel-cell-wrapper">
+                    <div class="control-label control-label-primary block-label block_label">Name</div>
+                    <div class="block-control">foobar</div>
+                </div>
+            </div>
+            <div class="panel-cell col-sm-6">
+                <div class="panel-cell-wrapper">
+                    <div class="control-label control-label-primary block-label block_label">Id</div>
+                    <div class="block-control"><span>foo_23</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-row row panel-row-spacer"></div>
+        <div class="panel-row row">
+            <div class="panel-cell col-sm-6 panel-cell-spacer"></div>
+            <div class="panel-cell col-sm-6">
+                <div class="panel-cell-wrapper">
+                    <div class="control-label control-label-primary block-label block_label">Label</div>
+                    <div class="block-control">Foo Bar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-section container-fluid" data-panel-collapse="true"
+         data-collapse-selector="&gt; .panel-section-heading &gt; .panel-actions &gt; .btn-panel-collapse">
+        <div class="panel-section-heading">
+            <div class="panel-actions">
+                <button type="button" class="btn-panel-collapse btn btn-default btn-ripple btn-xs"><span class="caret"></span></button>
+            </div>
+            <h6 class="panel-section-title">Section of content 2</h6></div>
+        <div class="panel-body"> Content 2.
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="panel-buttons">
+            <div data-class-nav="nav-btn-group" class="nav-scrollable" data-nav-scroll="true">
+                <div class="nav-btn-group">
+                    <button type="button" class="btn btn-default btn-sm">Button 10</button>
+                </div>
+            </div>
+        </div>
+        <div>Footer</div>
+    </div>
+</div>
+{% endmacro %}

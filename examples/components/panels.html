@@ -1,5 +1,7 @@
 {% extends "examples/layout.html" %}
 
+{% import "examples/macros/macro-panels.html" as panels %}
+
 {% set title = 'Panels' %}
 
 {% block container %}
@@ -239,6 +241,78 @@
                                 <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Panel with sections</h2>
+                    <div class="demo-example">
+                        {{ panels.panel('') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Panel accent with sections</h2>
+                    <div class="demo-example">
+                        {{ panels.panel('panel-accent') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Panel accent box with sections</h2>
+                    <div class="demo-example">
+                        {{ panels.panel('panel-accent-box') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Panel accent top with sections</h2>
+                    <div class="demo-example">
+                        {{ panels.panel('panel-accent-top') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Panel accent wire with sections</h2>
+                    <div class="demo-example">
+                        {{ panels.panel('panel-accent-wire') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Panel accent frame with sections</h2>
+                    <div class="demo-example">
+                        {{ panels.panel('panel-accent-frame') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Panel accent lite with sections</h2>
+                    <div class="demo-example">
+                        {{ panels.panel('panel-accent-lite') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Panel accent label with sections</h2>
+                    <div class="demo-example">
+                        {{ panels.panel('panel-accent-label') }}
                     </div>
                 </div>
             </div>
