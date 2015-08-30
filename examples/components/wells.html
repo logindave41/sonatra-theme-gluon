@@ -1,0 +1,36 @@
+{% extends "examples/layout.html" %}
+
+{% set title = 'Wells' %}
+
+{% block container %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ title }}</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Basic example</h2>
+                        <div class="demo-example">
+                            <div class="well">
+                                Look, I'm in a well!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Optional classes</h2>
+                        <div class="demo-example">
+                            <div class="well well-sm">
+                                Look, I'm in a small well!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
