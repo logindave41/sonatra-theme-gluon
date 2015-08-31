@@ -9,6 +9,8 @@
             > th {
                 color: @table-header-color;
                 min-width: 90px;
+                padding: @table-cell-padding * 0.7 @table-cell-padding;
+                font-size: @table-header-font-size;
 
                 &.table-left {
                     text-align: left;
@@ -21,8 +23,19 @@
                 &.table-right {
                     text-align: right;
                 }
+
+                &.table-row-number {
+                    padding-left: 4px;
+                    padding-right: 0;
+                    text-align: right;
+                }
             }
         }
+    }
+
+    > caption {
+        padding-left: @table-cell-padding;
+        padding-right: @table-cell-padding;
     }
 
     > tbody {
