@@ -6,6 +6,12 @@
     width: 100%;
 
     &.breakpoint {
+        > thead > tr {
+            > th.footable-first-column {
+                padding-left: @font-size-small + ceil((@font-size-small / 3));
+            }
+        }
+
         > tbody > tr {
             &.footable-detail-show > td {
                 border-bottom: none;
