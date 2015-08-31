@@ -9,6 +9,65 @@
 
 /*global require*/
 
+function ajaxTable(url, req, res) {
+    "use strict";
+
+    /**
+     * Generate the list.
+     *
+     * @param {Number} pn  The page number
+     * @param {Number} ps  The page size
+     * @param {Number} max The max size of the list
+     *
+     * @returns {Array}
+     */
+    function getRows(pn, ps, max) {
+        var rows = [],
+            start = (pn - 1) * ps,
+            end = Math.min(start + ps, max),
+            i;
+
+        if (end === 0) {
+            end = max;
+        }
+
+        for (i = start + 1; i <= end; i++) {
+            rows.push({
+                '_row_number': i,
+                '_row_id': i,
+                'id': i.toString(),
+                'firstname': 'First name ' + i,
+                'lastname': 'Last name ' + i,
+                'username': 'Username ' + i,
+                '_selectable': '<input type="checkbox">'
+            });
+        }
+
+        return rows;
+    }
+
+    var querystring = require('querystring'),
+        params = querystring.parse(url.parse(req.url).query),
+        max = 70,
+        pn = params.hasOwnProperty('pn') ? parseInt(params.pn, 10) : 1,
+        ps = params.hasOwnProperty('ps') ? parseInt(params.ps, 10) : 10,
+        rows = getRows(pn, ps, max);
+
+    res.writeHead(200, {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+    });
+
+    res.write(JSON.stringify({
+        size: max,
+        pageNumber: pn,
+        pageSize: ps,
+        rows: rows,
+        sortColumns: {}
+    }));
+    res.end();
+}
+
 function renderAsset(res, fs, mime, page, startPath, srcDirectory) {
     "use strict";
 
@@ -68,6 +127,11 @@ http.createServer(function (req, res) {
     }
 
     if (renderAsset(res, fs, mime, page, '/fonts/', 'fonts')) {
+        return;
+    }
+
+    if (page.substr(0, 24) === '/ajax/table-example.json') {
+        ajaxTable(url, req, res);
         return;
     }
 
