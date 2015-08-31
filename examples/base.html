@@ -102,6 +102,8 @@
         $('.container-main').on('scroll.st-examples', function() {
             $('.open .dropdown-toggle').dropdown('toggle');
         });
+        {% block custom_script %}
+        {% endblock %}
     });
 </script>
 </body>

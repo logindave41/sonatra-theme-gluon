@@ -39,7 +39,7 @@ function ajaxTable(url, req, res) {
                 'firstname': 'First name ' + i,
                 'lastname': 'Last name ' + i,
                 'username': 'Username ' + i,
-                '_selectable': '<input type="checkbox">'
+                '_selectable': '<div class="checkbox"><label class="form-control-fa"><input type="checkbox" class="input-secondary"><i class="fa form-control-fa-style"></i></label></div>'
             });
         }
 
