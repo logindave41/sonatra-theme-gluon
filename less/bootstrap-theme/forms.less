@@ -15,7 +15,7 @@
 
 .form-group {
     position: relative;
-    padding-top: 14px;
+    padding-top: @font-size-base;
 
     label:not(.btn) {
         color: @input-color-placeholder;
@@ -23,7 +23,7 @@
         pointer-events: none;
         font-weight: normal;
         left: 0;
-        top: @font-size-base + 7;
+        top: @font-size-base + (@font-size-base / 2);
         transition: @transition;
         -moz-transition: @transition;
         -webkit-transition: @transition;
@@ -49,7 +49,7 @@
             ~ label:not(.btn) {
                 top: 0;
                 color: @input-border-focus;
-                font-size: 12px;
+                font-size: ceil(@font-size-base * 0.85);
             }
         }
 
