@@ -28,6 +28,19 @@
     'use strict';
 
     /**
+     * Check the content size.
+     *
+     * @param {jQuery} $target The target
+     */
+    function checkContent($target) {
+        if ('' === $target.val()) {
+            $target.removeClass('has-floating-content');
+        } else {
+            $target.addClass('has-floating-content');
+        }
+    }
+
+    /**
      * Display the floating label.
      *
      * @param {jQuery.Event|Event} event
@@ -35,13 +48,7 @@
      * @private
      */
     function onFocusOut(event) {
-        var $target = $(event.currentTarget);
-
-        if ('' === $target.val()) {
-            $target.removeClass('has-floating-content');
-        } else {
-            $target.addClass('has-floating-content');
-        }
+        checkContent($(event.currentTarget));
     }
 
     // RIPPLE CLASS DEFINITION
@@ -74,6 +81,7 @@
                 $label = $('> label', $target),
                 placeholder = $target.attr('placeholder');
 
+            checkContent($target);
             $target.after('<span class="floating-bar"></span>');
 
             if (0 === $label.length && placeholder) {
