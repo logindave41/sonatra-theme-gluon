@@ -78,7 +78,7 @@
 
         $targets.each(function (index) {
             var $target = $targets.eq(index),
-                $label = $('> label', $target),
+                $label = $('> label', $target.parent()),
                 placeholder = $target.attr('placeholder');
 
             checkContent($target);
@@ -87,6 +87,8 @@
             if (0 === $label.length && placeholder) {
                 $target.removeAttr('placeholder');
                 $target.after('<label>' + placeholder + '</label>');
+            } else if ($label.length > 0 && placeholder) {
+                $target.addClass('fixed-floating-label');
             }
         });
     },
@@ -122,7 +124,8 @@
             }
 
             $('> .floating-bar', $target.parent()).remove();
-            $target.removeClass('has-floating-content');
+            $target.removeClass('has-floating-content')
+                .removeClass('fixed-floating-label');
         });
     };
 

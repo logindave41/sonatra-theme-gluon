@@ -48,7 +48,8 @@
         .box-shadow(none);
 
         &:focus,
-        &.has-floating-content {
+        &.has-floating-content,
+        &.fixed-floating-label {
             ~ label:not(.btn) {
                 color: @input-border-focus;
                 -moz-transform: scale(0.85) translate(0, -(@font-size-base + (@font-size-base / 2)));
