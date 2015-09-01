@@ -24,9 +24,12 @@
         font-weight: normal;
         left: 0;
         top: @font-size-base + (@font-size-base / 2);
-        transition: @transition;
         -moz-transition: @transition;
         -webkit-transition: @transition;
+        transition: @transition;
+        -moz-transform-origin: top left;
+        -webkit-transform-origin: top left;
+        transform-origin: top left;
     }
 
     label.btn {
@@ -47,9 +50,10 @@
         &:focus,
         &.has-floating-content {
             ~ label:not(.btn) {
-                top: 0;
                 color: @input-border-focus;
-                font-size: ceil(@font-size-base * 0.85);
+                -moz-transform: scale(0.85) translate(0, -(@font-size-base + (@font-size-base / 2)));
+                -webkit-transform: scale(0.85) translate(0, -(@font-size-base + (@font-size-base / 2)));
+                transform: scale(0.85) translate(0, -(@font-size-base + (@font-size-base / 2)));
             }
         }
 
@@ -80,9 +84,6 @@
             bottom: 0;
             position: absolute;
             background: @input-border-focus;
-            transition: @transition;
-            -moz-transition: @transition;
-            -webkit-transition: @transition;
         }
 
         &:before {
