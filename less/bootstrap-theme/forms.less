@@ -17,25 +17,6 @@
     position: relative;
     padding-top: @font-size-base;
 
-    label:not(.btn) {
-        color: @input-color-placeholder;
-        position: absolute;
-        pointer-events: none;
-        font-weight: normal;
-        left: 0;
-        top: @font-size-base + (@font-size-base / 2);
-        -moz-transition: @transition;
-        -webkit-transition: @transition;
-        transition: @transition;
-        -moz-transform-origin: top left;
-        -webkit-transform-origin: top left;
-        transform-origin: top left;
-    }
-
-    label.btn {
-        margin: 0;
-    }
-
     input,
     textarea {
         padding-left: 0;
@@ -46,6 +27,26 @@
         border-bottom: 1px solid @input-border;
         outline: none;
         .box-shadow(none);
+
+        ~ label:not(.btn) {
+            color: @input-color-placeholder;
+            position: absolute;
+            pointer-events: none;
+            font-weight: normal;
+            left: 0;
+            top: @font-size-base + (@font-size-base / 2);
+            -moz-transition: @transition;
+            -webkit-transition: @transition;
+            transition: @transition;
+            -moz-transform-origin: top left;
+            -webkit-transform-origin: top left;
+            transform-origin: top left;
+        }
+
+        ~ label.btn,
+        ~ .input-group-btn label.btn {
+            margin: 0;
+        }
 
         &:focus,
         &.has-floating-content,
@@ -126,10 +127,10 @@
             width: 100%;
             padding: @padding-base-vertical 0;
             border-bottom: 1px solid @input-border;
-        }
 
-        label {
-            top: @padding-base-vertical;
+            ~ label {
+                top: @padding-base-vertical;
+            }
         }
     }
 }
