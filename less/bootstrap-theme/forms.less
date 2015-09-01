@@ -107,6 +107,33 @@
     }
 }
 
+.input-group {
+    .input-group-addon {
+        border: none;
+        border-bottom: 1px solid transparent;
+        background-color: transparent;
+    }
+
+    .form-control {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+
+        input,
+        textarea {
+            border: none;
+            height: 100%;
+            width: 100%;
+            padding: @padding-base-vertical 0;
+            border-bottom: 1px solid @input-border;
+        }
+
+        label {
+            top: @padding-base-vertical;
+        }
+    }
+}
+
 
 // Checkbox / Radio
 // --------------------------------------------------
