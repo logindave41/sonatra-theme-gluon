@@ -78,7 +78,7 @@
 
         $targets.each(function (index) {
             var $target = $targets.eq(index),
-                $label = $('> label', $target.parent()),
+                $label = $('> label:not(.sr-only)', $target.parent()),
                 placeholder = $target.attr('placeholder');
 
             checkContent($target);
@@ -116,7 +116,7 @@
 
         $targets.each(function (index) {
             var $target = $targets.eq(index),
-                $label = $('> label', $target.parent());
+                $label = $('> label:not(.sr-only)', $target.parent());
 
             if ($label.length > 0) {
                 $target.attr('placeholder', $label.text());
