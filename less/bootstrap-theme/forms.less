@@ -135,6 +135,28 @@
     }
 }
 
+input,
+textarea {
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        border-color: @input-border-disabled;
+        border-bottom-style: dashed;
+        color: @input-color-disabled;
+        .placeholder(@input-color-placeholder-disabled);
+
+        ~ label:not(.btn) {
+            color: @input-color-placeholder-disabled;
+        }
+
+        &.has-floating-content,
+        &.fixed-floating-label {
+            ~ label:not(.btn) {
+                color: @input-color-placeholder-disabled;
+            }
+        }
+    }
+}
 
 // Checkbox / Radio
 // --------------------------------------------------
