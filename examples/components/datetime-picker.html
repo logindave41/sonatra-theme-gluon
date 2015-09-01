@@ -1,0 +1,92 @@
+{% extends "examples/layout.html" %}
+
+{% set title = 'Datetime picker' %}
+
+{% block container %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ title }}</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <h2>Datetime</h2>
+                        <div class="demo-example">
+                            <form name="form" method="post" action="">
+                                <div class="form-group">
+                                    <input type="text"
+                                           id="form_datetime"
+                                           class="form-control has-floating-content"
+                                           name="form[datetime]"
+                                           required="required"
+                                           data-locale="en"
+                                           data-date-picker="true"
+                                           data-time-picker="true"
+                                           data-time-picker-first="false"
+                                           data-open-focus="true"
+                                           data-format="M/D/YYYY, h:mm:ss A"
+                                           data-with-minutes="true"
+                                           data-with-seconds="true"
+                                           data-hour-step="1"
+                                           data-minute-step="1"
+                                           data-datetime-picker="true"
+                                           data-button-id="form_datetime_datetime_btn"
+                                           data-floating-label
+                                           value="2/23/2014, 2:46:23 PM">
+                                    <label for="form_datetime">Datetime field</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <h2>Date</h2>
+                        <div class="demo-example">
+                            <form name="form" method="post" action="">
+                                <div class="form-group">
+                                    <input type="text"
+                                           id="form_date"
+                                           class="form-control has-floating-content"
+                                           name="form[datetime]"
+                                           required="required"
+                                           data-locale="en"
+                                           data-time-picker="false"
+                                           data-open-focus="true"
+                                           data-format="M/D/YYYY"
+                                           data-datetime-picker="true"
+                                           data-floating-label
+                                           value="2/23/2014">
+                                    <label for="form_date">Date field</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <h2>Time</h2>
+                        <div class="demo-example">
+                            <form name="form" method="post" action="">
+                                <div class="form-group">
+                                    <input type="text"
+                                           id="form_time"
+                                           class="form-control has-floating-content"
+                                           name="form[datetime]"
+                                           required="required"
+                                           data-locale="en"
+                                           data-date-picker="false"
+                                           data-open-focus="true"
+                                           data-format="h:mm A"
+                                           data-datetime-picker="true"
+                                           data-floating-label
+                                           value="2:46 PM">
+                                    <label for="form_date">Time field</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
