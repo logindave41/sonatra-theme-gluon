@@ -82,7 +82,10 @@
                 placeholder = $target.attr('placeholder');
 
             checkContent($target);
-            $target.after('<span class="floating-bar"></span>');
+
+            if ($('> .floating-bar', $target.parent()).length === 0) {
+                $target.after('<span class="floating-bar"></span>');
+            }
 
             if (0 === $label.length && placeholder) {
                 $target.removeAttr('placeholder');
