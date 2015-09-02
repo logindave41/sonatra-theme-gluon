@@ -1,0 +1,63 @@
+{% extends "examples/layout.html" %}
+
+{% set title = 'Selects' %}
+
+{% block custom_head_style %}
+<style>
+    select.form-control {
+        width: auto;
+    }
+</style>
+{% endblock %}
+
+{% block container %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ title }}</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Single native select</h2>
+                        <div class="demo-example">
+                            <form>
+                                <select class="form-control">
+                                    <option>Item 1</option>
+                                    <option>Item 2</option>
+                                    <option>Item 3</option>
+                                    <option>Item 4</option>
+                                    <option>Item 5</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Multiple native select</h2>
+                        <div class="demo-example">
+                            <form>
+                                <select multiple="multiple" class="form-control">
+                                    <option>Item 1</option>
+                                    <option>Item 2</option>
+                                    <option>Item 3</option>
+                                    <option>Item 4</option>
+                                    <option>Item 5</option>
+                                    <optgroup label="Group">
+                                        <option>Item 6</option>
+                                        <option>Item 7</option>
+                                        <option>Item 8</option>
+                                        <option>Item 9</option>
+                                        <option>Item 10</option>
+                                    </optgroup>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
