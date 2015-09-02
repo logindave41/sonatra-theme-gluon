@@ -1,0 +1,51 @@
+{% extends "examples/layout.html" %}
+
+{% set title = 'Popovers' %}
+
+{% block container %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ title }}</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Basic example</h2>
+                        <div class="demo-example">
+                            <button type="button" class="btn btn-danger btn-raised btn-ripple" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Popover title" data-placement="auto right">Click to toggle popover</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Four directions</h2>
+                        <div class="demo-example">
+                            <div class="bs-example-popovers">
+                                <button type="button" class="btn btn-default btn-raised btn-" data-container="body" data-toggle="popover" data-placement="auto left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+                                    Popover on left
+                                </button>
+                                <button type="button" class="btn btn-default btn-raised btn-" data-container="body" data-toggle="popover" data-placement="auto top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+                                    Popover on top
+                                </button>
+                                <button type="button" class="btn btn-default btn-raised btn-" data-container="body" data-toggle="popover" data-placement="auto bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+                                    Popover on bottom
+                                </button>
+                                <button type="button" class="btn btn-default btn-raised btn-" data-container="body" data-toggle="popover" data-placement="auto right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+                                    Popover on right
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block custom_script %}
+$(function () {
+    $('[data-toggle="popover"]').popover();
+});
+{% endblock %}
