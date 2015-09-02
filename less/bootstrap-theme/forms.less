@@ -13,12 +13,9 @@
     border-radius: @input-border-radius-small;
 }
 
-.form-group {
-    position: relative;
-    padding-top: @font-size-base;
-
-    input,
-    textarea {
+input,
+textarea {
+    &.form-control {
         padding-left: 0;
         padding-right: 0;
         display: block;
@@ -27,14 +24,26 @@
         border-bottom: 1px solid @input-border;
         outline: none;
         .box-shadow(none);
+    }
+}
 
+textarea {
+    resize: none;
+}
+
+.form-group,
+.floating-group {
+    position: relative;
+
+    input,
+    textarea {
         ~ label:not(.btn) {
             color: @input-color-placeholder;
             position: absolute;
             pointer-events: none;
             font-weight: normal;
             left: 0;
-            top: @font-size-base + (@font-size-base / 2);
+            top: (@font-size-base / 2) + 1;
             -moz-transition: @transition;
             -webkit-transition: @transition;
             transition: @transition;
@@ -53,9 +62,9 @@
         &.fixed-floating-label {
             ~ label:not(.btn) {
                 color: @input-border-focus;
-                -moz-transform: scale(0.85) translate(0, -(@font-size-base + (@font-size-base / 2)));
-                -webkit-transform: scale(0.85) translate(0, -(@font-size-base + (@font-size-base / 2)));
-                transform: scale(0.85) translate(0, -(@font-size-base + (@font-size-base / 2)));
+                -moz-transform: scale(0.8) translate(0, -(@font-size-base + (@font-size-base / 2)) + (@padding-base-vertical / 2));
+                -webkit-transform: scale(0.8) translate(0, -(@font-size-base + (@font-size-base / 2)) + (@padding-base-vertical / 2));
+                transform: scale(0.8) translate(0, -(@font-size-base + (@font-size-base / 2)) + (@padding-base-vertical / 2));
             }
         }
 
@@ -67,10 +76,6 @@
                 width: 50%;
             }
         }
-    }
-
-    textarea {
-        resize: none;
     }
 
     .floating-bar {
@@ -96,6 +101,20 @@
             right: 50%;
         }
     }
+
+    &.form-control {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+
+        .form-control ~ label {
+            top: @padding-base-vertical;
+        }
+
+        .floating-bar {
+            position: initial;
+        }
+    }
 }
 
 .form-horizontal {
@@ -105,33 +124,6 @@
     .radio-inline,
     .checkbox-inline {
         padding-bottom: (@padding-base-vertical + 1); // Default padding plus a border
-    }
-}
-
-.input-group {
-    .input-group-addon {
-        border: none;
-        border-bottom: 1px solid transparent;
-        background-color: transparent;
-    }
-
-    .form-control {
-        border: none;
-        box-shadow: none;
-        padding: 0;
-
-        input,
-        textarea {
-            border: none;
-            height: 100%;
-            width: 100%;
-            padding: @padding-base-vertical 0;
-            border-bottom: 1px solid @input-border;
-
-            ~ label {
-                top: @padding-base-vertical;
-            }
-        }
     }
 }
 
