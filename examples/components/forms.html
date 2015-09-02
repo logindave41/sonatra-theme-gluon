@@ -14,9 +14,11 @@
                         <div class="demo-example">
                             <form>
                                 <div class="form-group">
-                                    <input type="text" class="form-control has-floating-content" id="exampleInputText" data-floating-label value="Content field">
-                                    <span class="floating-bar"></span>
-                                    <label for="exampleInputText">Input text with label</label>
+                                    <div class="floating-group">
+                                        <input type="text" class="form-control has-floating-content" id="exampleInputText" data-floating-label value="Content field">
+                                        <span class="floating-bar"></span>
+                                        <label for="exampleInputText">Input text with label</label>
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
@@ -102,8 +104,9 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">$</div>
-                                        <div class="form-control">
-                                            <input type="text" data-floating-label id="exampleInputAmount" placeholder="Amount">
+                                        <div class="floating-group form-control">
+                                            <input type="text" data-floating-label class="form-control" id="exampleInputAmount">
+                                            <label for="exampleInputAmount">Amount</label>
                                         </div>
                                         <div class="input-group-addon">.00</div>
                                     </div>
@@ -132,8 +135,10 @@
                                 <div class="form-group">
                                     <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
                                     <div class="col-sm-10">
-                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                                        <span class="floating-bar"></span>
+                                        <div class="floating-group">
+                                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                            <span class="floating-bar"></span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
