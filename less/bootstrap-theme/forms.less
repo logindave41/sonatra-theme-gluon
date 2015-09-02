@@ -158,6 +158,43 @@ textarea {
     }
 }
 
+// Input file
+// --------------------------------------------------
+
+.input-group {
+    &.bootstrap-filestyle {
+        input,
+        textarea {
+            border-bottom: 1px solid @input-border;
+        }
+    }
+}
+
+.form-control {
+    + .btn-file-input-text {
+        float: right;
+        margin-top: -@input-height-base;
+    }
+
+    + .bootstrap-filestyle {
+        outline-color: @input-border-focus;
+    }
+}
+
+.form-control.input-lg + .btn-file-input-text {
+    float: right;
+    margin-top: -@input-height-large;
+    height: @input-height-large;
+    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @input-border-radius-large);
+}
+
+.form-control.input-sm + .btn-file-input-text {
+    float: right;
+    margin-top: -@input-height-small;
+    height: @input-height-small;
+    .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @input-border-radius-small);
+}
+
 // Checkbox / Radio
 // --------------------------------------------------
 
@@ -294,41 +331,3 @@ fieldset[disabled] label.form-control-fa > input[type="radio"] {
 .form-control-disabled-color(warning);
 .form-control-color(danger);
 .form-control-disabled-color(danger);
-
-
-// Input file
-// --------------------------------------------------
-
-.input-group {
-    &.bootstrap-filestyle {
-        input,
-        textarea {
-            border-bottom: 1px solid @input-border;
-        }
-    }
-}
-
-.form-control {
-    + .btn-file-input-text {
-        float: right;
-        margin-top: -@input-height-base;
-    }
-
-    + .bootstrap-filestyle {
-        outline-color: @input-border-focus;
-    }
-}
-
-.form-control.input-lg + .btn-file-input-text {
-    float: right;
-    margin-top: -@input-height-large;
-    height: @input-height-large;
-    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @input-border-radius-large);
-}
-
-.form-control.input-sm + .btn-file-input-text {
-    float: right;
-    margin-top: -@input-height-small;
-    height: @input-height-small;
-    .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @input-border-radius-small);
-}
