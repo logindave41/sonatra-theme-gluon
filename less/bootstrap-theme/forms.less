@@ -178,6 +178,52 @@ textarea {
     .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @input-border-radius-small);
 }
 
+// Select
+// --------------------------------------------------
+
+select {
+    &.form-control {
+        font-weight: @btn-font-weight;
+        border: none;
+        border-bottom: 1px solid @input-border;
+        outline: none;
+        .box-shadow(none);
+
+        padding-left: @btn-padding-horizontal;
+        padding-right: @btn-padding-horizontal * 1.5;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: @dropdown-bg-hover;
+        }
+
+        &:focus,
+        &:active {
+            background-color: @dropdown-bg !important;
+            border-bottom-color: transparent;
+            -webkit-box-shadow: @dropdown-shadow;
+            box-shadow: @dropdown-shadow;
+        }
+
+        option {
+            padding: 16px;
+        }
+
+        &[multiple] {
+            option {
+                margin-left: -@btn-padding-horizontal;
+                margin-right: -@btn-padding-horizontal * 1.5;
+                padding-left: @btn-padding-horizontal;
+                padding-right: @btn-padding-horizontal * 1.5;
+            }
+        }
+    }
+}
+
+
 // Checkbox / Radio
 // --------------------------------------------------
 
