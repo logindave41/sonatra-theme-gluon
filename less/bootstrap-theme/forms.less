@@ -221,6 +221,13 @@ select {
             opacity: 0.65;
             .placeholder(@input-color-placeholder-disabled);
 
+            &:focus,
+            &:active {
+                background-color: @dropdown-bg !important;
+                border-bottom-color: @input-border-disabled;
+                .box-shadow(none);
+            }
+
             ~ label:not(.btn) {
                 color: @input-color-placeholder-disabled;
             }
