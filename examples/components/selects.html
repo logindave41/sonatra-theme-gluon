@@ -56,8 +56,57 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Single select2 select</h2>
+                        <div class="demo-example">
+                            <form>
+                                <select class="form-control select2" data-select2-scroller="true" data-placeholder="Select item">
+                                    <option>Item 1</option>
+                                    <option>Item 2</option>
+                                    <option>Item 3</option>
+                                    <option>Item 4</option>
+                                    <option>Item 5</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Multiple select2 select</h2>
+                        <div class="demo-example">
+                            <form>
+                                <div class="floating-group">
+                                    <select multiple="multiple" class="form-control select2" data-select2-scroller="true" data-placeholder="Select items">
+                                        <option>Item 1</option>
+                                        <option>Item 2</option>
+                                        <option>Item 3</option>
+                                        <option>Item 4</option>
+                                        <option>Item 5</option>
+                                        <optgroup label="Group">
+                                            <option>Item 6</option>
+                                            <option>Item 7</option>
+                                            <option>Item 8</option>
+                                            <option>Item 9</option>
+                                            <option>Item 10</option>
+                                        </optgroup>
+                                    </select>
+                                    <label class="top-floating-label">Multiple selection</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block custom_script %}
+$( '.select2:not([multiple])' ).select2({minimumResultsForSearch: Infinity, allowClear: true});
+$( '.select2[multiple]' ).select2({minimumResultsForSearch: Infinity});
 {% endblock %}
