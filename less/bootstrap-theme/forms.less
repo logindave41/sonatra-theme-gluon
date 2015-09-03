@@ -211,6 +211,27 @@ select {
                 padding-right: @btn-padding-horizontal * 1.5;
             }
         }
+
+        &[disabled],
+        &[readonly],
+        fieldset[disabled] & {
+            border-color: @input-border-disabled;
+            color: @input-color-disabled;
+            cursor: not-allowed;
+            opacity: 0.65;
+            .placeholder(@input-color-placeholder-disabled);
+
+            ~ label:not(.btn) {
+                color: @input-color-placeholder-disabled;
+            }
+
+            &.has-floating-content,
+            &.fixed-floating-label {
+                ~ label:not(.btn) {
+                    color: @input-color-placeholder-disabled;
+                }
+            }
+        }
     }
 }
 
