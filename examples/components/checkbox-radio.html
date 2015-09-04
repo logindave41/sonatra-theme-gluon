@@ -1,0 +1,142 @@
+{% extends "examples/layout.html" %}
+
+{% import "examples/macros/macro-forms.html" as forms %}
+
+{% set title = 'Checkbox / Radio' %}
+
+{% block container %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ title }}</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <h2>Checkbox</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Basic example</h3>
+                        <div class="demo-example">
+                            <form>
+                                <div class="form-group">
+                                    {{ forms.checkbox('default', false, false, 'Default style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.checkbox('primary', true, false, 'Primary style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.checkbox('accent', false, false, 'Accent style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.checkbox('success', true, false, 'Success style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.checkbox('info', false, false, 'Info style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.checkbox('warning', true, false, 'Warning style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.checkbox('danger', false, false, 'Danger style') }}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h3>Disabled example</h3>
+                        <div class="demo-example">
+                            <form>
+                                <div class="form-group">
+                                    {{ forms.checkbox('default', true, true, 'Default style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.checkbox('primary', false, true, 'Primary style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.checkbox('accent', true, true, 'Accent style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.checkbox('success', false, true, 'Success style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.checkbox('info', true, true, 'Info style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.checkbox('warning', false, true, 'Warning style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.checkbox('danger', true, true, 'Danger style') }}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h2>Radio</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Basic example</h3>
+                        <div class="demo-example">
+                            <form>
+                                <div class="form-group">
+                                    {{ forms.radio('default', 'radioExample1', false, false, 'Default style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.radio('primary', 'radioExample1', true, false, 'Primary style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.radio('accent', 'radioExample1', false, false, 'Accent style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.radio('success', 'radioExample1', false, false, 'Success style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.radio('info', 'radioExample2', false, true, 'Info style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.radio('warning', 'radioExample2', false, false, 'Warning style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.radio('danger', 'radioExample2', false, false, 'Danger style') }}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h3>Disabled example</h3>
+                        <div class="demo-example">
+                            <form>
+                                <div class="form-group">
+                                    {{ forms.radio('default', 'radioExample3', true, true, 'Default style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.radio('primary', 'radioExample3', false, true, 'Primary style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.radio('accent', 'radioExample3', false, true, 'Accent style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.radio('success', 'radioExample3', false, true, 'Success style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.radio('info', 'radioExample4', false, true, 'Info style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.radio('warning', 'radioExample4', true, true, 'Warning style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.radio('danger', 'radioExample4', false, true, 'Danger style') }}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
