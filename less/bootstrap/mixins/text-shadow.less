@@ -1,10 +1,5 @@
 // Text shadows
 
-.text-shadow(@shadow) {
-    -webkit-text-shadow: @shadow; // iOS <4.3 & Android <4.1
-            text-shadow: @shadow;
-}
-
 .text-longshadow (@color, @size, @darken: 10%) {
     .text-longshadowloop (@loopColor, @loopSize, @loopDarken, @initSize, @previousShadow: '') when (@loopSize >= 0) {
         .text-longshadowfinish (@string, @index) when (@index < 0) {

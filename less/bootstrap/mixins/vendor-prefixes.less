@@ -2,8 +2,29 @@
 // Vendor prefixes mixins
 // --------------------------------------------------
 
+.font-smoothing() {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.tap-highlight-color(@color) {
+    -webkit-tap-highlight-color: @color;
+}
+
 .keyframes(@name; @arguments) {
     @-moz-keyframes @name { @arguments(); }
     @-webkit-keyframes @name { @arguments(); }
     @keyframes @name { @arguments(); }
+}
+
+.text-shadow(@shadow) {
+    -webkit-text-shadow: @shadow; // iOS <4.3 & Android <4.1
+    text-shadow: @shadow;
+}
+
+.transform(@argument) {
+    -webkit-transform: @argument;
+    -moz-transform: @argument;
+    -ms-transform: @argument; // IE9 only
+    transform: @argument;
 }

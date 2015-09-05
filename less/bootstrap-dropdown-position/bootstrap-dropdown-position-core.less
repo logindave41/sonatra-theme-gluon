@@ -3,25 +3,15 @@
 // --------------------------------------------------
 
 .wrapper-dropdown-position {
-    -webkit-transition: -webkit-transform .3s cubic-bezier(.4,0,.2,1), opacity .2s cubic-bezier(.4,0,.2,1);
-    transition: transform .3s cubic-bezier(.4,0,.2,1), opacity .2s cubic-bezier(.4,0,.2,1);
-
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
-    transform-origin: 0 0;
+    .transition(transform .3s cubic-bezier(.4,0,.2,1), opacity .2s cubic-bezier(.4,0,.2,1););
+    .scale(0);
+    .transform-origin(0 0);
 
     &.wrapper-pull-right {
-        -webkit-transform-origin: 100% 0;
-        -ms-transform-origin: 100% 0;
-        transform-origin: 100% 0;
+        .transform-origin(100% 0);
     }
 
     &.wrapper-open {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
+        .scale(1);
     }
 }
