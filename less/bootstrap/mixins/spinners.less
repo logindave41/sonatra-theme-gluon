@@ -1,0 +1,13 @@
+﻿//
+// Spinners mixins
+// --------------------------------------------------
+
+.spinner-variant(@style; @color) {
+    .spinner {
+        &.spinner-@{style} {
+            .spinner-path {
+                stroke: @color;
+            }
+        }
+    }
+}
