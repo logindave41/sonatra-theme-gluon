@@ -1,0 +1,9 @@
+//
+// Vendor prefixes mixins
+// --------------------------------------------------
+
+.keyframes(@name; @arguments) {
+    @-moz-keyframes @name { @arguments(); }
+    @-webkit-keyframes @name { @arguments(); }
+    @keyframes @name { @arguments(); }
+}

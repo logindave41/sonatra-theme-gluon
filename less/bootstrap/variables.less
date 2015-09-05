@@ -240,7 +240,7 @@
 @input-height-base:                    (@line-height-computed + (@padding-base-vertical * 2) + 2);
 @input-bg:                             transparent;
 @input-bg-disabled:                    transparent;
-@input-color-disabled:                 lighten(@input-color, 30%);
+@input-color-disabled:                 #eee;
 @input-color-placeholder-disabled:     lighten(@input-color-placeholder, 25%);
 @input-border-disabled:                lighten(@input-border, 7%);
 
@@ -248,47 +248,47 @@
 @input-border-radius-large:            0px;
 @input-border-radius-small:            0px;
 
-@input-radio-checkbox-size:            22px;
+@input-radio-checkbox-size:            18px;
 
 @input-border-focus:                   @brand-primary;
 @input-checked-color:                  #fff;
 @input-checked-bg:                     @brand-primary;
-@input-checked-border-focus:           darken(@brand-primary, 10%);
+@input-checked-bg-focus:               darken(@brand-primary, 10%);
 
-@input-default-border-focus:           darken(@input-border, 10%);
-@input-default-checked-color:          @input-color;
-@input-default-checked-bg:             @input-border;
-@input-default-checked-border-focus:   darken(@input-border, 20%);
+@input-default-border-focus:           darken(@input-border, 40%);
+@input-default-checked-color:          #fff;
+@input-default-checked-bg:             darken(@input-border, 30%);
+@input-default-checked-bg-focus:       darken(@input-border, 50%);
 
 @input-primary-border-focus:           @brand-primary;
 @input-primary-checked-color:          #fff;
 @input-primary-checked-bg:             @brand-primary;
-@input-primary-checked-border-focus:   darken(@brand-primary, 20%);
+@input-primary-checked-bg-focus:       darken(@brand-primary, 10%);
 
 @input-accent-border-focus:            @brand-accent;
 @input-accent-checked-color:           #fff;
 @input-accent-checked-bg:              @brand-accent;
-@input-accent-checked-border-focus:    darken(@brand-accent, 20%);
+@input-accent-checked-bg-focus:        darken(@brand-accent, 10%);
 
 @input-success-border-focus:           @brand-success;
 @input-success-checked-color:          #fff;
 @input-success-checked-bg:             @brand-success;
-@input-success-checked-border-focus:   darken(@brand-success, 20%);
+@input-success-checked-bg-focus:       darken(@brand-success, 20%);
 
 @input-info-border-focus:              @brand-info;
 @input-info-checked-color:             #fff;
 @input-info-checked-bg:                @brand-info;
-@input-info-checked-border-focus:      darken(@brand-info, 20%);
+@input-info-checked-bg-focus:          darken(@brand-info, 20%);
 
 @input-warning-border-focus:           @brand-warning;
 @input-warning-checked-color:          #fff;
 @input-warning-checked-bg:             @brand-warning;
-@input-warning-checked-border-focus:   darken(@brand-warning, 20%);
+@input-warning-checked-bg-focus:       darken(@brand-warning, 20%);
 
 @input-danger-border-focus:            @brand-danger;
 @input-danger-checked-color:           #fff;
 @input-danger-checked-bg:              @brand-danger;
-@input-danger-checked-border-focus:    darken(@brand-danger, 20%);
+@input-danger-checked-bg-focus:        darken(@brand-danger, 20%);
 
 // Dropdowns
 // -------------------------
