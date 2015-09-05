@@ -3,16 +3,77 @@
 // --------------------------------------------------
 
 .progress {
-    height: 8px;
+    height: 4px;
     .box-shadow(none);
+
+    &.progress-floating-label {
+        overflow: visible;
+
+        .progress-bar span {
+            position: relative;
+            float: right;
+            display: block;
+            margin-top: -20px;
+            padding: 4px;
+            line-height: 9px;
+            font-size: 9px;
+            white-space: nowrap;
+            background-color: @tooltip-bg;
+            color: @tooltip-color;
+            opacity: @tooltip-opacity;
+            .border-top-radius(4px);
+            .border-bottom-radius(4px);
+            .transform-origin(center bottom);
+            .transition(@dropdown-transition);
+
+            &:after {
+                top: 100%;
+                left: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-top-color: @tooltip-arrow-color;
+                border-width: 4px;
+                margin-left: -4px;
+            }
+        }
+
+        &.on-hover {
+            .progress-bar {
+                span {
+                    .scale(0);
+                }
+
+                &:hover,
+                &:active {
+                    span {
+                        .scale(1);
+                    }
+                }
+            }
+        }
+    }
 }
 
 .progress-bar {
-    font-size: 8px;
-    line-height: 8px;
+    font-size: 4px;
+    line-height: 4px;
     .box-shadow(none);
 }
 
+.progress-lg {
+    .progress& {
+        height: 8px;
+    }
+
+    .progress-bar {
+        font-size: 8px;
+        line-height: 8px;
+    }
+}
 // Variations
 // -------------------------
 
