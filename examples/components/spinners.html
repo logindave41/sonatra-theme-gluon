@@ -1,0 +1,101 @@
+{% extends "examples/layout.html" %}
+
+{% set title = 'Spinners' %}
+
+{% block custom_head_style %}
+<style>
+    .demo-example {
+        text-align: center;
+        min-height: 120px;
+    }
+    .spinner-floating {
+        display: inline-block;
+    }
+</style>
+{% endblock %}
+
+{% block container %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ title }}</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <h2>Basic examples</h2>
+                    <div class="col-md-3">
+                        <h3>Basic</h3>
+                        <div class="demo-example">
+                            <svg class="spinner"><circle class="spinner-path" cx="22" cy="22" r="20" /></svg>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h3>Floating</h3>
+                        <div class="demo-example">
+                            <div class="spinner-floating">
+                                <svg class="spinner"><circle class="spinner-path" cx="22" cy="22" r="20" /></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h3>Mini</h3>
+                        <div class="demo-example">
+                            <svg class="spinner spinner-mini"><circle class="spinner-path" cx="22" cy="22" r="20" /></svg>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h3>Mini floating</h3>
+                        <div class="demo-example">
+                            <div class="spinner-floating spinner-mini">
+                                <svg class="spinner"><circle class="spinner-path" cx="22" cy="22" r="20" /></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h2>Context example</h2>
+                    <div class="col-md-12">
+                        <div class="demo-example">
+                            <h5>Default</h5>
+                            <div class="spinner-floating">
+                                <svg class="spinner spinner-default"><circle class="spinner-path" cx="22" cy="22" r="20" /></svg>
+                            </div>
+                            <h5>Primary</h5>
+                            <div class="spinner-floating">
+                                <svg class="spinner spinner-primary"><circle class="spinner-path" cx="22" cy="22" r="20" /></svg>
+                            </div>
+                            <h5>Accent</h5>
+                            <div class="spinner-floating">
+                                <svg class="spinner spinner-accent"><circle class="spinner-path" cx="22" cy="22" r="20" /></svg>
+                            </div>
+                            <h5>Success</h5>
+                            <div class="spinner-floating">
+                                <svg class="spinner spinner-success"><circle class="spinner-path" cx="22" cy="22" r="20" /></svg>
+                            </div>
+                            <h5>Info</h5>
+                            <div class="spinner-floating">
+                                <svg class="spinner spinner-info"><circle class="spinner-path" cx="22" cy="22" r="20" /></svg>
+                            </div>
+                            <h5>Warning</h5>
+                            <div class="spinner-floating">
+                                <svg class="spinner spinner-warning"><circle class="spinner-path" cx="22" cy="22" r="20" /></svg>
+                            </div>
+                            <h5>Danger</h5>
+                            <div class="spinner-floating">
+                                <svg class="spinner spinner-danger"><circle class="spinner-path" cx="22" cy="22" r="20" /></svg>
+                            </div>
+                            <h5>Colored</h5>
+                            <div class="spinner-floating">
+                                <svg class="spinner spinner-colored"><circle class="spinner-path" cx="22" cy="22" r="20" /></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
