@@ -64,41 +64,45 @@
 
 .button-variant-raised(@color; @bg; @bg-active; @color-disabled; @bg-disabled; @shadow; @shadow-active) {
     &.btn-raised {
+        .button-variant-raised-content(@color; @bg; @bg-active; @color-disabled; @bg-disabled; @shadow; @shadow-active);
+    }
+}
+
+.button-variant-raised-content(@color; @bg; @bg-active; @color-disabled; @bg-disabled; @shadow; @shadow-active) {
+    color: @color;
+    background-color: @bg;
+    .box-shadow(@shadow);
+
+    &:hover,
+    &:focus {
         color: @color;
-        background-color: @bg;
-        .box-shadow(@shadow);
+        .box-shadow(@shadow-z-1-hover);
+    }
 
+    &:active,
+    &.active,
+    .open > .dropdown-toggle& {
+        background-color: @bg-active !important;
+        .box-shadow(@shadow-active);
+    }
+
+    &.btn-ripple:active,
+    &.btn-ripple.active,
+    .open > .dropdown-toggle.btn-ripple& {
+        background-color: @bg !important;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] {
+        &,
         &:hover,
-        &:focus {
-            color: @color;
-            .box-shadow(@shadow-z-1-hover);
-        }
-
+        &:focus,
         &:active,
-        &.active,
-        .open > .dropdown-toggle& {
-            background-color: @bg-active !important;
-            .box-shadow(@shadow-active);
-        }
-
-        &.btn-ripple:active,
-        &.btn-ripple.active,
-        .open > .dropdown-toggle.btn-ripple& {
-            background-color: @bg !important;
-        }
-
-        &.disabled,
-        &[disabled],
-        fieldset[disabled] {
-            &,
-            &:hover,
-            &:focus,
-            &:active,
-            &.active {
-                background-color: @bg-disabled !important;
-                color: @color-disabled;
-                .box-shadow(none);
-            }
+        &.active {
+            background-color: @bg-disabled !important;
+            color: @color-disabled;
+            .box-shadow(none);
         }
     }
 }

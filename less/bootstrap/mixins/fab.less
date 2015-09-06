@@ -1,0 +1,12 @@
+﻿//
+// Floating Action Button mixins
+// --------------------------------------------------
+
+.fab-variant(@style; @color; @bg; @bg-active; @color-disabled; @bg-disabled; @shadow; @shadow-active) {
+    .btn,
+    .dropdown-fab > li > a.btn {
+        &.btn-fab.btn-@{style} {
+            .button-variant-raised-content(@color; @bg; @bg-active; @color-disabled; @bg-disabled; @shadow; @shadow-active);
+        }
+    }
+}
