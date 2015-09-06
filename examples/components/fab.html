@@ -1,0 +1,149 @@
+{% extends "examples/layout.html" %}
+
+{% set title = 'Floating Action Buttons' %}
+
+{% block container %}
+<div class="btn-group dropup btn-group-fab-bottom-right">
+    <button type="button" tabindex="1" class="btn btn-accent btn-fab btn-ripple dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-times btn-fab-icon-open"></i>
+        <i class="fa fa-plus"></i>
+    </button>
+    <ul class="dropdown-menu dropdown-fab mask-content">
+        <li><a href="#" class="btn btn-default btn-fab btn-ripple"><i class="fa fa-share-alt"></i></a></li>
+        <li><a href="#" class="btn btn-primary btn-fab btn-ripple"><i class="fa fa-key"></i></a></li>
+        <li><a href="#" class="btn btn-warning btn-fab btn-ripple disabled"><i class="fa fa-user"></i></a></li>
+        <li><a href="#" class="btn btn-danger btn-fab btn-ripple"><i class="fa fa-map-marker"></i></a></li>
+    </ul>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ title }}</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Context example</h2>
+                        <div class="demo-example">
+                            <div class="btn-group">
+                                <button type="button" tabindex="1" class="btn btn-default btn-fab btn-ripple">
+                                    <i class="fa fa-bicycle"></i>
+                                </button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" tabindex="1" class="btn btn-primary btn-fab btn-ripple">
+                                    <i class="fa fa-suitcase"></i>
+                                </button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" tabindex="1" class="btn btn-accent btn-fab btn-ripple">
+                                    <i class="fa fa-camera"></i>
+                                </button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" tabindex="1" class="btn btn-success btn-fab btn-ripple">
+                                    <i class="fa fa-cutlery"></i>
+                                </button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" tabindex="1" class="btn btn-info btn-fab btn-ripple">
+                                    <i class="fa fa-beer"></i>
+                                </button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" tabindex="1" class="btn btn-warning btn-fab btn-ripple">
+                                    <i class="fa fa-coffee"></i>
+                                </button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" tabindex="1" class="btn btn-danger btn-fab btn-ripple">
+                                    <i class="fa fa-bed"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Dropdown example</h2>
+                        <div class="demo-example">
+                            <div class="btn-group">
+                                <button type="button" tabindex="1" class="btn btn-info btn-fab btn-ripple dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-times btn-fab-icon-open"></i>
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-fab">
+                                    <li><a href="#" class="btn btn-default btn-fab btn-ripple"><i class="fa fa-share-alt"></i></a></li>
+                                    <li><a href="#" class="btn btn-primary btn-fab btn-ripple"><i class="fa fa-key"></i></a></li>
+                                    <li><a href="#" class="btn btn-warning btn-fab btn-ripple disabled"><i class="fa fa-user"></i></a></li>
+                                    <li><a href="#" class="btn btn-danger btn-fab btn-ripple"><i class="fa fa-map-marker"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="demo-example">
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                            <p>This is a paragraph.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
