@@ -10,7 +10,6 @@
     stroke-dashoffset: 0;
     stroke: @spinner-color;
     .animation(spinner-dash 1.5s ease-in-out infinite);
-
 }
 
 .spinner {
@@ -38,12 +37,30 @@
 }
 
 .spinner-mini {
-    zoom: @spinner-mini-zoom;
+    &.spinner,
+    .spinner {
+        .animation(spinner-rotate-mini 2s linear infinite);
+    }
+
+    &.spinner-floating {
+        width: 48px;
+        height: 48px;
+        padding: 2px;
+    }
 }
 
 .keyframes(spinner-rotate; {
     100% {
-        transform: rotate(360deg);
+        .rotate(360deg);
+    }
+});
+
+.keyframes(spinner-rotate-mini; {
+    0% {
+        .transform(rotate(0deg) scale(@spinner-mini-zoom));
+    }
+    100% {
+        .transform(rotate(360deg) scale(@spinner-mini-zoom));
     }
 });
 
