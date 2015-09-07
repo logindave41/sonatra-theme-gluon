@@ -256,10 +256,9 @@ select {
         position: absolute;
         vertical-align: top;
         opacity: 0;
-        z-index: -1;
 
         + .form-control-md-style {
-            margin-right: 6px;
+            margin-right: @input-radio-checkbox-size + 8;
 
             &:before,
             &:after {
@@ -268,14 +267,16 @@ select {
             }
 
             &:before {
+                position: absolute;
                 display: inline-block;
                 margin: 0;
                 width: @input-radio-checkbox-size;
                 height: @input-radio-checkbox-size;
-                background-color: @input-bg;
+                background-color: @input-unchecked-bg;
                 border: 2px solid @input-border;
                 vertical-align: top;
-                .transition(~".2s ease");
+                z-index: 1;
+                .transition(@input-radio-checkbox-transition);
             }
 
             &:after {
@@ -284,7 +285,35 @@ select {
                 height: 0;
                 top: @input-radio-checkbox-size / 2 - 1;
                 left: @input-radio-checkbox-size / 2 - 1;
-                .transition(~".2s ease");
+                z-index: 1;
+                .transition(@input-radio-checkbox-transition);
+            }
+
+            + span {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    display: inline-block;
+                    top: 0;
+                    left: 0;
+                    width: @input-radio-checkbox-size;
+                    height: @input-radio-checkbox-size;
+                    .border-top-radius(50%);
+                    .border-bottom-radius(50%);
+                    .transform-origin(50% 50%);
+                    .transition(box-shadow @input-radio-checkbox-transition);
+                }
+            }
+        }
+
+        &:focus {
+            + .form-control-md-style {
+                + span {
+                    &:before {
+                        background-color: @input-unchecked-bg-focus;
+                        .box-shadow(0 0 0 @input-radio-checkbox-focus-size @input-unchecked-bg-focus);
+                    }
+                }
             }
         }
     }
@@ -297,7 +326,16 @@ select {
             }
 
             &:after {
-                .rotate(45deg);
+                top: 0;
+                left: 5px;
+                width: 8px;
+                height: 14px;
+                border-style: solid;
+                border-top: none;
+                border-left: none;
+                border-right-width: 2px;
+                border-bottom-width: 2px;
+                .transform(scale(0) rotate(45deg));
             }
         }
     }
@@ -308,6 +346,14 @@ select {
             &:after {
                 .border-top-radius(50%);
                 .border-bottom-radius(50%);
+            }
+
+            &:after {
+                top: 5px;
+                left: 5px;
+                width: 8px;
+                height: 8px;
+                .scale(0);
             }
         }
     }
@@ -321,12 +367,7 @@ select {
             }
 
             &:after {
-                border-style: solid;
-                border-top: none;
-                border-left: none;
-                border-right-width: 2px;
-                border-bottom-width: 2px;
-                .animation(~"checkmark-expand 140ms ease-out forwards");
+                .transform(scale(1) rotate(45deg));
             }
         }
     }
@@ -334,7 +375,7 @@ select {
     input[type="radio"]:checked& {
         + .form-control-md-style {
             &:after {
-                .animation(~"checkmark-expand-radio 80ms ease-out forwards");
+                .scale(1);
             }
         }
     }
@@ -355,33 +396,6 @@ select {
             }
         }
     }
-
-    // keyframes
-    .keyframes(checkmark-expand; {
-        0% {
-            width: 0;
-            height: 0;
-        }
-        100% {
-            top: 0;
-            left: 5px;
-            width: 8px;
-            height: 14px;
-        }
-    });
-
-    .keyframes(checkmark-expand-radio; {
-        0% {
-            width: 0;
-            height: 0;
-        }
-        100% {
-            top: 5px;
-            left: 5px;
-            width: 8px;
-            height: 8px;
-        }
-    });
 }
 
 // Checkbox/radio colors

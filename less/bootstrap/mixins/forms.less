@@ -10,18 +10,18 @@
 // Form control color (checkbox/radio)
 
 .form-control-color(@style, @class-style) {
-    @border-focus: "@{style}-border-focus";
+    @border-hover: "@{style}-border-hover";
     @checked-color: "@{style}-checked-color";
     @checked-bg: "@{style}-checked-bg";
+    @checked-bg-hover: "@{style}-checked-bg-hover";
     @checked-bg-focus: "@{style}-checked-bg-focus";
 
     .form-control-md@{class-style} {
         input[type="checkbox"]&,
         input[type="radio"]& {
-            + .form-control-md-style:hover,
-            &:focus + .form-control-md-style {
+            + .form-control-md-style:hover {
                 &:before {
-                    border-color: @@border-focus;
+                    border-color: @@border-hover;
                 }
             }
         }
@@ -47,6 +47,17 @@
                     border-color: @@checked-bg;
                 }
             }
+
+            &:focus {
+                + .form-control-md-style {
+                    + span {
+                        &:before {
+                            background-color: @@checked-bg-focus;
+                            .box-shadow(0 0 0 @input-radio-checkbox-focus-size @@checked-bg-focus);
+                        }
+                    }
+                }
+            }
         }
 
         input[type="checkbox"]:checked& {
@@ -60,25 +71,23 @@
                 }
             }
 
-            + .form-control-md-style:hover,
-            &:focus + .form-control-md-style {
+            + .form-control-md-style:hover {
                 &:before {
-                    border-color: @@checked-bg-focus;
-                    background-color: @@checked-bg-focus;
+                    border-color: @@checked-bg-hover;
+                    background-color: @@checked-bg-hover;
                 }
             }
         }
 
         input[type="radio"]:checked& {
-            + .form-control-md-style:hover,
-            &:focus + .form-control-md-style {
+            + .form-control-md-style:hover {
                 &:before {
-                    border-color: @@checked-bg-focus;
+                    border-color: @@checked-bg-hover;
                 }
 
                 &:after {
-                    border-color: @@checked-bg-focus;
-                    background-color: @@checked-bg-focus;
+                    border-color: @@checked-bg-hover;
+                    background-color: @@checked-bg-hover;
                 }
             }
         }
