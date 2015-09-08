@@ -1,0 +1,138 @@
+//
+// Toggles
+// --------------------------------------------------
+
+.form-control-md-toggle {
+    @bar-size: round(@input-toggle-size / 3 * 2);
+    @margin: @bar-size + 1;
+    @width: round(@input-toggle-size * 1.8);
+    @left: ceil(-@input-toggle-size / 4);
+    @top: ceil(-(@input-toggle-size - @bar-size) / 2);
+    @checkedLeft: round(@width - (@input-toggle-size / 2) + @left);
+
+    // unchecked
+    input[type="checkbox"]& {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        width: @input-toggle-size;
+        height: @input-toggle-size;
+        vertical-align: top;
+        opacity: 0;
+
+        + .form-control-md-style {
+            content: '';
+            display: inline-block;
+            position: relative;
+            width: @width;
+            height: @bar-size;
+            vertical-align: middle;
+            margin: 0 @input-toggle-size 0 @margin;
+            background-color: @input-toggle-unchecked-lever-bg;
+            .border-top-radius(@bar-size);
+            .border-bottom-radius(@bar-size);
+            .transition(background 0.3s ease);
+
+            &:before {
+                content: '';
+                position: absolute;
+                display: inline-block;
+                left: @left;
+                top: @top;
+                width: @input-toggle-size;
+                height: @input-toggle-size;
+                cursor: pointer;
+                z-index: 1;
+                background-color: @input-toggle-unchecked-toggle-bg;
+                .border-top-radius(50%);
+                .border-bottom-radius(50%);
+                .box-shadow(@input-toggle-shadow);
+                .transition(@input-toggle-transition);
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                top: @top;
+                left: @left;
+                width: @input-toggle-size;
+                height: @input-toggle-size;
+                .border-top-radius(50%);
+                .border-bottom-radius(50%);
+                .transform-origin(50% 50%);
+                .transition(@input-toggle-transition);
+            }
+
+            &:hover {
+                &:before {
+                    background-color: @input-toggle-unchecked-toggle-bg-hover;
+                }
+            }
+        }
+
+        &:focus,
+        &:active {
+            + .form-control-md-style {
+                &:after {
+                    background-color: @input-toggle-unchecked-toggle-bg-focus;
+                    .box-shadow(0 0 0 @input-toggle-focus-size @input-toggle-unchecked-toggle-bg-focus);
+                }
+            }
+        }
+    }
+
+    // checked
+    input[type="checkbox"]:checked& {
+        + .form-control-md-style {
+            &:before,
+            &:after {
+                left: @checkedLeft;
+            }
+        }
+    }
+
+    // disabled unchecked
+    input[type="checkbox"][disabled]&,
+    fieldset[disabled] input[type="checkbox"]& {
+        + .form-control-md-style {
+            &:hover {
+                &:before {
+                    background-color: @input-toggle-unchecked-toggle-bg-disabled;
+                }
+            }
+        }
+    }
+
+    // disabled unchecked
+    input[type="checkbox"][disabled]&,
+    fieldset[disabled] input[type="checkbox"]& {
+        + .form-control-md-style {
+            background-color: @input-toggle-unchecked-lever-bg-disabled;
+
+            &,
+            &:before {
+                cursor: not-allowed;
+            }
+
+            &:before {
+                background-color: @input-toggle-unchecked-toggle-bg-disabled;
+            }
+
+            + span {
+                cursor: not-allowed;
+                color: @input-toggle-color-placeholder-disabled;
+            }
+        }
+    }
+}
+
+// Toggle colors
+.toggle-variant(input-toggle; ~'');
+.toggle-variant(input-toggle-default; ~'.input-default');
+.toggle-variant(input-toggle-primary; ~'.input-primary');
+.toggle-variant(input-toggle-accent; ~'.input-accent');
+.toggle-variant(input-toggle-success; ~'.input-success');
+.toggle-variant(input-toggle-info; ~'.input-info');
+.toggle-variant(input-toggle-warning; ~'.input-warning');
+.toggle-variant(input-toggle-danger; ~'.input-danger');

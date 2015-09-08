@@ -1,0 +1,66 @@
+﻿//
+// Toggle mixins
+// --------------------------------------------------
+
+.toggle-variant(@style, @class-style) {
+    @lever-checked-bg: "@{style}-checked-lever-bg";
+    @toggle-checked-bg: "@{style}-checked-toggle-bg";
+    @toggle-checked-bg-hover: "@{style}-checked-toggle-bg-hover";
+    @toggle-checked-bg-focus: "@{style}-checked-toggle-bg-focus";
+
+    .form-control-md-toggle@{class-style} {
+        // checked
+        input[type="checkbox"]:checked& {
+            + .form-control-md-style {
+                background-color: @@lever-checked-bg;
+
+                &:before {
+                    background-color: @@toggle-checked-bg;
+                }
+
+                &:hover {
+                    &:before {
+                        background-color: @@toggle-checked-bg-hover;
+                    }
+                }
+            }
+
+            &:focus,
+            &:active {
+                + .form-control-md-style {
+                    &:after {
+                        background-color: @toggle-checked-bg-focus;
+                        .box-shadow(0 0 0 @input-toggle-focus-size @@toggle-checked-bg-focus);
+                    }
+                }
+            }
+        }
+
+        // disabled
+        input[type="checkbox"][disabled]&,
+        fieldset[disabled] input[type="checkbox"]&,
+        input[type="checkbox"][disabled]:checked&,
+        fieldset[disabled] input[type="checkbox"]:checked&{
+            &:focus,
+            &:active {
+                + .form-control-md-style {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        // disabled checked
+        input[type="checkbox"][disabled]:checked&,
+        fieldset[disabled] input[type="checkbox"]:checked& {
+            + .form-control-md-style {
+                background-color: @input-toggle-checked-lever-bg-disabled;
+
+                &:before {
+                    background-color: @input-toggle-checked-toggle-bg-disabled;
+                }
+            }
+        }
+    }
+}

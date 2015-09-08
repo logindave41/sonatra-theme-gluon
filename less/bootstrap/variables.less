@@ -313,6 +313,66 @@
 @input-danger-checked-bg-hover:        darken(@brand-danger, 20%);
 @input-danger-checked-bg-focus:        fade(@brand-danger, 20%);
 
+// Form toggles
+// -------------------------
+
+@input-toggle-size:                                 @input-radio-checkbox-size + 4;
+@input-toggle-shadow:                               @shadow-z-1;
+@input-toggle-focus-size:                           round(@input-toggle-size * 0.6);
+@input-toggle-transition:                           ~"left 0.3s ease, background .3s ease, box-shadow 0.1s ease";
+
+@input-toggle-unchecked-toggle-bg:                  @gray-lighter;
+@input-toggle-unchecked-toggle-bg-hover:            darken(@input-toggle-unchecked-toggle-bg, 20%);
+@input-toggle-unchecked-toggle-bg-focus:            fade(@gray-light, 20%);
+@input-toggle-unchecked-lever-bg:                   lighten(@gray-light, 10%);
+
+@input-toggle-unchecked-toggle-bg-disabled:         lighten(@input-toggle-unchecked-lever-bg, 38%);
+@input-toggle-unchecked-lever-bg-disabled:          lighten(@input-toggle-unchecked-lever-bg, 32%);
+
+@input-toggle-checked-toggle-bg:                    @input-checked-bg;
+@input-toggle-checked-toggle-bg-hover:              @input-checked-bg-hover;
+@input-toggle-checked-toggle-bg-focus:              @input-checked-bg-focus;
+@input-toggle-checked-lever-bg:                     lighten(@input-toggle-checked-toggle-bg, 32%);
+@input-toggle-checked-toggle-bg-disabled:           lighten(@input-toggle-unchecked-lever-bg, 30%);
+@input-toggle-checked-lever-bg-disabled:            lighten(@input-toggle-unchecked-lever-bg, 36%);
+
+@input-toggle-color-placeholder-disabled:           @input-color-placeholder-disabled;
+
+@input-toggle-default-checked-toggle-bg:            @gray;
+@input-toggle-default-checked-toggle-bg-hover:      darken(@input-toggle-default-checked-toggle-bg, 20%);
+@input-toggle-default-checked-toggle-bg-focus:      fade(@input-toggle-default-checked-toggle-bg, 20%);
+@input-toggle-default-checked-lever-bg:             lighten(@input-toggle-default-checked-toggle-bg, 32%);
+
+@input-toggle-primary-checked-toggle-bg:            @input-toggle-checked-toggle-bg;
+@input-toggle-primary-checked-toggle-bg-hover:      @input-toggle-checked-toggle-bg-hover;
+@input-toggle-primary-checked-toggle-bg-focus:      @input-toggle-checked-toggle-bg-focus;
+@input-toggle-primary-checked-lever-bg:             @input-toggle-checked-lever-bg;
+
+@input-toggle-accent-checked-toggle-bg:             @input-accent-checked-bg;
+@input-toggle-accent-checked-toggle-bg-hover:       @input-accent-checked-bg-hover;
+@input-toggle-accent-checked-toggle-bg-focus:       @input-accent-checked-bg-focus;
+@input-toggle-accent-checked-lever-bg:              lighten(@input-toggle-accent-checked-toggle-bg, 46%);
+
+@input-toggle-success-checked-toggle-bg:            @input-success-checked-bg;
+@input-toggle-success-checked-toggle-bg-hover:      @input-success-checked-bg-hover;
+@input-toggle-success-checked-toggle-bg-focus:      @input-success-checked-bg-focus;
+@input-toggle-success-checked-lever-bg:             lighten(@input-toggle-success-checked-toggle-bg, 28%);
+
+@input-toggle-info-checked-toggle-bg:               @input-info-checked-bg;
+@input-toggle-info-checked-toggle-bg-hover:         @input-info-checked-bg-hover;
+@input-toggle-info-checked-toggle-bg-focus:         @input-info-checked-bg-focus;
+@input-toggle-info-checked-lever-bg:                lighten(@input-toggle-info-checked-toggle-bg, 23%);
+
+@input-toggle-warning-checked-toggle-bg:            @input-warning-checked-bg;
+@input-toggle-warning-checked-toggle-bg-hover:      @input-warning-checked-bg-hover;
+@input-toggle-warning-checked-toggle-bg-focus:       @input-warning-checked-bg-focus;
+@input-toggle-warning-checked-lever-bg:             lighten(@input-toggle-warning-checked-toggle-bg, 23%);
+
+@input-toggle-danger-checked-toggle-bg:             @input-danger-checked-bg;
+@input-toggle-danger-checked-toggle-bg-hover:       @input-danger-checked-bg-hover;
+@input-toggle-danger-checked-toggle-bg-focus:       @input-danger-checked-bg-focus;
+@input-toggle-danger-checked-lever-bg:              lighten(@input-toggle-danger-checked-toggle-bg, 32%);
+
 // Dropdowns
 // -------------------------
 
