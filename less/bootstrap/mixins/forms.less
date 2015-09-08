@@ -10,22 +10,12 @@
 // Form control color (checkbox/radio)
 
 .form-control-color(@style, @class-style) {
-    @border-hover: "@{style}-border-hover";
     @checked-color: "@{style}-checked-color";
     @checked-bg: "@{style}-checked-bg";
     @checked-bg-hover: "@{style}-checked-bg-hover";
     @checked-bg-focus: "@{style}-checked-bg-focus";
 
     .form-control-md@{class-style} {
-        input[type="checkbox"]&,
-        input[type="radio"]& {
-            + .form-control-md-style:hover {
-                &:before {
-                    border-color: @@border-hover;
-                }
-            }
-        }
-
         input[type="radio"]:checked& {
             + .form-control-md-style {
                 &:before {
@@ -48,7 +38,8 @@
                 }
             }
 
-            &:focus {
+            &:focus,
+            &:active {
                 + .form-control-md-style {
                     + span {
                         &:before {
@@ -99,7 +90,6 @@
         fieldset[disabled] input[type="radio"]& {
             + .form-control-md-style {
                 &:before {
-                    background-color: @input-bg-disabled;
                     border-color: @input-border-disabled;
                 }
 

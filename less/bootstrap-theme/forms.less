@@ -289,6 +289,12 @@ select {
                 .transition(@input-radio-checkbox-transition);
             }
 
+            &:hover {
+                &:before {
+                    border-color: @input-unchecked-border-hover;
+                }
+            }
+
             + span {
                 &:before {
                     content: "";
@@ -306,7 +312,8 @@ select {
             }
         }
 
-        &:focus {
+        &:focus,
+        &:active {
             + .form-control-md-style {
                 + span {
                     &:before {
@@ -391,8 +398,23 @@ select {
                 cursor: not-allowed;
             }
 
+            &:before {
+                background-color: @input-unchecked-bg-disabled;
+            }
+
             + span {
                 cursor: not-allowed;
+            }
+        }
+
+        &:focus,
+        &:active {
+            + .form-control-md-style {
+                + span {
+                    &:before {
+                        display: none;
+                    }
+                }
             }
         }
     }
