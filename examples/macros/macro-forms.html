@@ -1,7 +1,7 @@
-{% macro checkbox(brand, checked=false, disabled=false, label='Checkbox example') %}
+{% macro checkbox(brand, checked=false, disabled=false, label='Checkbox example', className = 'form-control-md') %}
 <div class="checkbox">
     <label>
-        <input type="checkbox" class="form-control-md input-{{ brand }}"{% if checked %} checked="checked"{% endif %}{% if disabled %} disabled="disabled"{% endif %} />
+        <input type="checkbox" class="{{ className }} input-{{ brand }}"{% if checked %} checked="checked"{% endif %}{% if disabled %} disabled="disabled"{% endif %} />
         <span class="form-control-md-style"></span>
         <span>{{ label }}</span>
     </label>
@@ -16,4 +16,8 @@
         <span>{{ label }}</span>
     </label>
 </div>
+{% endmacro %}
+
+{% macro toggle(brand, checked=false, disabled=false, label='Checkbox example') %}
+    {{ checkbox(brand, checked, disabled, label, 'form-control-md-toggle') }}
 {% endmacro %}

@@ -1,0 +1,83 @@
+{% extends "examples/layout.html" %}
+
+{% import "examples/macros/macro-forms.html" as forms %}
+
+{% set title = 'Toggles' %}
+
+{% block container %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ title }}</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Basic example</h3>
+                        <div class="demo-example">
+                            <form>
+                                <div class="form-group">
+                                    {{ forms.toggle('empty', true, false, 'No style') }}
+                                </div>
+
+                                <div class="form-group">
+                                    {{ forms.toggle('default', false, false, 'Default style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.toggle('primary', true, false, 'Primary style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.toggle('accent', false, false, 'Accent style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.toggle('success', true, false, 'Success style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.toggle('info', false, false, 'Info style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.toggle('warning', true, false, 'Warning style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.toggle('danger', false, false, 'Danger style') }}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h3>Disabled example</h3>
+                        <div class="demo-example">
+                            <form>
+                                <div class="form-group">
+                                    {{ forms.toggle('empty', false, true, 'No style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.toggle('default', true, true, 'Default style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.toggle('primary', false, true, 'Primary style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.toggle('accent', true, true, 'Accent style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.toggle('success', false, true, 'Success style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.toggle('info', true, true, 'Info style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.toggle('warning', false, true, 'Warning style') }}
+                                </div>
+                                <div class="form-group">
+                                    {{ forms.toggle('danger', true, true, 'Danger style') }}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
