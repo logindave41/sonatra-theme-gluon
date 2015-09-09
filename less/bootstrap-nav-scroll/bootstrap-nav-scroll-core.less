@@ -8,3 +8,29 @@
         margin-right: 25px;
     }
 }
+
+.nav-scrollable {
+    .transition(~"padding-left .2s ease-in, padding-right .2s ease-in");
+
+    &:not(.nav-scrollable-has-previous):not(.nav-scrollable-has-next) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &.is-nav-tabs {
+        &:before {
+            content: " ";
+            position: absolute;
+            display: block;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: @nav-tabs-border-color;
+        }
+
+        .nav-tabs {
+            border-bottom: none;
+        }
+    }
+}

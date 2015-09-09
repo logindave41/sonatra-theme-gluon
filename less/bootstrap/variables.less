@@ -509,15 +509,17 @@
 // -------------------------
 
 //== Tabs
-@nav-tabs-border-color:                       transparent;
-@nav-tabs-link-hover-border-color:            transparent;
-@nav-tabs-active-link-border-color:           @brand-primary;
-@nav-tabs-active-link-hover-bg:               #fff;
-@nav-tabs-active-link-hover-color:            @gray;
-@nav-tabs-active-link-hover-border-color:     transparent;
-@nav-tabs-justified-link-border-color:        #ddd;
-@nav-tabs-justified-active-link-border-color: @body-bg;
-@nav-tabs-shadow:                             4px 0px 2px -3px rgba(0, 0, 0, 0.14);
+@nav-link-padding:                            14px 16px;
+@nav-link-hover-bg:                           transparent;
+@nav-tabs-border-color:                       @input-border;
+@nav-link-color:                              rgba(0,0,0,.54);
+@nav-link-hover-color:                        rgba(0,0,0,.64);
+@nav-tabs-active-link-color:                  rgba(0,0,0,.87);
+@nav-tabs-active-link-hover-bg:               transparent;
+@nav-tabs-active-link-ripple-bg:              fade(@brand-accent, 30%);
+@nav-tabs-active-link-border-color:           @brand-accent;
+
+@nav-pills-active-link-ripple-bg:              rgba(255, 255, 255, 0.3);
 
 
 // Table
