@@ -35,84 +35,22 @@
         }
     }
 
-    .panel {
-        border: none;
-        margin-bottom: 32px;
-
-        input {
-            border: none;
-            .box-shadow(none);
-        }
-
-        .input-group {
-            border-top: 1px solid @gray-lighter;
-
-            &:first-child {
-                border-top: 0;
-            }
-        }
-
-        .input-group-addon {
-            border: none;
-            background-color: @input-bg;
-
-            > .fa {
-                width: 20px;
-                color: lighten(@gray-light, 20%);
-            }
-
-            &:after {
-                content: "";
-                position: absolute;
-                height: 50%;
-                border-left: 1px @gray-lighter solid;
-                top: 25%;
-                margin-left: 9px;
-            }
-        }
-
-        .form-group {
-            margin-bottom: 0;
-        }
-    }
-
     .account-links {
-        margin-top: 14px;
+        margin-top: -round(@form-group-margin-bottom / 2);
 
         .checkbox {
             margin: 0;
+            display: inline-block;
         }
 
         .help {
-            line-height: @input-radio-checkbox-size;
+            line-height: @input-radio-checkbox-size + 2;
+            color: lighten(@gray-light, 25%);
         }
     }
 
-    span.or {
-        position: relative;
-        display: block;
-        margin: 20px 10px;
-        text-align: center;
-        font-size: @font-size-small;
-        color: @gray-lighter;
-
-        &:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 50%;
-            width: 100%;
-            height: 1px;
-            background-color: lighten(@gray-light, 20%);
-        }
-
-        &:after {
-            content: attr(data-text);
-            position: relative;
-            padding: 5px 20px;
-            color: lighten(@gray-light, 20%);
-            background-color: @body-bg;
-        }
+    .buttons {
+        margin-top: @form-group-margin-bottom * 2;
     }
 
     .footer-link {
