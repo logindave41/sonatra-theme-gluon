@@ -93,6 +93,10 @@ textarea {
         }
     }
 
+    .help-block {
+        font-size: round(@font-size-base * 0.85);
+    }
+
     &.form-control {
         border: none;
         box-shadow: none;
@@ -140,6 +144,11 @@ textarea {
         }
     }
 }
+
+.form-control-state(success; @state-success-text; @state-success-bg; @state-success-border);
+.form-control-state(info; @state-info-text; @state-info-bg; @state-info-border);
+.form-control-state(warning; @state-warning-text; @state-warning-bg; @state-warning-border);
+.form-control-state(danger; @state-danger-text; @state-danger-bg; @state-danger-border);
 
 // Input file
 // --------------------------------------------------

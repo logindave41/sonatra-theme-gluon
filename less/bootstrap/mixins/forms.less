@@ -1,12 +1,3 @@
-// Form control focus state
-
-.form-control-focus(@color: @input-border-focus) {
-    &:focus {
-        .box-shadow(none);
-    }
-}
-
-
 // Form control color (checkbox/radio)
 
 .form-control-color(@style, @class-style) {
@@ -149,4 +140,59 @@
 .form-floating-label-top(@paddingVerticalSup: 0) {
     color: @input-border-focus;
     .transform(scale(0.8) translate(0, -(@font-size-base + (@font-size-base / 2)) + (-@padding-base-vertical / 2) + @paddingVerticalSup));
+}
+
+// Form control state (floating label)
+
+.form-control-state(@style; @color; @bg; @border) {
+    .form-group,
+    .floating-group {
+        &.has-@{style} {
+            input,
+            textarea {
+                border-bottom-color: @border;
+
+                &,
+                &:focus {
+                    .box-shadow(none);
+                }
+
+                &:focus,
+                &.has-floating-content,
+                &.fixed-floating-label {
+                    ~ label:not(.btn) {
+                        color: @color;
+                    }
+                }
+            }
+
+            .floating-bar {
+                &:before,
+                &:after {
+                    background: @border;
+                }
+            }
+
+            .help-block {
+                color: @color;
+            }
+
+            input,
+            textarea {
+                &[disabled],
+                &[readonly],
+                fieldset[disabled] & {
+                    border-color: @input-border-disabled;
+
+                    ~ label:not(.btn) {
+                        color: @input-color-placeholder-disabled;
+                    }
+
+                    ~ .help-block {
+                        color: @input-color-disabled;
+                    }
+                }
+            }
+        }
+    }
 }
