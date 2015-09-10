@@ -93,6 +93,14 @@
             } else if ($label.length > 0 && placeholder) {
                 $target.addClass('fixed-floating-label');
             }
+
+            window.setTimeout(function () {
+                var $autoFills = $(':-webkit-autofill', $target.parent());
+
+                if ($autoFills.length > 0) {
+                    $target.addClass('has-floating-content');
+                }
+            }, 100);
         });
     },
         old;
