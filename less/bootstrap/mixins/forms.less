@@ -1,3 +1,12 @@
+// Form control focus state
+
+.form-control-focus(@color: @input-border-focus) {
+    &:focus {
+        .box-shadow(none);
+    }
+}
+
+
 // Form control color (checkbox/radio)
 
 .form-control-color(@style, @class-style) {
