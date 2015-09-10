@@ -71,7 +71,7 @@
             this.options.floatingLabelSelector = null;
         }
 
-        this.$element.on('focusout.st.floating-label' + this.guid, this.options.floatingLabelSelector, this, onFocusOut);
+        this.$element.on('focusout.st.floating-label change.st.floating-label' + this.guid, this.options.floatingLabelSelector, this, onFocusOut);
 
         var $targets = null !== this.options.floatingLabelSelector ? $(this.options.floatingLabelSelector, this.$element)
             : this.$element;
@@ -123,7 +123,7 @@
         var $targets = null !== this.options.floatingLabelSelector ? $(this.options.floatingLabelSelector, this.$element)
                 : this.$element;
 
-        this.$element.off('focusout.st.floating-label' + this.guid, this.options.floatingLabelSelector, onFocusOut);
+        this.$element.off('focusout.st.floating-label change.st.floating-label' + this.guid, this.options.floatingLabelSelector, onFocusOut);
 
         $targets.each(function (index) {
             var $target = $targets.eq(index),
