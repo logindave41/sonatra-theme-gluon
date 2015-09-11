@@ -378,6 +378,11 @@
     .btn-sidebar-toggle.sidebar-locked-toggle + .btn-sidebar-toggle.pull-right {
         + .navbar-brand {
             width: @navbar-brand-width;
+
+            &.sidebar-full-locked {
+                margin-left: @navbar-brand-width - @navbar-padding-horizontal;
+                width: auto;
+            }
         }
     }
 }
