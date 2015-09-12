@@ -11,8 +11,8 @@
         position: relative;
         padding: 16px;
         height: 151px;
-        background: rgb(38, 50, 56);
-        color: #ffffff;
+        background: @sidebar-default-header-bg;
+        color: @sidebar-default-header-color;
         overflow: hidden;
         
         .sidebar-header-title {
@@ -21,10 +21,36 @@
             bottom: 10px;
             left: 0;
             width: 100%;
-            padding: 2px 16px;
+            padding: @sidebar-header-title-padding;
+            font-size: @sidebar-header-title-font-size;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
+        }
+
+        .sidebar-header-fullname {
+            display: block;
+            font-weight: @font-family-weight-bold;
+        }
+
+        .sidebar-header-email {
+            opacity: 0.7;
+        }
+
+        .sidebar-header-profile-icon {
+            position: absolute;
+            display: inline-block;
+            top: 24px;
+            left: 16px;
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            font-size: 20px;
+            font-weight: @font-family-weight-bold;
+            text-align: center;
+            background-color: @sidebar-header-profile-icon-bg;
+            .border-top-radius(50%);
+            .border-bottom-radius(50%);
         }
     }
 
@@ -32,14 +58,17 @@
         font-weight: @headings-font-weight-bold;
     }
 
-    .sidebar-group > span,
-    .sidebar-item > a {
+    .sidebar-group > span {
+        padding: 19px 20px;
+    }
+
+    .sidebar-item > a,
+    .sidebar-item > a.active {
         padding: 19px 40px;
     }
 
     .sidebar-item > a.active {
         border-left-width: 0;
-        padding: 19px 40px;
     }
 
     &.sidebar-default {
