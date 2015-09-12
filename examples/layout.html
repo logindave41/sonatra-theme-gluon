@@ -2,9 +2,6 @@
 
 {% block head_style %}
 <style>
-    .sidebar-header {
-        background: #0c9b8f !important;
-    }
     .sidebar-header-img {
         opacity: .05;
         position: absolute;
@@ -77,7 +74,12 @@
         {% block sidebar_header %}
         <li class="sidebar-header">
             <img class="sidebar-header-img" src="/assets/badge_inverse.svg">
-            <span class="sidebar-header-title">john.doe@example.tld</span>
+
+            <span class="sidebar-header-profile-icon">JD</span>
+            <span class="sidebar-header-title">
+                <span class="sidebar-header-fullname">John Doe</span>
+                <span class="sidebar-header-email">john.doe@example.tld</span>
+            </span>
         </li>
         {% endblock %}
 
