@@ -22,7 +22,7 @@
             left: 0;
             width: 100%;
             padding: @sidebar-header-title-padding;
-            font-size: @sidebar-header-title-font-size;
+            font-size: @sidebar-default-header-title-font-size;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
@@ -40,7 +40,7 @@
         .sidebar-header-profile-icon {
             position: absolute;
             display: inline-block;
-            top: 24px;
+            bottom: 76px;
             left: 16px;
             height: 60px;
             width: 60px;
@@ -48,7 +48,7 @@
             font-size: 20px;
             font-weight: @font-family-weight-bold;
             text-align: center;
-            background-color: @sidebar-header-profile-icon-bg;
+            background-color: @sidebar-default-header-profile-icon-bg;
             .border-top-radius(50%);
             .border-bottom-radius(50%);
         }
@@ -58,13 +58,25 @@
         font-weight: @headings-font-weight-bold;
     }
 
+    .sidebar-item-icon {
+        display: none;
+        position: absolute;
+        left: 16px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        margin-top: -3px;
+        font-size: 18px;
+        color: @sidebar-default-icon-color;
+    }
+
     .sidebar-group > span {
-        padding: 19px 20px;
+        padding: 11px 16px;
     }
 
     .sidebar-item > a,
     .sidebar-item > a.active {
-        padding: 19px 40px;
+        padding: 19px 32px;
     }
 
     .sidebar-item > a.active {
@@ -87,4 +99,16 @@
         }
     }
 
+    .sidebar-menu {
+        &.with-icons {
+            .sidebar-item > a,
+            .sidebar-item > a.active {
+                padding-left: 50px;
+            }
+
+            .sidebar-item-icon {
+                display: inline-block;
+            }
+        }
+    }
 }
