@@ -28,49 +28,49 @@
 {% endblock %}
 
 {% set sidebarItems = sidebarItems|default([
-        {label: 'Home', href: '/'},
+        {label: 'Home', href: '/', icon: 'home'},
         {label: 'Styles', children: [
-            {label: 'Typography', href: '/style/typography.html'},
-            {label: 'Code', href: '/style/code.html'},
-            {label: 'Images', href: '/style/images.html'},
-            {label: 'Shadows', href: '/style/shadows.html'}
+            {label: 'Typography', href: '/style/typography.html', icon: 'font'},
+            {label: 'Code', href: '/style/code.html', icon: 'code'},
+            {label: 'Images', href: '/style/images.html', icon: 'image'},
+            {label: 'Shadows', href: '/style/shadows.html', icon: 'cube'}
         ]},
         {label: 'Components', children: [
-            {label: 'Forms', href: '/components/forms.html'},
-            {label: 'Selects', href: '/components/selects.html'},
-            {label: 'Checkbox / Radio', href: '/components/checkbox-radio.html'},
-            {label: 'Toggles', href: '/components/toggles.html'},
-            {label: 'Datetime picker', href: '/components/datetime-picker.html'},
-            {label: 'Buttons', href: '/components/buttons.html'},
-            {label: 'FAB', href: '/components/fab.html'},
-            {label: 'Dropdowns', href: '/components/dropdowns.html'},
-            {label: 'Thumbnails', href: '/components/thumbnails.html'},
-            {label: 'Tables', href: '/components/tables.html'},
-            {label: 'Panels', href: '/components/panels.html'},
-            {label: 'Tabs / Pills', href: '/components/tabs-pills.html'},
-            {label: 'List group', href: '/components/list-group.html'},
-            {label: 'Badges', href: '/components/badges.html'},
-            {label: 'Labels', href: '/components/labels.html'},
-            {label: 'Pagination', href: '/components/pagination.html'},
-            {label: 'Wells', href: '/components/wells.html'},
-            {label: 'Breadcrumbs', href: '/components/breadcrumbs.html'},
-            {label: 'Alerts', href: '/components/alerts.html'},
-            {label: 'Modals', href: '/components/modals.html'},
-            {label: 'Progress bars', href: '/components/progress-bars.html'},
-            {label: 'Spinners', href: '/components/spinners.html'},
-            {label: 'ScrollSpy', href: '/components/scroll-spy.html'},
-            {label: 'Tooltips', href: '/components/tooltips.html'},
-            {label: 'Popovers', href: '/components/popovers.html'},
-            {label: 'Carousel', href: '/components/carousel.html'}
+            {label: 'Forms', href: '/components/forms.html', icon: 'th-list'},
+            {label: 'Selects', href: '/components/selects.html', icon: 'toggle-down'},
+            {label: 'Checkbox / Radio', href: '/components/checkbox-radio.html', icon:'check-square'},
+            {label: 'Toggles', href: '/components/toggles.html', icon: 'toggle-on'},
+            {label: 'Datetime picker', href: '/components/datetime-picker.html', icon: 'calendar-check-o'},
+            {label: 'Buttons', href: '/components/buttons.html', icon: 'plus-square'},
+            {label: 'FAB', href: '/components/fab.html', icon: 'plus-circle'},
+            {label: 'Dropdowns', href: '/components/dropdowns.html', icon: 'toggle-down'},
+            {label: 'Thumbnails', href: '/components/thumbnails.html', icon: 'image'},
+            {label: 'Tables', href: '/components/tables.html', icon: 'table'},
+            {label: 'Panels', href: '/components/panels.html', icon: 'columns'},
+            {label: 'Tabs / Pills', href: '/components/tabs-pills.html', icon: 'th'},
+            {label: 'List group', href: '/components/list-group.html', icon: 'list'},
+            {label: 'Badges', href: '/components/badges.html', icon: 'sticky-note'},
+            {label: 'Labels', href: '/components/labels.html', icon: 'diamond'},
+            {label: 'Pagination', href: '/components/pagination.html', icon: 'sort-numeric-asc'},
+            {label: 'Wells', href: '/components/wells.html', icon: 'rocket'},
+            {label: 'Breadcrumbs', href: '/components/breadcrumbs.html', icon: 'link'},
+            {label: 'Alerts', href: '/components/alerts.html', icon: 'bell'},
+            {label: 'Modals', href: '/components/modals.html', icon: 'question-circle'},
+            {label: 'Progress bars', href: '/components/progress-bars.html', icon: 'circle-o-notch'},
+            {label: 'Spinners', href: '/components/spinners.html', icon: 'spinner'},
+            {label: 'ScrollSpy', href: '/components/scroll-spy.html', icon: 'road'},
+            {label: 'Tooltips', href: '/components/tooltips.html', icon: 'info-circle'},
+            {label: 'Popovers', href: '/components/popovers.html', icon: 'question-circle'},
+            {label: 'Carousel', href: '/components/carousel.html', icon: 'image'}
         ]},
-        {label: 'Settings', href: '#'},
-        {label: 'Help and support', href: '#'}
+        {label: 'Settings', href: '#', icon: 'cog'},
+        {label: 'Help and support', href: '#', icon: 'support'}
     ]) %}
 
 {% block sidebars %}
 <div class="sidebar sidebar-default sidebar-force-open sidebar-fixed-top sidebar-locked sidebar-full-locked sidebar-open-init"
      data-sidebar="true" data-force-toggle="true" data-locked="true" data-toggle-id="sidebar-toggle-left">
-    <ul class="sidebar-menu">
+    <ul class="sidebar-menu with-icons">
         {% block sidebar_header %}
         <li class="sidebar-header">
             <img class="sidebar-header-img" src="/assets/badge_inverse.svg">
@@ -88,12 +88,12 @@
                 <li class="sidebar-group"><span>{{ item.label }}</span>
                     <ul class="sidebar-group-menu">
                         {% for groupItem in item.children %}
-                            <li class="sidebar-item"><a href="{{ groupItem.href }}"{% if groupItem.href == app.uri %} class="active"{% endif %}>{{ groupItem.label }}</a></li>
+                            <li class="sidebar-item"><a href="{{ groupItem.href }}"{% if groupItem.href == app.uri %} class="active"{% endif %}><i class="sidebar-item-icon fa fa-{{ groupItem.icon }}"></i>{{ groupItem.label }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>
             {% else %}
-                <li class="sidebar-item"><a href="{{ item.href }}"{% if item.href == app.uri %} class="active"{% endif %}>{{ item.label }}</a></li>
+                <li class="sidebar-item"><a href="{{ item.href }}"{% if item.href == app.uri %} class="active"{% endif %}><i class="sidebar-item-icon fa fa-{{ item.icon }}"></i>{{ item.label }}</a></li>
             {% endif%}
         {% endfor %}
     </ul>
