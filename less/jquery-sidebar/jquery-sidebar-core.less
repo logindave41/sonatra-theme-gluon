@@ -14,6 +14,14 @@
         background: @sidebar-default-header-bg;
         color: @sidebar-default-header-color;
         overflow: hidden;
+
+        .sidebar-header-title,
+        .sidebar-header-title > span {
+            display: block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
         
         .sidebar-header-title {
             display: block;
@@ -23,13 +31,9 @@
             width: 100%;
             padding: @sidebar-header-title-padding;
             font-size: @sidebar-default-header-title-font-size;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
         }
 
         .sidebar-header-fullname {
-            display: block;
             font-weight: @font-family-weight-bold;
         }
 
