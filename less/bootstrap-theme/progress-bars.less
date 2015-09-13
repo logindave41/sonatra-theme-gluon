@@ -13,7 +13,7 @@
             position: relative;
             float: right;
             display: block;
-            margin-top: -20px;
+            margin: -20px 0 0 0;
             padding: 4px;
             line-height: 9px;
             font-size: 9px;
@@ -25,6 +25,10 @@
             .border-bottom-radius(4px);
             .transform-origin(center bottom);
             .transition(@dropdown-transition);
+            // override sr-only
+            width: auto;
+            height: auto;
+            overflow: inherit;
 
             &:after {
                 top: 100%;
