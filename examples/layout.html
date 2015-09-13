@@ -105,37 +105,38 @@
     <!-- NAVBAR -->
     {% block navbar %}
     <nav class="navbar navbar-inverse navbar-fixed-top affix">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="btn btn-ripple navbar-toggle btn-sidebar-toggle sidebar-locked-toggle" id="sidebar-toggle-left">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <div class="btn-group btn-sidebar-toggle pull-right">
-                    <button type="button" class="btn btn-ripple navbar-toggle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="sidebar-toggle-right">
-                        <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-ripple pull-top pull-right">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                    </ul>
-                </div>
-
+        <div class="navbar-flex">
+            <button type="button" class="btn btn-ripple navbar-toggle btn-sidebar-toggle sidebar-locked-toggle" id="sidebar-toggle-left">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div>
                 <a class="navbar-brand navbar-brand-switch sidebar-full-locked" href="/">
                     <img class="navbar-brand-badge" src="../assets/badge_inverse.svg">
                     <img class="navbar-brand-logo" src="../assets/logo_inverse.svg">
                 </a>
-                <span class="navbar-title">{{ title|default('Home example') }}</span>
+            </div>
+            <div class="navbar-flex-stretch">
+                <span class="navbar-title">{{ title|default('Home example') }} Home example Home example Home example</span>
+            </div>
+            <div class="btn-group btn-sidebar-toggle">
+                <button type="button" class="btn btn-ripple navbar-toggle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="sidebar-toggle-right">
+                    <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-ripple pull-top pull-right">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                </ul>
             </div>
         </div>
     </nav>
