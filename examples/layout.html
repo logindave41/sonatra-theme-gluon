@@ -109,14 +109,12 @@
             <button type="button" class="btn btn-ripple navbar-toggle btn-sidebar-toggle sidebar-locked-toggle" id="sidebar-toggle-left">
                 <i class="fa fa-bars"></i>
             </button>
-            <div>
-                <a class="navbar-brand navbar-brand-switch sidebar-full-locked" href="/">
-                    <img class="navbar-brand-badge" src="../assets/badge_inverse.svg">
-                    <img class="navbar-brand-logo" src="../assets/logo_inverse.svg">
-                </a>
-            </div>
-            <div class="navbar-flex-stretch">
-                <span class="navbar-title">{{ title|default('Home example') }} Home example Home example Home example</span>
+            <a class="navbar-brand navbar-brand-switch sidebar-full-locked" href="/">
+                <img class="navbar-brand-badge" src="../assets/badge_inverse.svg">
+                <img class="navbar-brand-logo" src="../assets/logo_inverse.svg">
+            </a>
+            <div class="navbar-title">
+                {{ title|default('Home example') }} Home example Home example Home example
             </div>
             <div class="btn-group btn-sidebar-toggle">
                 <button type="button" class="btn btn-ripple navbar-toggle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="sidebar-toggle-right">
