@@ -89,8 +89,16 @@
         float: none;
     }
 
-    .navbar-flex-stretch {
+    .navbar-title {
         .flex(1);
+    }
+
+    .navbar-brand {
+        float: left;
+
+        img {
+            position: relative;
+        }
     }
 
     .navbar-brand-switch {
@@ -183,10 +191,6 @@
             img.navbar-brand-badge {
                 display: inherit;
             }
-        }
-
-        + .navbar-title {
-            padding-left: 0;
         }
     }
 
