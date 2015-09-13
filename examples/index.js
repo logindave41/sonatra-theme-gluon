@@ -108,7 +108,8 @@ http.createServer(function (req, res) {
     'use strict';
 
     var page = url.parse(req.url).pathname,
-        params = {app: {uri: page}};
+        params = {app: {uri: page}},
+        env;
 
     if (renderAsset(res, fs, mime, page, '/assets/', 'assets')) {
         return;
@@ -136,7 +137,11 @@ http.createServer(function (req, res) {
     }
 
     nunjucks = require('nunjucks');
-    nunjucks.configure({ autoescape: true });
+    env = nunjucks.configure({ autoescape: true });
+
+    env.addFilter('is_fa_font', function (value) {
+        return typeof value === 'string' && value.length > 3 && value.substr(0, 3) === 'fa ';
+    });
 
     if (page.substr(0, 12) === '/components/' || page.substr(0, 7) === '/style/') {
         src = __dirname + page;
