@@ -11,6 +11,21 @@
     -webkit-tap-highlight-color: @color;
 }
 
+.flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+}
+
+.flex(@values) {
+    -webkit-box-flex: @values;
+    -webkit-flex: @values;
+    -moz-box-flex: @values;
+    -ms-box-flex: @values;
+    flex: @values;
+}
+
 .keyframes(@name; @arguments) {
     @-moz-keyframes @name { @arguments(); }
     @-webkit-keyframes @name { @arguments(); }

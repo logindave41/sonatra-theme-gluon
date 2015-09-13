@@ -80,6 +80,31 @@
     }
 }
 
+.navbar-flex {
+    width: 100%;
+    padding: 0 2px;
+    .flexbox();
+
+    > * {
+        float: none;
+    }
+
+    .navbar-flex-stretch {
+        .flex(1);
+    }
+
+    .navbar-brand-switch {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .navbar-title {
+        white-space: normal;
+        padding: 0 @navbar-padding-horizontal;
+        line-height: @navbar-height;
+    }
+}
+
 .navbar-default {
     &.navbar-fixed-top,
     &.navbar-static-top {
@@ -356,13 +381,19 @@
         display: inline-block;
     }
 
+    .navbar-flex {
+        padding: 0 @navbar-padding-horizontal;
+    }
+
     .btn-sidebar-toggle,
     .btn-sidebar-toggle + .btn-sidebar-toggle.pull-right {
-        + .navbar-brand {
-            width: @navbar-brand-width - @btn-sidebar-toggle-height;
+        + .navbar-brand,
+        + div .navbar-brand {
+            width: @navbar-brand-width - @btn-sidebar-toggle-height - @navbar-padding-horizontal;
         }
 
-        + .navbar-brand-switch {
+        + .navbar-brand-switch,
+        + div + .navbar-brand-switch {
             padding-left: @navbar-padding-horizontal;
             padding-right: @navbar-padding-horizontal;
         }
@@ -379,11 +410,12 @@
 
     .btn-sidebar-toggle.sidebar-locked-toggle,
     .btn-sidebar-toggle.sidebar-locked-toggle + .btn-sidebar-toggle.pull-right {
-        + .navbar-brand {
+        + .navbar-brand,
+        + div .navbar-brand {
             width: @navbar-brand-width;
 
             &.sidebar-full-locked {
-                margin-left: @navbar-brand-width - @navbar-padding-horizontal;
+                margin-left: @navbar-brand-width;
                 width: auto;
             }
         }
