@@ -64,36 +64,42 @@
             {label: 'Carousel', href: '/components/carousel.html', icon: 'fa fa-image'}
         ]},
         {label: 'Settings', href: '#', icon: 'fa fa-cog'},
-        {label: 'Help and support', href: '#', icon: 'fa fa-support'}
+        {label: 'Help and support', href: '#', icon: 'fa fa-support'},
+        {label: 'Content menu group', styleClass: 'sidebar-menu-context', children: [
+            {label: 'Context item 1', href: '#', icon: 'fa fa-bicycle'},
+            {label: 'Context item 2', href: '#', icon: 'fa fa-cab', active: true}
+        ]},
+        {label: 'Context item 3', href: '#', icon: 'fa fa-rocket', styleClass: 'sidebar-menu-context'}
     ]) %}
 
 {% block sidebars %}
 <div class="sidebar sidebar-default sidebar-force-open sidebar-fixed-top sidebar-locked sidebar-full-locked sidebar-open-init"
-     data-sidebar="true" data-force-toggle="true" data-locked="true" data-toggle-id="sidebar-toggle-left">
+     data-sidebar="true" data-force-toggle="true" data-locked="true" data-toggle-id="sidebar-toggle-left" data-sidebar-context="true">
     <ul class="sidebar-menu with-icons">
         {% block sidebar_header %}
         <li class="sidebar-header">
             <img class="sidebar-header-img" src="/assets/badge_inverse.svg">
 
             <span class="sidebar-header-profile-icon">JD</span>
-            <span class="sidebar-header-title">
+            <span class="sidebar-header-title sidebar-menu-toggle">
                 <span class="sidebar-header-fullname">John Doe</span>
                 <span class="sidebar-header-email">john.doe@example.tld</span>
+                <span class="caret"></span>
             </span>
         </li>
         {% endblock %}
 
         {% for item in sidebarItems %}
             {% if item.children %}
-                <li class="sidebar-group"><span>{{ item.label }}</span>
+                <li class="sidebar-group {{ item.styleClass }}"><span>{{ item.label }}</span>
                     <ul class="sidebar-group-menu">
                         {% for groupItem in item.children %}
-                            <li class="sidebar-item"><a href="{{ groupItem.href }}"{% if groupItem.href == app.uri %} class="active"{% endif %}><i class="sidebar-item-icon {% if groupItem.icon|is_fa_font %}{{ groupItem.icon }}{% else %}material-icons{% endif %}">{% if not(item.icon|is_fa_font) %}{{ item.icon }}{% endif %}</i>{{ groupItem.label }}</a></li>
+                            <li class="sidebar-item"><a href="{{ groupItem.href }}"{% if groupItem.href == app.uri or groupItem.active %} class="active"{% endif %}><i class="sidebar-item-icon {% if groupItem.icon|is_fa_font %}{{ groupItem.icon }}{% else %}material-icons{% endif %}">{% if not(item.icon|is_fa_font) %}{{ item.icon }}{% endif %}</i>{{ groupItem.label }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>
             {% else %}
-                <li class="sidebar-item"><a href="{{ item.href }}"{% if item.href == app.uri %} class="active"{% endif %}><i class="sidebar-item-icon {% if item.icon|is_fa_font %}{{ item.icon }}{% else %}material-icons{% endif %}">{% if not(item.icon|is_fa_font) %}{{ item.icon }}{% endif %}</i>{{ item.label }}</a></li>
+                <li class="sidebar-item {{ item.styleClass }}"><a href="{{ item.href }}"{% if item.href == app.uri or groupItem.active %} class="active"{% endif %}><i class="sidebar-item-icon {% if item.icon|is_fa_font %}{{ item.icon }}{% else %}material-icons{% endif %}">{% if not(item.icon|is_fa_font) %}{{ item.icon }}{% endif %}</i>{{ item.label }}</a></li>
             {% endif%}
         {% endfor %}
     </ul>
