@@ -420,12 +420,11 @@
 @navbar-shadow-default: 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
 @navbar-shadow-inverse: @navbar-shadow-default;
 
-// Custom navbar sidebar toggle
-@btn-sidebar-toggle-height: 38px;
-@btn-sidebar-toggle-margin-top: 11px;
-@btn-sidebar-toggle-margin-bottom: @btn-sidebar-toggle-margin-top;
-@btn-sidebar-toggle-padding: 4px;
-@btn-sidebar-toggle-margin-horizontal: 5px;
+// Custom navbar navbar button
+@btn-navbar-height: 38px;
+@btn-navbar-margin-top: 11px;
+@btn-navbar-margin-bottom: @btn-navbar-margin-top;
+@btn-navbar-margin-horizontal: 5px;
 
 // Custom navbar brand
 @navbar-brand-font-size:                   @font-size-small;
@@ -443,6 +442,19 @@
 //@navbar-default-color:                   #777;
 @navbar-default-bg:                        #fafafa;
 @navbar-default-border:                    darken(@navbar-default-bg, 5%);
+
+// Navbar buttons
+@navbar-default-btn-hover-color:           darken(@navbar-default-bg, 5%);
+@navbar-default-btn-bg-active:             darken(@navbar-default-bg, 14%);
+@navbar-default-btn-color-disabled:        rgba(0,0,0,0.4);
+@navbar-default-btn-bg-disabled:           transparent;
+@navbar-default-btn-ripple-bg:             rgba(0,0,0,0.1);
+
+@navbar-inverse-btn-hover-color:           lighten(@navbar-inverse-bg, 5%);
+@navbar-inverse-btn-bg-active:             lighten(@navbar-inverse-bg, 14%);
+@navbar-inverse-btn-color-disabled:        rgba(255,255,255,0.4);
+@navbar-inverse-btn-bg-disabled:           transparent;
+@navbar-inverse-btn-ripple-bg:             rgba(255,255,255,0.1);
 
 // Navbar links
 @navbar-default-link-color:                @gray;

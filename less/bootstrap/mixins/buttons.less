@@ -20,6 +20,22 @@
         padding: @btn-padding-vertical-lg @btn-padding-horizontal-lg;
     }
 
+    &:active,
+    &.active,
+    .open > .dropdown-toggle& {
+        .box-shadow(none);
+    }
+
+    &.pull-right {
+        + .btn.pull-right {
+            margin-right: 3px;
+        }
+    }
+
+    .button-variant-flat-color(@bg-hover; @bg-active; @color-disabled; @bg-disabled; @ripple-bg);
+}
+
+.button-variant-flat-color(@bg-hover; @bg-active; @color-disabled; @bg-disabled; @ripple-bg) {
     &:hover,
     &:focus {
         background-color: @bg-hover;
@@ -40,12 +56,6 @@
 
     .ripple {
         background-color: @ripple-bg;
-    }
-
-    &.pull-right {
-        + .btn.pull-right {
-            margin-right: 3px;
-        }
     }
 
     &.disabled,

@@ -35,19 +35,22 @@
     margin-bottom: @navbar-default-toggle-margin-bottom;
 }
 
-.btn-sidebar-toggle:not(.btn-group),
-.btn-group.btn-sidebar-toggle .btn {
-    width: @btn-sidebar-toggle-height;
-    height: @btn-sidebar-toggle-height;
-    min-width: inherit;
-    margin-top: @btn-sidebar-toggle-margin-top;
-    margin-bottom: @btn-sidebar-toggle-margin-bottom;
-    margin-left: @btn-sidebar-toggle-margin-horizontal;
-    margin-right: @btn-sidebar-toggle-margin-horizontal;
-    padding: @btn-sidebar-toggle-padding;
-    float: left;
-    .border-top-radius(@btn-sidebar-toggle-height);
-    .border-bottom-radius(@btn-sidebar-toggle-height);
+.btn-navbar {
+    width: @btn-navbar-height + 2;
+    height: @btn-navbar-height + 2;
+    line-height: @btn-navbar-height + 2;
+    border:none;
+    margin: @btn-navbar-margin-top @btn-navbar-margin-horizontal @btn-navbar-margin-bottom @btn-navbar-margin-horizontal;
+    padding: 0;
+    background-color: transparent;
+    .border-top-radius(50%);
+    .border-bottom-radius(50%);
+
+    &:active,
+    &.active,
+    .open > .dropdown-toggle& {
+        .box-shadow(none);
+    }
 }
 
 .btn-sidebar-toggle,
@@ -99,8 +102,6 @@
     }
 
     .navbar-brand {
-        float: left;
-
         img {
             position: relative;
         }
@@ -126,6 +127,11 @@
         }
     }
 
+    .btn-navbar {
+        color: @navbar-default-color;
+        .button-variant-flat-color(@navbar-default-btn-hover-color; @navbar-default-btn-bg-active; @navbar-default-btn-color-disabled; @navbar-default-btn-bg-disabled; @navbar-default-btn-ripple-bg);
+    }
+
     .navbar-brand {
         &:hover,
         &:focus {
@@ -148,6 +154,11 @@
         &.affix {
             .box-shadow(@navbar-shadow-inverse);
         }
+    }
+
+    .btn-navbar {
+        color: @navbar-inverse-color;
+        .button-variant-flat-color(@navbar-inverse-btn-hover-color; @navbar-inverse-btn-bg-active; @navbar-inverse-btn-color-disabled; @navbar-inverse-btn-bg-disabled; @navbar-inverse-btn-ripple-bg);
     }
 
     .navbar-brand {
@@ -398,7 +409,7 @@
     .btn-sidebar-toggle + .btn-sidebar-toggle.pull-right {
         + .navbar-brand,
         + div .navbar-brand {
-            width: @navbar-brand-width - @btn-sidebar-toggle-height - @navbar-padding-horizontal;
+            width: @navbar-brand-width - @btn-navbar-height - @navbar-padding-horizontal;
         }
 
         + .navbar-brand-switch,
