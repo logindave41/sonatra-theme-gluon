@@ -31,6 +31,23 @@
             width: 100%;
             padding: @sidebar-header-title-padding;
             font-size: @sidebar-default-header-title-font-size;
+
+            // Menu context
+            &.sidebar-menu-toggle {
+                cursor: pointer;
+                padding-right: 26px;
+            }
+
+            > .caret {
+                position: absolute;
+                right: 14px;
+                top: 50%;
+
+                margin-left: 3px;
+                border-top-width: 5px;
+                border-right-width: 5px;
+                border-left-width: 5px;
+            }
         }
 
         .sidebar-header-fullname {
@@ -140,6 +157,47 @@
 
             .sidebar-item-icon {
                 display: inline-block;
+            }
+        }
+    }
+
+    // Menu context
+    .sidebar-group,
+    .sidebar-item {
+        &.sidebar-menu-context {
+            display: none;
+        }
+    }
+
+    .sidebar-item-icon {
+        &.profile-icon {
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.6em;
+            color: @sidebar-default-header-color;
+            background-color: @sidebar-default-header-profile-icon-bg;
+            .border-top-radius(50%);
+            .border-bottom-radius(50%);
+        }
+    }
+
+    &.sidebar-menu-switched {
+        .sidebar-header-title {
+            > .caret {
+                .rotate(180deg);
+            }
+        }
+
+        .sidebar-group,
+        .sidebar-item {
+            display: none;
+
+            &.sidebar-menu-context {
+                display: block;
+
+                .sidebar-item {
+                    display: block;
+                }
             }
         }
     }
