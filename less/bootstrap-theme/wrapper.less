@@ -8,12 +8,11 @@ body,
     height: 100%;
     width: 100%;
     margin: 0;
-
-    -webkit-overflow-scrolling: touch;
 }
 
 .container-main {
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
     &.container-fixed-top {
         padding-top: @navbar-height + @navbar-margin-bottom;
@@ -21,5 +20,12 @@ body,
 
     &.container-fixed-bottom {
         padding-bottom: @navbar-height + @navbar-margin-bottom;
+    }
+}
+
+html.ios-shrink {
+    .container-main {
+        height: auto;
+        -webkit-overflow-scrolling: auto;
     }
 }
