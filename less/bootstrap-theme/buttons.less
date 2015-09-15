@@ -2,6 +2,26 @@
 // Buttons
 // --------------------------------------------------
 
+.btn-link {
+  .border-top-radius(@btn-border-radius-base);
+  .border-bottom-radius(@btn-border-radius-base);
+
+  &.btn-lg {
+    .border-top-radius(@btn-border-radius-large);
+    .border-bottom-radius(@btn-border-radius-large);
+  }
+
+  &.btn-sm {
+    .border-top-radius(@btn-border-radius-small);
+    .border-bottom-radius(@btn-border-radius-small);
+  }
+
+  &.btn-xs {
+    .border-top-radius(@btn-border-radius-small);
+    .border-bottom-radius(@btn-border-radius-small);
+  }
+}
+
 .btn-default {
   .button-variant-flat(@btn-default-bg-hover; @btn-default-bg-active; @btn-default-color-disabled; @btn-default-bg-disabled; @btn-default-ripple-bg);
   .button-variant-raised(@btn-default-raised-color; @btn-default-raised-bg; @btn-default-raised-bg-active; @btn-default-raised-color-disabled; @btn-default-raised-bg-disabled; @btn-default-raised-shadow; @btn-default-raised-shadow-active);
