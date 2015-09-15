@@ -119,6 +119,8 @@
 
         delete this.$element;
         delete this.$context;
+
+        this.$element.removeData('st.sidebar-context');
     };
 
 

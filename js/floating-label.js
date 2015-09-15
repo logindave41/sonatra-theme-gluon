@@ -138,6 +138,8 @@
             $target.removeClass('has-floating-content')
                 .removeClass('fixed-floating-label');
         });
+
+        this.$element.removeData('st.floating-label');
     };
 
 

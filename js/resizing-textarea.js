@@ -122,6 +122,8 @@
 
             $target.removeAttr('data-resizing-rows');
         });
+
+        this.$element.removeData('st.resizing-textarea');
     };
 
 
