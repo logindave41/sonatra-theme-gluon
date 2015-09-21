@@ -15,8 +15,8 @@
     @checked-bg-hover: "@{style}-checked-bg-hover";
     @checked-bg-focus: "@{style}-checked-bg-focus";
 
-    .form-control-md@{class-style} {
-        input[type="radio"]:checked& {
+    .form-control-md {
+        input[type="radio"]@{class-style}:checked {
             + .form-control-md-style {
                 &:before {
                     border-color: @@checked-bg;
@@ -30,8 +30,8 @@
         }
 
         // checked
-        input[type="checkbox"]:checked&,
-        input[type="radio"]:checked& {
+        input[type="checkbox"]@{class-style}:checked,
+        input[type="radio"]@{class-style}:checked {
             + .form-control-md-style {
                 &:before {
                     border-color: @@checked-bg;
@@ -51,7 +51,7 @@
             }
         }
 
-        input[type="checkbox"]:checked& {
+        input[type="checkbox"]@{class-style}:checked {
             + .form-control-md-style {
                 &:before {
                     background-color: @@checked-bg;
@@ -70,7 +70,7 @@
             }
         }
 
-        input[type="radio"]:checked& {
+        input[type="radio"]@{class-style}:checked {
             + .form-control-md-style:hover {
                 &:before {
                     border-color: @@checked-bg-hover;
@@ -84,10 +84,10 @@
         }
 
         // disabled
-        input[type="checkbox"][disabled]&,
-        input[type="radio"][disabled]&,
-        fieldset[disabled] input[type="checkbox"]&,
-        fieldset[disabled] input[type="radio"]& {
+        input[type="checkbox"][disabled]@{class-style},
+        input[type="radio"][disabled]@{class-style},
+        fieldset[disabled] & input[type="checkbox"]@{class-style},
+        fieldset[disabled] & input[type="radio"]@{class-style} {
             + .form-control-md-style {
                 &:before {
                     border-color: @input-border-disabled;
@@ -99,8 +99,8 @@
             }
         }
 
-        input[type="checkbox"][disabled]&,
-        fieldset[disabled] input[type="checkbox"]& {
+        input[type="checkbox"][disabled]@{class-style},
+        fieldset[disabled] & input[type="checkbox"]@{class-style} {
             &:checked {
                 + .form-control-md-style {
                     &:before {
@@ -115,8 +115,8 @@
             }
         }
 
-        input[type="radio"][disabled]&,
-        fieldset[disabled] input[type="radio"]& {
+        input[type="radio"][disabled]@{class-style},
+        fieldset[disabled] & input[type="radio"]@{class-style} {
             &:checked {
                 + .form-control-md-style {
                     &:before {

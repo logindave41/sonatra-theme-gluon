@@ -1,9 +1,11 @@
 {% macro checkbox(brand, checked=false, disabled=false, label='Checkbox example', className = 'form-control-md') %}
 <div class="checkbox">
     <label>
-        <input type="checkbox" class="{{ className }} input-{{ brand }}"{% if checked %} checked="checked"{% endif %}{% if disabled %} disabled="disabled"{% endif %} />
-        <span class="form-control-md-style"></span>
-        <span>{{ label }}</span>
+        <span class="{{ className }}">
+            <input type="checkbox" class="input-{{ brand }}"{% if checked %} checked="checked"{% endif %}{% if disabled %} disabled="disabled"{% endif %} />
+            <span class="form-control-md-style"></span>
+            <span>{{ label }}</span>
+        </span>
     </label>
 </div>
 {% endmacro %}
@@ -11,9 +13,11 @@
 {% macro radio(brand, name, checked=false, disabled=false, label='Checkbox example') %}
 <div class="radio">
     <label>
-        <input type="radio" name="{{ name }}" class="form-control-md input-{{ brand }}"{% if checked %} checked="checked"{% endif %}{% if disabled %} disabled="disabled"{% endif %} />
-        <span class="form-control-md-style"></span>
-        <span>{{ label }}</span>
+        <span class="form-control-md">
+            <input type="radio" name="{{ name }}" class="input-{{ brand }}"{% if checked %} checked="checked"{% endif %}{% if disabled %} disabled="disabled"{% endif %} />
+            <span class="form-control-md-style"></span>
+            <span>{{ label }}</span>
+        </span>
     </label>
 </div>
 {% endmacro %}

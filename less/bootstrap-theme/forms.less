@@ -260,9 +260,11 @@ select {
 // --------------------------------------------------
 
 .form-control-md {
+    position: relative;
+
     // unchecked
-    input[type="checkbox"]&,
-    input[type="radio"]& {
+    input[type="checkbox"],
+    input[type="radio"] {
         width: @input-radio-checkbox-size;
         height: @input-radio-checkbox-size;
         padding: 0;
@@ -272,8 +274,6 @@ select {
         opacity: 0;
 
         + .form-control-md-style {
-            margin-right: @input-radio-checkbox-size + 8;
-
             &:before,
             &:after {
                 content: '';
@@ -286,6 +286,8 @@ select {
                 margin: 0;
                 width: @input-radio-checkbox-size;
                 height: @input-radio-checkbox-size;
+                top: 0;
+                left: 0;
                 background-color: @input-unchecked-bg;
                 border: 2px solid @input-border;
                 vertical-align: top;
@@ -310,6 +312,8 @@ select {
             }
 
             + span {
+                margin-left: @input-radio-checkbox-size + 8;
+
                 &:before {
                     content: "";
                     position: absolute;
@@ -339,7 +343,7 @@ select {
         }
     }
 
-    input[type="checkbox"]& {
+    input[type="checkbox"] {
         + .form-control-md-style {
             &:before {
                 .border-top-radius(2px);
@@ -361,7 +365,7 @@ select {
         }
     }
 
-    input[type="radio"]& {
+    input[type="radio"] {
         + .form-control-md-style {
             &:before,
             &:after {
@@ -380,7 +384,7 @@ select {
     }
 
     // checked
-    input[type="checkbox"]:checked& {
+    input[type="checkbox"]:checked {
         + .form-control-md-style {
             &:before {
                 .border-top-radius(2px);
@@ -393,7 +397,7 @@ select {
         }
     }
 
-    input[type="radio"]:checked& {
+    input[type="radio"]:checked {
         + .form-control-md-style {
             &:after {
                 .scale(1);
@@ -402,10 +406,10 @@ select {
     }
 
     // disabled
-    input[type="checkbox"][disabled]&,
-    input[type="radio"][disabled]&,
-    fieldset[disabled] input[type="checkbox"]&,
-    fieldset[disabled] input[type="radio"]& {
+    input[type="checkbox"][disabled],
+    input[type="radio"][disabled],
+    fieldset[disabled] & input[type="checkbox"],
+    fieldset[disabled] & input[type="radio"] {
         + .form-control-md-style {
             &:before,
             &:after {
@@ -450,13 +454,12 @@ select {
     label {
         padding-left: 0;
         cursor: default;
-        position: relative;
     }
 }
 
-.radio input[type="radio"],
-.radio-inline input[type="radio"],
-.checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
-    margin-left: 0;
+.radio-inline,
+.checkbox-inline {
+    &:first-child {
+        padding-left: 0;
+    }
 }

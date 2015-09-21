@@ -8,9 +8,9 @@
     @toggle-checked-bg-hover: "@{style}-checked-toggle-bg-hover";
     @toggle-checked-bg-focus: "@{style}-checked-toggle-bg-focus";
 
-    .form-control-md-toggle@{class-style} {
+    .form-control-md-toggle {
         // checked
-        input[type="checkbox"]:checked& {
+        input[type="checkbox"]@{class-style}:checked {
             + .form-control-md-style {
                 background-color: @@lever-checked-bg;
 
@@ -37,10 +37,10 @@
         }
 
         // disabled
-        input[type="checkbox"][disabled]&,
-        fieldset[disabled] input[type="checkbox"]&,
-        input[type="checkbox"][disabled]:checked&,
-        fieldset[disabled] input[type="checkbox"]:checked&{
+        input[type="checkbox"][disabled]@{class-style},
+        fieldset[disabled] & input[type="checkbox"]@{class-style},
+        input[type="checkbox"][disabled]@{class-style}:checked,
+        fieldset[disabled] & input[type="checkbox"]@{class-style}:checked {
             &:focus,
             &:active {
                 + .form-control-md-style {
@@ -52,8 +52,8 @@
         }
 
         // disabled checked
-        input[type="checkbox"][disabled]:checked&,
-        fieldset[disabled] input[type="checkbox"]:checked& {
+        input[type="checkbox"][disabled]@{class-style}:checked,
+        fieldset[disabled] & input[type="checkbox"]@{class-style}:checked {
             + .form-control-md-style {
                 background-color: @input-toggle-checked-lever-bg-disabled;
 

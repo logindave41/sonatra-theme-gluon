@@ -11,7 +11,7 @@
     @checkedLeft: round(@width - (@input-toggle-size / 2) + @left);
 
     // unchecked
-    input[type="checkbox"]& {
+    input[type="checkbox"] {
         position: absolute;
         padding: 0;
         margin: 0;
@@ -83,7 +83,7 @@
     }
 
     // checked
-    input[type="checkbox"]:checked& {
+    input[type="checkbox"]:checked {
         + .form-control-md-style {
             &:before,
             &:after {
@@ -93,8 +93,8 @@
     }
 
     // disabled unchecked
-    input[type="checkbox"][disabled]&,
-    fieldset[disabled] input[type="checkbox"]& {
+    input[type="checkbox"][disabled],
+    fieldset[disabled] & input[type="checkbox"] {
         + .form-control-md-style {
             &:hover {
                 &:before {
@@ -105,8 +105,8 @@
     }
 
     // disabled unchecked
-    input[type="checkbox"][disabled]&,
-    fieldset[disabled] input[type="checkbox"]& {
+    input[type="checkbox"][disabled],
+    fieldset[disabled] & input[type="checkbox"] {
         + .form-control-md-style {
             background-color: @input-toggle-unchecked-lever-bg-disabled;
 
