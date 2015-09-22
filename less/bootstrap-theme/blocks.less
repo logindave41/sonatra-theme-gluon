@@ -15,10 +15,6 @@
 // --------------------------------------------------
 
 .block-control {
-    .placeholder();
-}
-
-.block-control {
     display: block;
     width: 100%;
     min-height: @input-height-base;
@@ -28,8 +24,9 @@
     color: @input-color;
     vertical-align: middle;
     border: 1px solid transparent;
+    .placeholder();
 
-    .choice_multiple {
+    &.choice_multiple {
         padding-top: 0;
         padding-bottom: 0;
 
@@ -70,23 +67,6 @@
     }
 }
 
-// Group
-// --------------------------------------------------
-
-.block-group {
-    margin-bottom: 15px;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    .checkbox,
-    .radio {
-        padding-left: 0;
-        padding-top: 8px;
-    }
-}
-
 // Collection
 // --------------------------------------------------
 
@@ -109,6 +89,7 @@
         margin-top: 0;
         margin-bottom: 0;
         padding-top: (@padding-base-vertical + 1);
+        padding-bottom: (@padding-base-vertical + 1);
     }
 
     .block-collection {
@@ -121,10 +102,33 @@
         .make-row();
     }
 
-    @media (min-width: @screen-sm-min) {
-        .block-label {
-            text-align: right;
+    .block-group {
+        &:before,
+        &:after {
+            content: " ";
+            display: table;
         }
+
+        &:after {
+            clear: both;
+        }
+    }
+}
+
+// Group
+// --------------------------------------------------
+
+.block-group {
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .checkbox,
+    .radio {
+        padding-left: 0;
+        padding-top: 8px;
     }
 }
 
@@ -165,6 +169,14 @@
     }
 }
 
+.block-control-color(default);
+.block-control-color(primary);
+.block-control-color(accent);
+.block-control-color(success);
+.block-control-color(info);
+.block-control-color(warning);
+.block-control-color(danger);
+
 // Responsive
 // --------------------------------------------------
 
@@ -190,13 +202,10 @@
     }
 }
 
-// Variants
-// --------------------------------------------------
-
-.block-control-color(default);
-.block-control-color(primary);
-.block-control-color(accent);
-.block-control-color(success);
-.block-control-color(info);
-.block-control-color(warning);
-.block-control-color(danger);
+@media (min-width: @screen-sm-min) {
+    .block-horizontal {
+        .block-label {
+            text-align: right;
+        }
+    }
+}
