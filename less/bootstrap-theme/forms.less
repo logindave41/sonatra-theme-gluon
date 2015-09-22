@@ -466,8 +466,11 @@ select {
 .radio-inline,
 .checkbox-inline {
     cursor: default;
+    padding-left: 0;
+    padding-right: 20px;
+}
 
-    &:first-child {
-        padding-left: 0;
-    }
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+    margin-left: 0;
 }
