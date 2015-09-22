@@ -2,12 +2,134 @@
 // Blocks
 // --------------------------------------------------
 
-// Checkbox / Radio
+// Label
 // --------------------------------------------------
 
 .block-label {
+    display: inline-block;
+    margin-bottom: 5px;
     font-weight: @font-family-weight-bold;
 }
+
+// Control
+// --------------------------------------------------
+
+.block-control {
+    .placeholder();
+}
+
+.block-control {
+    display: block;
+    width: 100%;
+    min-height: @input-height-base;
+    padding: @padding-base-vertical 0;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+    color: @input-color;
+    vertical-align: middle;
+    border: 1px solid transparent;
+
+    .choice_multiple {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .choice-item,
+        .choice-empty {
+            display: block;
+        }
+
+        .choice-item.inline,
+        .choice-empty.inline {
+            display: inline-block;
+        }
+
+        .choice-item > span,
+        .choice-item > a {
+            display: inline-block;
+            padding: 2px 5px;
+            background: @gray-lighter;
+            margin: -2px 2px -2px 0;
+        }
+
+        .choice-item:not(.inline) + .choice-item:not(.inline) > span,
+        .choice-item:not(.inline) + .choice-item:not(.inline) > a {
+            margin-top: 4px;
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            min-height: @input-height-base;
+            padding: @padding-base-vertical 0;
+            font-size: @font-size-base;
+            line-height: @line-height-base;
+            color: @input-color;
+            vertical-align: middle;
+            border: 1px solid transparent;
+        }
+    }
+}
+
+// Group
+// --------------------------------------------------
+
+.block-group {
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .checkbox,
+    .radio {
+        padding-left: 0;
+        padding-top: 8px;
+    }
+}
+
+// Collection
+// --------------------------------------------------
+
+.block-collection {
+    > .block-group {
+        margin-bottom: 0;
+    }
+}
+
+// Horizontal
+// --------------------------------------------------
+
+.block-horizontal {
+    .block-label,
+    .form-label,
+    .radio,
+    .checkbox,
+    .radio-inline,
+    .checkbox-inline {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: (@padding-base-vertical + 1);
+    }
+
+    .block-collection {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .block-group,
+    .form-group {
+        .make-row();
+    }
+
+    @media (min-width: @screen-sm-min) {
+        .block-label {
+            text-align: right;
+        }
+    }
+}
+
+// Checkbox / Radio
+// --------------------------------------------------
 
 .block-control-fa-checkbox,
 .block-control-fa-radio {
@@ -42,6 +164,34 @@
         }
     }
 }
+
+// Responsive
+// --------------------------------------------------
+
+@media (min-width: @screen-sm) {
+    .block-inline {
+        .block-group {
+            display: inline-block;
+            margin-bottom: 0;
+            vertical-align: middle;
+        }
+
+        .block-control {
+            display: inline-block;
+        }
+
+        .radio,
+        .checkbox {
+            display: inline-block;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+// Variants
+// --------------------------------------------------
 
 .block-control-color(default);
 .block-control-color(primary);
