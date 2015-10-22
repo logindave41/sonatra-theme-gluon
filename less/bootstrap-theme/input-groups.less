@@ -6,35 +6,100 @@
 // -------------------------
 .input-group-addon {
     border-radius: @input-border-radius;
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+    }
+
+    &:empty {
+        padding: 0;
+    }
 }
 
 // Floating label
 // -------------------------
 
 .input-group {
+    .input-group-addon,
+    .input-group-btn {
+        vertical-align: top;
+    }
+
     .input-group-addon {
         border: none;
         border-bottom: 1px solid transparent;
         background-color: transparent;
-        vertical-align: top;
         line-height: @line-height-base;
 
         &:first-child {
-            min-width: 70px;
+             min-width: 70px;
+         }
+    }
+
+    .floating-group {
+        .floating-bar,
+        .help-block,
+        + .help-block {
+            float: left;
+        }
+    }
+}
+
+div[class*="col-"] {
+    > .input-group {
+        .input-group-addon,
+        .input-group-btn {
+            &:first-child {
+                min-width: inherit;
+            }
+        }
+    }
+}
+
+
+.control-label + .block-control,
+.control-label + .panel-block-help + .block-control {
+    .input-group {
+        .input-group-addon,
+        .input-group-btn {
+            &:first-child {
+                min-width: inherit;
+            }
+        }
+    }
+}
+
+.block-control {
+    .input-group,
+    .floating-group {
+        margin-top: -10px;
+    }
+
+    .input-group {
+        .floating-group {
+            display: table-cell;
+
+            .form-control {
+                display: block;
+            }
+        }
+
+        .input-group {
+            margin-top: 0;
         }
     }
 }
 
 .input-group-btn {
     .btn {
-        min-width: auto;
+        min-width: initial;
 
         &.btn-md-icon {
             padding: 6px 12px;
-
-            .material-icons {
-                vertical-align: middle;
-            }
         }
     }
 }
@@ -53,6 +118,17 @@
     .input-group {
         &.bootstrap-filestyle {
             width: 100%;
+        }
+    }
+}
+
+.has-error {
+    .input-group {
+        &.bootstrap-filestyle {
+            input,
+            textarea {
+                border-bottom-color: @state-danger-border;
+            }
         }
     }
 }

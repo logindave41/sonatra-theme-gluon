@@ -98,6 +98,7 @@
 @btn-padding-vertical-lg:        10px;
 @btn-padding-horizontal-lg:      18px;
 
+@btn-link-disabled-color:        fade(@text-color, 26%);
 
 @btn-default-color:              @text-color;
 @btn-default-bg:                 transparent;
@@ -433,6 +434,7 @@
 @navbar-brand-vertical-padding:            14px;
 @navbar-brand-line-height:                 32px;
 @navbar-brand-img-height:                  @navbar-brand-line-height;
+@navbar-brand-logo-width:                  auto;
 
 // Custom navbar dropdown link
 @navbar-dropdown-link-color:               @brand-primary;
@@ -566,6 +568,13 @@
 
 @label-accent-bg:             @brand-accent;
 
+// Floating Labels
+// -------------------------
+
+@block-floating-label-color:      @brand-primary;
+@form-floating-label-color:       @input-color-placeholder;
+@form-floating-label-color-focus: @input-border-focus;
+
 // Progress bars
 // -------------------------
 @progress-bar-bg:             @brand-primary;
@@ -612,9 +621,9 @@
 
 @panel-top-border-height:     3px;
 
-@panel-heading-size:          ceil((@font-size-large * 1.4));
+@panel-heading-size:          floor((@font-size-base * 1.2));
 
-@panel-section-heading-size:  @font-size-large;
+@panel-section-heading-size:  @font-size-base;
 @panel-section-heading-color: #a5a5a5;
 
 @panel-default-text:          @gray-dark;

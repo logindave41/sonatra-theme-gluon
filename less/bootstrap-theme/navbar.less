@@ -4,6 +4,18 @@
 
 .navbar {
     height: @navbar-height;
+
+    &.headroom {
+        .transition(0.2s ease);
+    }
+
+    &.headroom--pinned {
+        .transform(translateY(0%));
+    }
+
+    &.headroom--unpinned {
+        .transform(translateY(-100%));
+    }
 }
 
 .navbar-brand {
@@ -24,6 +36,11 @@
 
     .navbar-brand-badge {
         display: none;
+        width: @navbar-brand-img-height;
+    }
+
+    .navbar-brand-logo {
+        width: @navbar-brand-logo-width;
     }
 }
 
@@ -42,6 +59,7 @@
     margin: @btn-navbar-margin-top @btn-navbar-margin-horizontal @btn-navbar-margin-bottom @btn-navbar-margin-horizontal;
     padding: @btn-padding-vertical 0;
     background-color: transparent;
+    vertical-align: top;
     .border-top-radius(50%);
     .border-bottom-radius(50%);
 
@@ -49,6 +67,25 @@
     &.active,
     .open > .dropdown-toggle& {
         .box-shadow(none);
+    }
+}
+
+.btn-navbar-home {
+    &:empty {
+        width: @btn-navbar-height + 2;
+        height: @btn-navbar-height + 2;
+        margin: @btn-navbar-margin-top @btn-navbar-margin-horizontal @btn-navbar-margin-bottom 0;
+        padding: @btn-padding-vertical 0;
+        vertical-align: top;
+        display: none;
+
+        &.force {
+            display: inherit;
+        }
+    }
+
+    &:not(:empty) + .btn-navbar-home {
+        display: none;
     }
 }
 
@@ -82,7 +119,6 @@
 .navbar-flex {
     width: 100%;
     height: @navbar-height;
-    padding: 0 2px;
     .flexbox();
 
     > * {
@@ -94,14 +130,12 @@
     }
 
     .navbar-brand {
+        padding-left: 0;
+        padding-right: 0;
+
         img {
             position: relative;
         }
-    }
-
-    .navbar-brand-switch {
-        padding-left: @navbar-padding-horizontal;
-        padding-right: 2px;
     }
 
     .navbar-title {
@@ -111,19 +145,15 @@
     }
 }
 
-.btn-sidebar-toggle,
-.btn-sidebar-toggle + .btn-sidebar-toggle.pull-right {
-    + .navbar-brand-switch,
-    + .btn-group .navbar-brand-switch {
-        padding-left: 0;
-    }
-}
-
 .navbar-default {
     &.navbar-fixed-top,
     &.navbar-static-top {
         &.affix {
             .box-shadow(@navbar-shadow-default);
+
+            &.headroom--unpinned {
+                .box-shadow(none);
+            }
         }
     }
 
@@ -153,6 +183,10 @@
     &.navbar-fixed-top {
         &.affix {
             .box-shadow(@navbar-shadow-inverse);
+
+            &.headroom--unpinned {
+                .box-shadow(none);
+            }
         }
     }
 
@@ -401,44 +435,40 @@
         display: inline-block;
     }
 
-    .navbar-flex {
-        padding: 0 @navbar-padding-horizontal;
-    }
-
-    .btn-sidebar-toggle,
-    .btn-sidebar-toggle + .btn-sidebar-toggle.pull-right {
+    .btn-navbar-home,
+    .btn-navbar-home + .btn-sidebar-toggle.pull-right {
         + .navbar-brand,
         + div .navbar-brand {
-            width: @navbar-brand-width - @btn-navbar-height - @navbar-padding-horizontal;
-        }
-
-        + .navbar-brand-switch,
-        + div + .navbar-brand-switch {
-            padding-left: @navbar-padding-horizontal;
-            padding-right: @navbar-padding-horizontal;
+            width: auto;
         }
     }
 }
 
 @media (min-width: (@screen-sm-max + 1)) {
-    .btn-sidebar-toggle,
-    .btn-group.btn-sidebar-toggle .btn {
-        &.sidebar-locked-toggle {
-            display: none;
+    .navbar {
+        &.navbar-sidebar-locked-left,
+        &.navbar-sidebar-full-locked-left {
+            .btn-sidebar-toggle {
+                display: none;
+            }
+
+            .navbar-brand {
+                width: @navbar-brand-width;
+            }
         }
-    }
 
-    .btn-sidebar-toggle.sidebar-locked-toggle,
-    .btn-sidebar-toggle.sidebar-locked-toggle + .btn-sidebar-toggle.pull-right {
-        + .navbar-brand,
-        + div .navbar-brand {
-            width: @navbar-brand-width;
+        &.navbar-sidebar-full-locked-left {
+            padding-left: @navbar-brand-width;
 
-            &.sidebar-full-locked {
-                margin-left: @navbar-brand-width;
+            .navbar-brand {
                 width: auto;
             }
         }
+
+        .btn-navbar-home:empty {
+            display: inherit;
+        }
+
     }
 }
 
