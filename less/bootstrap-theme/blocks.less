@@ -84,13 +84,15 @@
             }
         }
 
-        > span {
+        > span,
+        &.choice-horizontal > div,
+        &.choice-horizontal > .choice-item {
             display: inline-block;
         }
 
         > div,
-        &.choice-horizontal > span,
-        &.choice-horizontal > .choice-item {
+        &.choice-vertical > span,
+        &.choice-vertical > .choice-item {
             display: table;
         }
     }
@@ -115,6 +117,35 @@
                 min-height: 1px;
                 height: auto;
             }
+        }
+    }
+
+    &.choice-items {
+        > span,
+        > div,
+        > a,
+        > .choice-item {
+            padding: 2px 8px;
+            border: 1px solid @gray-lighter;
+            margin: -3px 8px 12px 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        > span,
+        > a,
+        &.choice-horizontal > div,
+        &.choice-horizontal > .choice-item {
+            display: inline-block;
+        }
+
+        > div,
+        &.choice-vertical > span,
+        &.choice-vertical > a,
+        &.choice-vertical > .choice-item {
+            display: table;
         }
     }
 }
